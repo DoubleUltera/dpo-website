@@ -1,0 +1,402 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+
+const title = "Notarial Services | Atty. Renerio de Dios Jr. | Tacloban City, Leyte";
+const description = "Professional notarial services in Tacloban City. Affidavits, contracts, special power of attorney, document authentication. Licensed attorney and notary public serving Region 8.";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+	<body>
+		<Header />
+
+		<!-- Hero Section -->
+		<section class="section bg-gradient-to-br from-accent-50 to-white">
+			<div class="container">
+				<div class="max-w-4xl mx-auto">
+					<div class="text-center mb-8">
+						<span class="badge-accent">Complementary Legal Service</span>
+					</div>
+					<h1 class="text-center mb-6">
+						Professional Notarial Services
+					</h1>
+					<p class="text-xl text-neutral-700 text-center mb-8 max-w-3xl mx-auto">
+						Convenient notarial services available alongside DPO consulting. Licensed attorney and commissioned notary public serving Tacloban City and Region 8.
+					</p>
+					<div class="flex flex-col sm:flex-row gap-4 justify-center">
+						<a href="/contact" class="btn-accent">
+							Request Appointment
+						</a>
+						<a href="/services/dpo-consulting" class="btn-secondary">
+							View DPO Services
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Services Section -->
+		<section class="section">
+			<div class="container">
+				<div class="max-w-4xl mx-auto">
+					<div class="text-center mb-12">
+						<h2 class="mb-4">Notarial Services Offered</h2>
+						<p class="text-lg text-neutral-600 max-w-2xl mx-auto">
+							As a commissioned notary public, I provide professional notarization services for individuals and businesses
+						</p>
+					</div>
+
+					<div class="grid md:grid-cols-2 gap-8">
+						<!-- Service 1 -->
+						<div class="card">
+							<div class="card-body">
+								<div class="flex items-start gap-4 mb-4">
+									<div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center flex-shrink-0">
+										<svg class="w-6 h-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+										</svg>
+									</div>
+									<div>
+										<h3 class="font-semibold text-primary-900 mb-2">
+											Affidavits & Sworn Statements
+										</h3>
+										<p class="text-sm text-neutral-700">
+											Notarization of affidavits for various purposes including legal proceedings, employment, travel, and government requirements.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Service 2 -->
+						<div class="card">
+							<div class="card-body">
+								<div class="flex items-start gap-4 mb-4">
+									<div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center flex-shrink-0">
+										<svg class="w-6 h-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+										</svg>
+									</div>
+									<div>
+										<h3 class="font-semibold text-primary-900 mb-2">
+											Contracts & Agreements
+										</h3>
+										<p class="text-sm text-neutral-700">
+											Notarization of business contracts, lease agreements, loan documents, and other contractual instruments.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Service 3 -->
+						<div class="card">
+							<div class="card-body">
+								<div class="flex items-start gap-4 mb-4">
+									<div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center flex-shrink-0">
+										<svg class="w-6 h-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/>
+										</svg>
+									</div>
+									<div>
+										<h3 class="font-semibold text-primary-900 mb-2">
+											Special Power of Attorney (SPA)
+										</h3>
+										<p class="text-sm text-neutral-700">
+											Preparation and notarization of SPA for bank transactions, property transactions, vehicle registration, and other authorized representations.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Service 4 -->
+						<div class="card">
+							<div class="card-body">
+								<div class="flex items-start gap-4 mb-4">
+									<div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center flex-shrink-0">
+										<svg class="w-6 h-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+										</svg>
+									</div>
+									<div>
+										<h3 class="font-semibold text-primary-900 mb-2">
+											Document Authentication
+										</h3>
+										<p class="text-sm text-neutral-700">
+											Authentication and certification of documents for submission to government agencies, foreign embassies, and private institutions.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Service 5 -->
+						<div class="card">
+							<div class="card-body">
+								<div class="flex items-start gap-4 mb-4">
+									<div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center flex-shrink-0">
+										<svg class="w-6 h-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+										</svg>
+									</div>
+									<div>
+										<h3 class="font-semibold text-primary-900 mb-2">
+											Corporate Documents
+										</h3>
+										<p class="text-sm text-neutral-700">
+											Notarization of corporate resolutions, secretary's certificates, articles of incorporation amendments, and other business documents.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Service 6 -->
+						<div class="card">
+							<div class="card-body">
+								<div class="flex items-start gap-4 mb-4">
+									<div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center flex-shrink-0">
+										<svg class="w-6 h-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+										</svg>
+									</div>
+									<div>
+										<h3 class="font-semibold text-primary-900 mb-2">
+											Real Estate Documents
+										</h3>
+										<p class="text-sm text-neutral-700">
+											Notarization of deeds of sale, deeds of donation, mortgage documents, and other real property transactions.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- How It Works -->
+		<section class="section bg-neutral-50">
+			<div class="container">
+				<div class="max-w-3xl mx-auto">
+					<h2 class="text-center mb-12">How Notarization Works</h2>
+
+					<div class="space-y-8">
+						<div class="flex items-start gap-6">
+							<div class="flex-shrink-0">
+								<div class="w-12 h-12 bg-accent-500 text-white rounded-full flex items-center justify-center font-bold text-xl">
+									1
+								</div>
+							</div>
+							<div>
+								<h3 class="font-semibold text-primary-900 mb-2">Schedule an Appointment</h3>
+								<p class="text-neutral-700 text-sm">
+									Contact me via phone or email to schedule a notarization appointment. Walk-ins are also welcome during business hours, subject to availability.
+								</p>
+							</div>
+						</div>
+
+						<div class="flex items-start gap-6">
+							<div class="flex-shrink-0">
+								<div class="w-12 h-12 bg-accent-500 text-white rounded-full flex items-center justify-center font-bold text-xl">
+									2
+								</div>
+							</div>
+							<div>
+								<h3 class="font-semibold text-primary-900 mb-2">Bring Required Documents</h3>
+								<p class="text-neutral-700 text-sm mb-2">
+									Bring the following to your appointment:
+								</p>
+								<ul class="space-y-1 text-sm text-neutral-700">
+									<li class="flex items-start gap-2">
+										<span class="text-accent-600">•</span>
+										<span>The document(s) to be notarized</span>
+									</li>
+									<li class="flex items-start gap-2">
+										<span class="text-accent-600">•</span>
+										<span>Valid government-issued ID (original and photocopy)</span>
+									</li>
+									<li class="flex items-start gap-2">
+										<span class="text-accent-600">•</span>
+										<span>Community Tax Certificate (CTC / Cedula)</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="flex items-start gap-6">
+							<div class="flex-shrink-0">
+								<div class="w-12 h-12 bg-accent-500 text-white rounded-full flex items-center justify-center font-bold text-xl">
+									3
+								</div>
+							</div>
+							<div>
+								<h3 class="font-semibold text-primary-900 mb-2">Verify and Sign</h3>
+								<p class="text-neutral-700 text-sm">
+									I will verify your identity, review the document, and administer the oath or acknowledgment as required. You will then sign the document in my presence.
+								</p>
+							</div>
+						</div>
+
+						<div class="flex items-start gap-6">
+							<div class="flex-shrink-0">
+								<div class="w-12 h-12 bg-accent-500 text-white rounded-full flex items-center justify-center font-bold text-xl">
+									4
+								</div>
+							</div>
+							<div>
+								<h3 class="font-semibold text-primary-900 mb-2">Notarization Complete</h3>
+								<p class="text-neutral-700 text-sm">
+									I will complete the notarial certificate, affix my seal, and sign the document. You will receive your notarized document immediately.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Frequently Notarized Documents -->
+		<section class="section">
+			<div class="container">
+				<div class="max-w-4xl mx-auto">
+					<h2 class="text-center mb-12">Frequently Notarized Documents</h2>
+
+					<div class="grid md:grid-cols-3 gap-6">
+						<div class="bg-neutral-50 p-6 rounded-lg">
+							<h3 class="font-semibold text-primary-900 mb-3 text-sm">Personal Documents</h3>
+							<ul class="space-y-2 text-xs text-neutral-700">
+								<li>• Affidavit of Loss</li>
+								<li>• Affidavit of Discrepancy</li>
+								<li>• Affidavit of No Income</li>
+								<li>• Affidavit of Support</li>
+								<li>• Waiver of Rights</li>
+								<li>• Consent Letters</li>
+							</ul>
+						</div>
+
+						<div class="bg-neutral-50 p-6 rounded-lg">
+							<h3 class="font-semibold text-primary-900 mb-3 text-sm">Business Documents</h3>
+							<ul class="space-y-2 text-xs text-neutral-700">
+								<li>• Employment Contracts</li>
+								<li>• Non-Disclosure Agreements</li>
+								<li>• Business Permits Applications</li>
+								<li>• Board Resolutions</li>
+								<li>• Secretary's Certificates</li>
+								<li>• Lease Agreements</li>
+							</ul>
+						</div>
+
+						<div class="bg-neutral-50 p-6 rounded-lg">
+							<h3 class="font-semibold text-primary-900 mb-3 text-sm">Property Documents</h3>
+							<ul class="space-y-2 text-xs text-neutral-700">
+								<li>• Deed of Absolute Sale</li>
+								<li>• Deed of Donation</li>
+								<li>• Deed of Assignment</li>
+								<li>• Real Estate Mortgage</li>
+								<li>• Lease Contracts</li>
+								<li>• Subdivision Agreements</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Integration with DPO Services -->
+		<section class="section bg-primary-700 text-white">
+			<div class="container">
+				<div class="max-w-3xl mx-auto text-center">
+					<h2 class="mb-6 text-white">Combined DPO & Notarial Services</h2>
+					<p class="text-xl mb-8 text-primary-100">
+						Need both data privacy consulting and notarial services? As a TÜV Certified DPO and licensed attorney, I provide integrated services for your business compliance needs.
+					</p>
+					<div class="bg-primary-600 bg-opacity-50 rounded-lg p-6 mb-8">
+						<p class="text-primary-50 mb-4">
+							<strong>Example Combined Service:</strong>
+						</p>
+						<p class="text-sm text-primary-100">
+							Data privacy compliance project + notarization of data processing agreements, privacy policies, consent forms, and employee confidentiality agreements.
+						</p>
+					</div>
+					<a href="/contact" class="btn bg-white text-primary-700 hover:bg-neutral-100">
+						Request Combined Services Quote
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Office Information -->
+		<section class="section bg-neutral-50">
+			<div class="container">
+				<div class="max-w-3xl mx-auto">
+					<h2 class="text-center mb-8">Office Information</h2>
+
+					<div class="grid md:grid-cols-2 gap-8">
+						<div class="bg-white p-6 rounded-lg shadow-sm">
+							<h3 class="font-semibold text-primary-900 mb-4">Business Hours</h3>
+							<div class="space-y-2 text-sm text-neutral-700">
+								<div class="flex justify-between">
+									<span>Monday - Friday:</span>
+									<span class="font-medium">9:00 AM - 5:00 PM</span>
+								</div>
+								<div class="flex justify-between">
+									<span>Saturday:</span>
+									<span class="font-medium">By Appointment</span>
+								</div>
+								<div class="flex justify-between">
+									<span>Sunday:</span>
+									<span class="font-medium">Closed</span>
+								</div>
+							</div>
+							<p class="text-xs text-neutral-600 mt-4">
+								Walk-ins welcome during business hours, but appointments are recommended to avoid waiting.
+							</p>
+						</div>
+
+						<div class="bg-white p-6 rounded-lg shadow-sm">
+							<h3 class="font-semibold text-primary-900 mb-4">Location</h3>
+							<p class="text-sm text-neutral-700 mb-2">
+								<strong>Tacloban City, Leyte</strong><br/>
+								Eastern Visayas, Philippines
+							</p>
+							<p class="text-xs text-neutral-600 mb-4">
+								Conveniently located in Tacloban City, serving clients from across Region 8 including Leyte, Samar, and Biliran provinces.
+							</p>
+							<a href="/contact" class="text-primary-600 hover:text-primary-700 text-sm font-medium">
+								Get Directions →
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section class="section">
+			<div class="container">
+				<div class="max-w-3xl mx-auto text-center">
+					<h2 class="mb-6">Need Notarial Services?</h2>
+					<p class="text-xl text-neutral-700 mb-8">
+						Contact me to schedule an appointment for professional notarization services
+					</p>
+					<a href="/contact" class="btn-accent">
+						Request Appointment
+					</a>
+					<p class="mt-6 text-sm text-neutral-600">
+						Or call during business hours: Monday - Friday, 9:00 AM - 5:00 PM
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<Footer />
+	</body>
+</html>

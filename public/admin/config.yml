@@ -1,0 +1,71 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Local development backend (comment out for production)
+# local_backend: true
+
+media_folder: "src/assets/blog"
+public_folder: "/src/assets/blog"
+
+# Site URL (update this when deploying)
+site_url: https://dporegion8.com
+display_url: https://dporegion8.com
+
+# Logo (can be customized later)
+# logo_url: /images/logo.svg
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - {label: "Title", name: "title", widget: "string", required: true}
+      - {label: "Description (SEO)", name: "description", widget: "text", required: true,
+         hint: "Between 50-160 characters for optimal SEO"}
+      - {label: "Publish Date", name: "pubDate", widget: "datetime", required: true}
+      - {label: "Updated Date", name: "updatedDate", widget: "datetime", required: false}
+      - {label: "Featured Image", name: "heroImage", widget: "image", required: false,
+         hint: "Recommended size: 1200x630px"}
+      - {label: "Category", name: "category", widget: "select", required: true,
+         options: ["Data Privacy Law", "Compliance Tips", "Industry News", "Legal Updates", "Case Studies"]}
+      - {label: "Tags", name: "tags", widget: "list", required: false, allow_add: true,
+         hint: "Add relevant keywords (e.g., NPC, DPA 2012, GDPR, Region 8)"}
+      - {label: "Body", name: "body", widget: "markdown", required: true}
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "src/pages/about-content.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Content", name: "body", widget: "markdown"}
+
+      - label: "Homepage"
+        name: "home"
+        file: "src/content/homepage.md"
+        fields:
+          - {label: "Hero Heading", name: "heroHeading", widget: "string"}
+          - {label: "Hero Subheading", name: "heroSubheading", widget: "text"}
+          - {label: "Call to Action Text", name: "ctaText", widget: "string", default: "Request Quote"}
+          - {label: "About Section", name: "aboutSection", widget: "markdown"}
+          - {label: "Services Section", name: "servicesSection", widget: "markdown"}
+
+# Editor configuration
+editor:
+  preview: true
+
+# Publish mode
+publish_mode: editorial_workflow
+
+# Enable media library
+media_library:
+  name: uploadcare
+  config:
+    publicKey: demo # Replace with your Uploadcare public key later (or use default)

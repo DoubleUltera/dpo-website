@@ -1,0 +1,591 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+
+const title = "Data Protection Officer (DPO) Consulting Services | TÜV Certified | Region 8 Philippines";
+const description = "Expert TÜV certified DPO consulting for Philippine businesses. Privacy Management Program implementation, Data Privacy Act compliance, NPC registration, and data breach response. Serving Leyte, Samar & Biliran.";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+		<!-- Service Schema -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Service",
+			"serviceType": "Data Protection Officer Consulting",
+			"provider": {
+				"@type": ["Attorney", "ProfessionalService"],
+				"name": "Atty. Renerio de Dios Jr.",
+				"hasCredential": {
+					"@type": "EducationalOccupationalCredential",
+					"credentialCategory": "certification",
+					"name": "TÜV Certified Data Protection Officer"
+				}
+			},
+			"areaServed": {
+				"@type": "State",
+				"name": "Eastern Visayas, Region 8, Philippines"
+			},
+			"offers": {
+				"@type": "Offer",
+				"priceSpecification": {
+					"@type": "PriceSpecification",
+					"price": "Contact for quote",
+					"priceCurrency": "PHP"
+				}
+			}
+		}
+		</script>
+		<!-- FAQ Schema -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "FAQPage",
+			"mainEntity": [{
+				"@type": "Question",
+				"name": "What is a Data Protection Officer (DPO)?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "A Data Protection Officer (DPO) is a professional responsible for overseeing an organization's data privacy compliance strategy. Under the Philippine Data Privacy Act of 2012 (RA 10173), certain organizations are required to appoint a DPO to ensure compliance with data protection regulations."
+				}
+			}, {
+				"@type": "Question",
+				"name": "Does my business need a Data Protection Officer?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "Under RA 10173, your business needs a DPO if you process sensitive personal information, process data as a core business activity, or employ at least 250 people. Healthcare, financial services, BPOs, educational institutions, and government agencies typically require a DPO."
+				}
+			}, {
+				"@type": "Question",
+				"name": "What is TÜV certification for DPO?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "TÜV certification is an internationally recognized credential that validates a Data Protection Officer's expertise in data privacy laws, compliance frameworks, and privacy management programs. It ensures the highest standards of professional competence."
+				}
+			}]
+		}
+		</script>
+	</head>
+	<body>
+		<Header />
+
+		<!-- Hero Section -->
+		<section class="section bg-gradient-to-br from-primary-50 to-white">
+			<div class="container">
+				<div class="max-w-4xl mx-auto">
+					<div class="text-center mb-8">
+						<span class="badge-primary">TÜV Certified Professional Service</span>
+					</div>
+					<h1 class="text-center mb-6">
+						Data Protection Officer (DPO) Consulting Services
+					</h1>
+					<p class="text-xl text-neutral-700 text-center mb-8 max-w-3xl mx-auto">
+						Ensure full compliance with RA 10173 (Data Privacy Act of 2012) through expert DPO consulting from Eastern Visayas' only TÜV Certified Data Protection Officer.
+					</p>
+					<div class="flex flex-col sm:flex-row gap-4 justify-center">
+						<a href="/contact" class="btn-primary">
+							Request Free Consultation
+						</a>
+						<a href="#services" class="btn-secondary">
+							View Services
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- What is a DPO Section -->
+		<section class="section">
+			<div class="container">
+				<div class="max-w-4xl mx-auto">
+					<div class="grid md:grid-cols-2 gap-12 items-center">
+						<div>
+							<h2 class="mb-6">What is a Data Protection Officer?</h2>
+							<p class="text-neutral-700 mb-4">
+								A Data Protection Officer (DPO) is a professional responsible for overseeing an organization's data privacy compliance strategy. The DPO ensures that your organization processes personal data in accordance with applicable data protection laws.
+							</p>
+							<p class="text-neutral-700 mb-4">
+								Under the Philippine <strong>Data Privacy Act of 2012 (RA 10173)</strong>, certain organizations are required to appoint a DPO to ensure compliance with the National Privacy Commission (NPC) regulations.
+							</p>
+							<p class="text-neutral-700">
+								As a <strong>TÜV Certified DPO</strong>, I provide internationally recognized expertise combined with deep knowledge of Philippine data privacy laws and the unique business environment of Region 8.
+							</p>
+						</div>
+						<div class="bg-primary-50 p-8 rounded-xl">
+							<h3 class="text-xl font-semibold text-primary-900 mb-4">Key DPO Responsibilities</h3>
+							<ul class="space-y-3 text-sm text-neutral-700">
+								<li class="flex items-start gap-3">
+									<svg class="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+									</svg>
+									<span>Monitor compliance with Data Privacy Act and NPC regulations</span>
+								</li>
+								<li class="flex items-start gap-3">
+									<svg class="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+									</svg>
+									<span>Advise on data protection impact assessments (DPIAs)</span>
+								</li>
+								<li class="flex items-start gap-3">
+									<svg class="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+									</svg>
+									<span>Train staff on data privacy requirements and best practices</span>
+								</li>
+								<li class="flex items-start gap-3">
+									<svg class="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+									</svg>
+									<span>Act as point of contact with National Privacy Commission</span>
+								</li>
+								<li class="flex items-start gap-3">
+									<svg class="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+									</svg>
+									<span>Manage data breach notifications and incident response</span>
+								</li>
+								<li class="flex items-start gap-3">
+									<svg class="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+									</svg>
+									<span>Maintain records of processing activities</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Services Section -->
+		<section id="services" class="section bg-neutral-50">
+			<div class="container">
+				<div class="text-center mb-12">
+					<h2 class="mb-4">Comprehensive DPO Consulting Services</h2>
+					<p class="text-lg text-neutral-600 max-w-2xl mx-auto">
+						Tailored data privacy solutions for businesses across Region 8, Philippines
+					</p>
+				</div>
+
+				<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+					<!-- Service 1 -->
+					<div class="card">
+						<div class="card-body">
+							<div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+								<svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+								</svg>
+							</div>
+							<h3 class="text-lg font-semibold text-primary-900 mb-3">
+								Privacy Management Program (PMP) Implementation
+							</h3>
+							<p class="text-sm text-neutral-700 mb-4">
+								Design and implement a comprehensive Privacy Management Program tailored to your organization's needs, ensuring full compliance with RA 10173.
+							</p>
+							<ul class="space-y-2 text-xs text-neutral-600">
+								<li class="flex items-start gap-2">
+									<span class="text-primary-600">•</span>
+									<span>Gap analysis and compliance assessment</span>
+								</li>
+								<li class="flex items-start gap-2">
+									<span class="text-primary-600">•</span>
+									<span>Privacy policies and procedures development</span>
+								</li>
+								<li class="flex items-start gap-2">
+									<span class="text-primary-600">•</span>
+									<span>Data mapping and inventory</span>
+								</li>
+								<li class="flex items-start gap-2">
+									<span class="text-primary-600">•</span>
+									<span>Records of processing activities (RoPA)</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- Service 2 -->
+					<div class="card">
+						<div class="card-body">
+							<div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+								<svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+								</svg>
+							</div>
+							<h3 class="text-lg font-semibold text-primary-900 mb-3">
+								Data Privacy Act Compliance Audits
+							</h3>
+							<p class="text-sm text-neutral-700 mb-4">
+								Comprehensive audits to identify compliance gaps and provide actionable recommendations aligned with NPC requirements.
+							</p>
+							<ul class="space-y-2 text-xs text-neutral-600">
+								<li class="flex items-start gap-2">
+									<span class="text-primary-600">•</span>
+									<span>Compliance assessment against RA 10173</span>
+								</li>
+								<li class="flex items-start gap-2">
+									<span class="text-primary-600">•</span>
+									<span>Security measures evaluation</span>
+								</li>
+								<li class="flex items-start gap-2">
+									<span class="text-primary-600">•</span>
+									<span>Data subject rights implementation review</span>
+								</li>
+								<li class="flex items-start gap-2">
+									<span class="text-primary-600">•</span>
+									<span>Detailed audit report with remediation plan</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- Service 3 -->
+					<div class="card">
+						<div class="card-body">
+							<div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+								<svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+								</svg>
+							</div>
+							<h3 class="text-lg font-semibold text-primary-900 mb-3">
+								Data Breach Response & Incident Management
+							</h3>
+							<p class="text-sm text-neutral-700 mb-4">
+								Prepare for and respond to data breaches with expert guidance, including NPC notification procedures and damage control strategies.
+							</p>
+							<ul class="space-y-2 text-xs text-neutral-600">
+								<li class="flex items-start gap-2">
+									<span class="text-primary-600">•</span>
+									<span>Breach response plan development</span>
+								</li>
+								<li class="flex items-start gap-2">
+									<span class="text-primary-600">•</span>
+									<span>72-hour NPC notification compliance</span>
+								</li>
+								<li class="flex items-start gap-2">
+									<span class="text-primary-600">•</span>
+									<span>Data subject communication templates</span>
+								</li>
+								<li class="flex items-start gap-2">
+									<span class="text-primary-600">•</span>
+									<span>Post-incident review and improvement</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- Service 4 -->
+					<div class="card">
+						<div class="card-body">
+							<div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+								<svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+								</svg>
+							</div>
+							<h3 class="text-lg font-semibold text-primary-900 mb-3">
+								NPC Registration Assistance
+							</h3>
+							<p class="text-sm text-neutral-700 mb-4">
+								Navigate the National Privacy Commission registration process with expert assistance to ensure accurate and timely compliance.
+							</p>
+							<ul class="space-y-2 text-xs text-neutral-600">
+								<li class="flex items-start gap-2">
+									<span class="text-primary-600">•</span>
+									<span>Eligibility assessment for registration</span>
+								</li>
+								<li class="flex items-start gap-2">
+									<span class="text-primary-600">•</span>
+									<span>Registration form preparation and filing</span>
+								</li>
+								<li class="flex items-start gap-2">
+									<span class="text-primary-600">•</span>
+									<span>Annual renewal management</span>
+								</li>
+								<li class="flex items-start gap-2">
+									<span class="text-primary-600">•</span>
+									<span>Update notifications when required</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- Service 5 -->
+					<div class="card">
+						<div class="card-body">
+							<div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+								<svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+								</svg>
+							</div>
+							<h3 class="text-lg font-semibold text-primary-900 mb-3">
+								Employee Training & Awareness Programs
+							</h3>
+							<p class="text-sm text-neutral-700 mb-4">
+								Build a privacy-aware culture through comprehensive training programs for all levels of your organization.
+							</p>
+							<ul class="space-y-2 text-xs text-neutral-600">
+								<li class="flex items-start gap-2">
+									<span class="text-primary-600">•</span>
+									<span>General data privacy awareness training</span>
+								</li>
+								<li class="flex items-start gap-2">
+									<span class="text-primary-600">•</span>
+									<span>Role-specific privacy training (HR, IT, Marketing)</span>
+								</li>
+								<li class="flex items-start gap-2">
+									<span class="text-primary-600">•</span>
+									<span>Executive-level privacy briefings</span>
+								</li>
+								<li class="flex items-start gap-2">
+									<span class="text-primary-600">•</span>
+									<span>Annual refresher programs</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- Service 6 -->
+					<div class="card">
+						<div class="card-body">
+							<div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+								<svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+								</svg>
+							</div>
+							<h3 class="text-lg font-semibold text-primary-900 mb-3">
+								Data Protection Impact Assessments (DPIA)
+							</h3>
+							<p class="text-sm text-neutral-700 mb-4">
+								Identify and mitigate privacy risks in new projects, systems, or processing activities before implementation.
+							</p>
+							<ul class="space-y-2 text-xs text-neutral-600">
+								<li class="flex items-start gap-2">
+									<span class="text-primary-600">•</span>
+									<span>DPIA scoping and necessity assessment</span>
+								</li>
+								<li class="flex items-start gap-2">
+									<span class="text-primary-600">•</span>
+									<span>Risk identification and evaluation</span>
+								</li>
+								<li class="flex items-start gap-2">
+									<span class="text-primary-600">•</span>
+									<span>Mitigation measures recommendations</span>
+								</li>
+								<li class="flex items-start gap-2">
+									<span class="text-primary-600">•</span>
+									<span>Documentation for NPC review</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Who Needs DPO Section -->
+		<section class="section">
+			<div class="container">
+				<div class="max-w-4xl mx-auto">
+					<h2 class="text-center mb-8">Does Your Business Need a Data Protection Officer?</h2>
+
+					<div class="bg-accent-50 border-l-4 border-accent-500 p-6 rounded-lg mb-8">
+						<p class="text-neutral-800 font-semibold mb-2">Under RA 10173, you need a DPO if:</p>
+						<ul class="space-y-2 text-neutral-700">
+							<li class="flex items-start gap-3">
+								<svg class="w-5 h-5 text-accent-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+								</svg>
+								<span>Your organization processes <strong>sensitive personal information</strong> (health data, financial data, biometrics)</span>
+							</li>
+							<li class="flex items-start gap-3">
+								<svg class="w-5 h-5 text-accent-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+								</svg>
+								<span>Data processing is a <strong>core business activity</strong> (BPOs, data analytics firms)</span>
+							</li>
+							<li class="flex items-start gap-3">
+								<svg class="w-5 h-5 text-accent-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+								</svg>
+								<span>Your organization employs <strong>at least 250 people</strong></span>
+							</li>
+							<li class="flex items-start gap-3">
+								<svg class="w-5 h-5 text-accent-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+								</svg>
+								<span>You process data on a <strong>large scale or systematically monitor individuals</strong></span>
+							</li>
+						</ul>
+					</div>
+
+					<div class="grid md:grid-cols-2 gap-8">
+						<div>
+							<h3 class="text-xl font-semibold text-primary-900 mb-4">Industries We Serve</h3>
+							<ul class="space-y-3 text-sm text-neutral-700">
+								<li class="flex items-start gap-2">
+									<span class="text-primary-600 font-bold">→</span>
+									<span><strong>Healthcare & Medical:</strong> Hospitals, clinics, diagnostic centers</span>
+								</li>
+								<li class="flex items-start gap-2">
+									<span class="text-primary-600 font-bold">→</span>
+									<span><strong>Financial Services:</strong> Banks, insurance, lending companies</span>
+								</li>
+								<li class="flex items-start gap-2">
+									<span class="text-primary-600 font-bold">→</span>
+									<span><strong>BPO & Call Centers:</strong> Customer service, data processing</span>
+								</li>
+								<li class="flex items-start gap-2">
+									<span class="text-primary-600 font-bold">→</span>
+									<span><strong>Education:</strong> Schools, universities, training centers</span>
+								</li>
+								<li class="flex items-start gap-2">
+									<span class="text-primary-600 font-bold">→</span>
+									<span><strong>E-commerce & Retail:</strong> Online stores, customer databases</span>
+								</li>
+								<li class="flex items-start gap-2">
+									<span class="text-primary-600 font-bold">→</span>
+									<span><strong>HR & Recruitment:</strong> Employment agencies, staffing firms</span>
+								</li>
+								<li class="flex items-start gap-2">
+									<span class="text-primary-600 font-bold">→</span>
+									<span><strong>Government & Public Sector:</strong> LGUs, government agencies</span>
+								</li>
+							</ul>
+						</div>
+						<div>
+							<h3 class="text-xl font-semibold text-primary-900 mb-4">Benefits of DPO Consulting</h3>
+							<ul class="space-y-3 text-sm text-neutral-700">
+								<li class="flex items-start gap-2">
+									<svg class="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+									</svg>
+									<span>Avoid NPC fines and penalties (up to ₱5 million)</span>
+								</li>
+								<li class="flex items-start gap-2">
+									<svg class="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+									</svg>
+									<span>Protect your organization's reputation and brand trust</span>
+								</li>
+								<li class="flex items-start gap-2">
+									<svg class="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+									</svg>
+									<span>Build customer confidence in data handling practices</span>
+								</li>
+								<li class="flex items-start gap-2">
+									<svg class="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+									</svg>
+									<span>Reduce risk of costly data breaches</span>
+								</li>
+								<li class="flex items-start gap-2">
+									<svg class="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+									</svg>
+									<span>Meet international data transfer requirements</span>
+								</li>
+								<li class="flex items-start gap-2">
+									<svg class="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+									</svg>
+									<span>Competitive advantage in tenders and partnerships</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- FAQ Section -->
+		<section class="section bg-neutral-50">
+			<div class="container">
+				<div class="max-w-3xl mx-auto">
+					<h2 class="text-center mb-12">Frequently Asked Questions</h2>
+
+					<div class="space-y-6">
+						<details class="bg-white rounded-lg p-6 shadow-sm">
+							<summary class="font-semibold text-primary-900 cursor-pointer">
+								What is the difference between an in-house DPO and a DPO consultant?
+							</summary>
+							<p class="mt-4 text-neutral-700 text-sm">
+								An in-house DPO is a full-time employee dedicated solely to your organization. A DPO consultant provides expert services on a contractual basis, offering flexibility and cost savings while maintaining independence. For many Region 8 businesses, a consultant DPO provides the same expertise at a fraction of the cost of a full-time hire.
+							</p>
+						</details>
+
+						<details class="bg-white rounded-lg p-6 shadow-sm">
+							<summary class="font-semibold text-primary-900 cursor-pointer">
+								How much does DPO consulting cost?
+							</summary>
+							<p class="mt-4 text-neutral-700 text-sm">
+								Pricing depends on your organization's size, industry, data processing complexity, and scope of services needed. We offer flexible engagement models including monthly retainers, project-based pricing, and hourly consulting. Contact us for a customized quote tailored to your specific requirements.
+							</p>
+						</details>
+
+						<details class="bg-white rounded-lg p-6 shadow-sm">
+							<summary class="font-semibold text-primary-900 cursor-pointer">
+								What is the TÜV certification and why does it matter?
+							</summary>
+							<p class="mt-4 text-neutral-700 text-sm">
+								TÜV (Technischer Überwachungsverein) is a globally recognized certification body. TÜV Certified Data Protection Officer credential validates that I have undergone rigorous training and examination in data protection laws, GDPR, privacy management, and risk assessment. It ensures you're working with a professionally certified expert who meets international standards.
+							</p>
+						</details>
+
+						<details class="bg-white rounded-lg p-6 shadow-sm">
+							<summary class="font-semibold text-primary-900 cursor-pointer">
+								Can you serve as DPO for multiple companies?
+							</summary>
+							<p class="mt-4 text-neutral-700 text-sm">
+								Yes, as an external DPO consultant, I can serve multiple organizations simultaneously, provided there are no conflicts of interest. This is explicitly permitted under RA 10173 and is a common practice that allows small and medium businesses to access expert DPO services cost-effectively.
+							</p>
+						</details>
+
+						<details class="bg-white rounded-lg p-6 shadow-sm">
+							<summary class="font-semibold text-primary-900 cursor-pointer">
+								How long does it take to implement a Privacy Management Program?
+							</summary>
+							<p class="mt-4 text-neutral-700 text-sm">
+								Implementation timelines vary based on your current compliance level and organizational complexity. A basic PMP for a small business can be implemented in 4-6 weeks, while larger organizations with complex data processing may require 3-6 months. We provide a detailed timeline during the initial consultation.
+							</p>
+						</details>
+
+						<details class="bg-white rounded-lg p-6 shadow-sm">
+							<summary class="font-semibold text-primary-900 cursor-pointer">
+								Do you provide services outside of Region 8?
+							</summary>
+							<p class="mt-4 text-neutral-700 text-sm">
+								While I'm based in Tacloban City and specialize in Region 8 (Leyte, Samar, Biliran), I can provide DPO consulting services to organizations anywhere in the Philippines through remote consulting, virtual training, and periodic on-site visits as needed.
+							</p>
+						</details>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section class="section bg-primary-700 text-white">
+			<div class="container">
+				<div class="max-w-3xl mx-auto text-center">
+					<h2 class="mb-4">
+						Protect Your Business with Expert DPO Consulting
+					</h2>
+					<p class="text-xl mb-8 text-primary-100">
+						Get a free consultation to discuss your data privacy compliance needs
+					</p>
+					<a href="/contact" class="btn bg-white text-primary-700 hover:bg-neutral-100">
+						Request Free Consultation
+					</a>
+					<p class="mt-8 text-sm text-primary-200">
+						Serving businesses across Leyte, Samar, Biliran, and all of Region 8, Philippines
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<Footer />
+	</body>
+</html>

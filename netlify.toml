@@ -1,0 +1,106 @@
+# Netlify Configuration for DPO Website
+# This file configures build settings, redirects, and headers for optimal performance
+
+[build]
+  # Build command to generate the static site
+  command = "npm run build"
+
+  # Directory containing the built static files
+  publish = "dist"
+
+# Production context (main branch)
+[context.production]
+  command = "npm run build"
+
+[context.production.environment]
+  NODE_VERSION = "20"
+
+# Branch deploys (for testing other branches)
+[context.branch-deploy]
+  command = "npm run build"
+
+# Deploy preview context (for pull requests)
+[context.deploy-preview]
+  command = "npm run build"
+
+# Redirects and rewrites
+[[redirects]]
+  # Redirect /admin to Decap CMS
+  from = "/admin"
+  to = "/admin/index.html"
+  status = 200
+
+[[redirects]]
+  # Redirect www to non-www (if using custom domain)
+  from = "https://www.dporegion8.com/*"
+  to = "https://dporegion8.com/:splat"
+  status = 301
+  force = true
+  # Note: Update domain name when finalized
+
+[[redirects]]
+  # Catch-all redirect for 404 errors to custom 404 page (if you create one)
+  from = "/*"
+  to = "/404"
+  status = 404
+
+# Security headers for enhanced protection
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Prevent clickjacking
+    X-Frame-Options = "DENY"
+
+    # Prevent MIME type sniffing
+    X-Content-Type-Options = "nosniff"
+
+    # Enable XSS protection
+    X-XSS-Protection = "1; mode=block"
+
+    # Referrer policy
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+    # Permissions policy (restrict features)
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# Cache static assets for better performance
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Don't cache HTML files (so updates are immediate)
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Forms configuration (Netlify Forms)
+# Netlify automatically detects forms with data-netlify="true"
+# Free tier: 100 form submissions per month
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
+[build.processing.html]
+  pretty_urls = true
+
+[build.processing.images]
+  compress = true

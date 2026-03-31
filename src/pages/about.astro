@@ -1,0 +1,150 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+
+const title = "About Atty. Renerio de Dios Jr. | TÜV Certified DPO | Tacloban City";
+const description = "Meet Atty. Renerio de Dios Jr., Eastern Visayas' only TÜV Certified Data Protection Officer. Licensed attorney, notary public, and data privacy expert serving Region 8, Philippines.";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+		<!-- Person Schema -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "Renerio de Dios Jr.",
+			"honorificPrefix": "Atty.",
+			"jobTitle": "Data Protection Officer",
+			"hasOccupation": {
+				"@type": "Occupation",
+				"name": "Data Protection Officer",
+				"occupationalCategory": "Legal and Compliance"
+			},
+			"hasCredential": [
+				{
+					"@type": "EducationalOccupationalCredential",
+					"credentialCategory": "certification",
+					"name": "TÜV Certified Data Protection Officer",
+					"issuedBy": {
+						"@type": "Organization",
+						"name": "TÜV Rheinland Philippines"
+					},
+					"dateCreated": "2026-03-25",
+					"expires": "2029-03-24"
+				},
+				{
+					"@type": "EducationalOccupationalCredential",
+					"credentialCategory": "license",
+					"name": "Licensed to Practice Law in the Philippines"
+				}
+			],
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "Tacloban City",
+				"addressRegion": "Leyte",
+				"addressCountry": "Philippines"
+			},
+			"knowsAbout": ["Data Privacy Law", "Data Protection", "Privacy Management", "Philippine Law", "Notarial Services"]
+		}
+		</script>
+	</head>
+	<body>
+		<Header />
+
+		<!-- Hero Section -->
+		<section class="section bg-gradient-to-br from-primary-50 to-white">
+			<div class="container">
+				<div class="max-w-4xl mx-auto">
+					<div class="text-center mb-8">
+						<span class="badge-primary">About Me</span>
+					</div>
+					<h1 class="text-center mb-6">
+						Atty. Renerio de Dios Jr.
+					</h1>
+					<p class="text-xl text-neutral-700 text-center mb-8 max-w-3xl mx-auto">
+						TÜV Certified Data Protection Officer | Licensed Attorney | Notary Public<br/>
+						<span class="text-lg text-neutral-600">Tacloban City, Leyte - Serving All of Region 8, Philippines</span>
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Professional Summary Section -->
+		<section class="section">
+			<div class="container">
+				<div class="max-w-4xl mx-auto">
+					<div class="grid md:grid-cols-3 gap-8 mb-12">
+						<!-- Profile Placeholder -->
+						<div class="md:col-span-1">
+							<div class="bg-neutral-200 aspect-square rounded-lg flex items-center justify-center">
+								<svg class="w-24 h-24 text-neutral-400" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+								</svg>
+							</div>
+						</div>
+
+						<!-- Summary -->
+						<div class="md:col-span-2">
+							<h2 class="text-2xl font-semibold text-primary-900 mb-4">Professional Summary</h2>
+							<p class="text-neutral-700 mb-4">
+								I am a licensed attorney and <strong>TÜV Certified Data Protection Officer</strong>, providing expert data privacy compliance consulting to businesses across Region 8 (Eastern Visayas), Philippines.
+							</p>
+							<p class="text-neutral-700 mb-4">
+								With specialized training in the <strong>Data Privacy Act of 2012 (RA 10173)</strong>, GDPR, and international data protection standards, I help organizations navigate the complex landscape of data privacy compliance while protecting their customers' personal information.
+							</p>
+							<p class="text-neutral-700">
+								As the only TÜV Certified DPO in Eastern Visayas, I combine international certification standards with deep knowledge of Philippine law and the unique business environment of Region 8.
+							</p>
+						</div>
+					</div>
+
+					<!-- Quick Stats -->
+					<div class="grid md:grid-cols-4 gap-6 mb-12">
+						<div class="bg-primary-50 p-6 rounded-lg text-center">
+							<div class="text-3xl font-bold text-primary-600 mb-2">2026</div>
+							<div class="text-sm text-neutral-700">TÜV Certification Year</div>
+						</div>
+						<div class="bg-primary-50 p-6 rounded-lg text-center">
+							<div class="text-3xl font-bold text-primary-600 mb-2">2029</div>
+							<div class="text-sm text-neutral-700">Certification Valid Until</div>
+						</div>
+						<div class="bg-primary-50 p-6 rounded-lg text-center">
+							<div class="text-3xl font-bold text-primary-600 mb-2">8</div>
+							<div class="text-sm text-neutral-700">Region Coverage</div>
+						</div>
+						<div class="bg-primary-50 p-6 rounded-lg text-center">
+							<div class="text-3xl font-bold text-primary-600 mb-2">40</div>
+							<div class="text-sm text-neutral-700">Hours DPO Training</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section class="section">
+			<div class="container">
+				<div class="max-w-3xl mx-auto text-center">
+					<h2 class="mb-6">Let's Work Together</h2>
+					<p class="text-xl text-neutral-700 mb-8">
+						Ready to ensure your organization's data privacy compliance? Get in touch for a free consultation.
+					</p>
+					<div class="flex flex-col sm:flex-row gap-4 justify-center">
+						<a href="/contact" class="btn-primary">
+							Request Consultation
+						</a>
+						<a href="/services/dpo-consulting" class="btn-secondary">
+							View DPO Services
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<Footer />
+	</body>
+</html>
