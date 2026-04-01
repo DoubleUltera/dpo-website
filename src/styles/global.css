@@ -374,3 +374,366 @@ img {
     min-width: 44px;
   }
 }
+
+/* ========================================
+   Blog Post Content Formatting Styles
+   ======================================== */
+
+/* Callout Boxes */
+.callout-box {
+  background-color: #eff6ff; /* blue-50 */
+  border-left: 4px solid #1e3a8a; /* primary blue */
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+}
+
+.callout-box.highlight {
+  background-color: #fef3c7; /* amber-100 */
+  border-left-color: #f59e0b; /* gold accent */
+}
+
+.callout-box.warning {
+  background-color: #fef2f2; /* red-50 */
+  border-left-color: #dc2626; /* red */
+}
+
+/* Warning Boxes */
+.warning-box {
+  background-color: #fef2f2;
+  border: 2px solid #dc2626;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+}
+
+.warning-box h3 {
+  color: #dc2626;
+  margin-top: 0;
+}
+
+/* Example Boxes */
+.example-box {
+  background-color: #f9fafb; /* neutral-50 */
+  border: 1px solid #e5e7eb; /* neutral-200 */
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+}
+
+/* Summary/Definition Boxes */
+.summary-box,
+.definition-box {
+  background-color: #f0f9ff; /* sky-50 */
+  border: 2px solid #3b82f6; /* blue-500 */
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+}
+
+/* Critical Information Box */
+.critical-box {
+  background-color: #fef3c7; /* amber-100 */
+  border: 3px solid #f59e0b; /* gold */
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
+
+/* Action Boxes */
+.action-box {
+  background-color: #dcfce7; /* green-100 */
+  border-left: 4px solid #16a34a; /* green-600 */
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+}
+
+/* Template Boxes */
+.template-box,
+.template-document {
+  background-color: #f9fafb;
+  border: 1px dashed #9ca3af; /* neutral-400 */
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+  font-family: monospace;
+}
+
+/* Checklist Boxes */
+.checklist-box,
+.documentation-checklist,
+.security-checklist,
+.registration-checklist,
+.preparedness-checklist {
+  background-color: #f9fafb;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+  border-left: 4px solid #16a34a; /* green */
+}
+
+.checklist-box ul,
+.documentation-checklist ul,
+.security-checklist ul,
+.registration-checklist ul,
+.preparedness-checklist ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.checklist-box li,
+.documentation-checklist li,
+.security-checklist li,
+.registration-checklist li,
+.preparedness-checklist li {
+  padding: 0.5rem 0;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.checklist-box li:before,
+.documentation-checklist li:before,
+.security-checklist li:before,
+.registration-checklist li:before,
+.preparedness-checklist li:before {
+  content: "□";
+  position: absolute;
+  left: 0;
+  color: #16a34a;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* Comparison Tables */
+.comparison-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.comparison-table th {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.comparison-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.comparison-table tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+/* Data Retention Tables */
+.retention-table table,
+.retention-schedule table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.9rem;
+}
+
+.retention-table th,
+.retention-schedule th {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.retention-table td,
+.retention-schedule td {
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+}
+
+/* Grid Layouts */
+.principles-grid,
+.mistakes-grid,
+.security-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+@media (min-width: 768px) {
+  .principles-grid,
+  .security-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.principles-grid > div,
+.mistakes-grid > div,
+.security-grid > div {
+  background-color: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border-left: 4px solid #1e3a8a;
+}
+
+/* Industry Cards */
+.industry-card {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  border-left: 4px solid #f59e0b; /* gold */
+}
+
+/* Scenario Boxes */
+.scenario-box {
+  background-color: #fef3c7; /* amber-100 */
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0.5rem;
+  border-left: 4px solid #d97706; /* amber-600 */
+}
+
+/* Contact Info Box */
+.contact-info-box {
+  background-color: #eff6ff; /* blue-50 */
+  border: 2px solid #3b82f6; /* blue-500 */
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+}
+
+.contact-info-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contact-info-box li {
+  padding: 0.5rem 0;
+}
+
+/* Registration Categories */
+.registration-categories {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+@media (min-width: 768px) {
+  .registration-categories {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Timeline Boxes */
+.timeline-box {
+  background-color: #fef3c7;
+  border-left: 4px solid #f59e0b;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+}
+
+/* Risk Assessment Table */
+.risk-assessment-table table,
+.team-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+.risk-assessment-table th,
+.team-table th {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 1rem;
+  text-align: left;
+}
+
+.risk-assessment-table td,
+.team-table td {
+  padding: 1rem;
+  border: 1px solid #e5e7eb;
+}
+
+.risk-assessment-table tr:nth-child(even),
+.team-table tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+/* Reporting Box */
+.reporting-box {
+  background-color: #fef2f2; /* red-50 */
+  border: 2px solid #dc2626;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+}
+
+/* Notification Template */
+.notification-template {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+/* Pricing Box */
+.pricing-box {
+  background-color: #dcfce7; /* green-100 */
+  border: 2px solid #16a34a;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+/* Step-by-Step Box */
+.step-by-step {
+  background-color: #f9fafb;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+  border-left: 4px solid #3b82f6;
+}
+
+.step-by-step ol {
+  padding-left: 1.5rem;
+}
+
+.step-by-step li {
+  padding: 0.5rem 0;
+}
+
+/* Quick Reference Card */
+.quick-ref-card table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.9rem;
+}
+
+.quick-ref-card th {
+  background-color: #f59e0b; /* gold */
+  color: white;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.quick-ref-card td {
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+}
+
+.quick-ref-card tr:nth-child(even) {
+  background-color: #fef3c7; /* amber-100 */
+}
