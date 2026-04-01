@@ -4,12 +4,7 @@ const today = new Date();
 ---
 
 <footer>
-	<div class="site-name">{SITE_TITLE}</div>
-	<div class="address">
-		Unit 2, Pacer Apartments, Gurami Street, V&G Subdivision<br/>
-		Barangay 109-A, Tacloban City, Leyte 6500
-	</div>
-	<div class="copyright">&copy; {today.getFullYear()} Atty. Renerio de Dios Jr. All Rights Reserved.</div>
+	&copy; {today.getFullYear()} {SITE_TITLE} All Rights Reserved.
 </footer>
 <style>
 	footer {
@@ -17,18 +12,5 @@ const today = new Date();
 		background: linear-gradient(var(--gray-gradient)) no-repeat;
 		color: rgb(var(--gray));
 		text-align: center;
-	}
-	.site-name {
-		font-weight: 600;
-		margin-bottom: 0.75em;
-		font-size: 1.1em;
-	}
-	.address {
-		font-size: 0.9em;
-		margin-bottom: 0.75em;
-		line-height: 1.6;
-	}
-	.copyright {
-		margin-top: 0.5em;
 	}
 </style>
