@@ -9,8 +9,8 @@ media_folder: "src/assets/blog"
 public_folder: "/src/assets/blog"
 
 # Site URL (update this when deploying)
-site_url: https://dporegion8.com
-display_url: https://dporegion8.com
+site_url: https://superb-dieffenbachia-f461b8.netlify.app
+display_url: https://superb-dieffenbachia-f461b8.netlify.app
 
 # Logo (can be customized later)
 # logo_url: /images/logo.svg
