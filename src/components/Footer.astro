@@ -1,9 +1,11 @@
 ---
+import { SITE_TITLE } from '../consts';
 const today = new Date();
 ---
 
 <footer>
-	&copy; {today.getFullYear()} Atty. Renerio de Dios Jr. All Rights Reserved.
+	<div class="site-name">{SITE_TITLE}</div>
+	<div>&copy; {today.getFullYear()} Atty. Renerio de Dios Jr. All Rights Reserved.</div>
 </footer>
 <style>
 	footer {
@@ -11,5 +13,10 @@ const today = new Date();
 		background: linear-gradient(var(--gray-gradient)) no-repeat;
 		color: rgb(var(--gray));
 		text-align: center;
+	}
+	.site-name {
+		font-weight: 600;
+		margin-bottom: 0.5em;
+		font-size: 1.1em;
 	}
 </style>
