@@ -525,4 +525,4 @@ Don't wait for a breach to force compliance. Be prepared, respond quickly, and p
 
 ---
 
-*Need help creating a data breach response plan or responding to an active breach? Contact me immediately. As Region 8's only TÜV Certified DPO, I provide emergency breach response services and ongoing compliance support.*
+*Need help creating a data breach response plan or responding to an active breach? Contact me immediately. As a TÜV Certified DPO serving Region 8, I provide emergency breach response services and ongoing compliance support.*

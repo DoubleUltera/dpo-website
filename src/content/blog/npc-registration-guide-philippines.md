@@ -426,4 +426,4 @@ NPC registration is not optional if your business processes sensitive personal i
 
 ---
 
-*Need help with NPC registration or unsure if your business requires it? Contact me for a free assessment. As Region 8's only TÜV Certified DPO, I guide businesses through every step of the compliance process.*
+*Need help with NPC registration or unsure if your business requires it? Contact me for a free assessment. As a TÜV Certified DPO serving Region 8, I guide businesses through every step of the compliance process.*

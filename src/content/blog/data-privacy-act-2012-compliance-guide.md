@@ -344,7 +344,7 @@ Based on my experience consulting with businesses across Eastern Visayas, here a
 
 Data privacy compliance can feel overwhelming, especially for small businesses. The good news is that you don't have to figure it out alone.
 
-As the **only TÜV Certified Data Protection Officer in Region 8**, I help businesses across Leyte, Samar, and Biliran achieve full compliance with RA 10173 through:
+As a **TÜV Certified Data Protection Officer serving Region 8**, I help businesses across Leyte, Samar, and Biliran achieve full compliance with RA 10173 through:
 
 - **Compliance audits** to identify gaps
 - **Privacy Management Program implementation**

@@ -383,7 +383,7 @@ Operating without a required DPO is a direct violation and creates significant c
 
 Most small and medium enterprises benefit more from an external DPO consultant who provides expert guidance at a fraction of the cost of a full-time employee.
 
-**As the only TÜV Certified DPO in Eastern Visayas, I provide DPO consulting services tailored to Region 8 businesses.**
+**As a TÜV Certified DPO serving Eastern Visayas, I provide DPO consulting services tailored to Region 8 businesses.**
 
 </div>
 

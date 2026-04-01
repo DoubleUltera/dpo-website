@@ -190,7 +190,7 @@ Even if you're not legally required, appointing a DPO is a smart business decisi
 
 If you're unsure whether your business needs a DPO or want to ensure compliance with RA 10173, I offer **free consultations** to assess your requirements and provide a customized compliance plan.
 
-As the only **TÜV Certified Data Protection Officer** in Region 8 (Eastern Visayas), I provide expert DPO consulting services to businesses across Leyte, Samar, and Biliran.
+As a **TÜV Certified Data Protection Officer** serving Region 8 (Eastern Visayas), I provide expert DPO consulting services to businesses across Leyte, Samar, and Biliran.
 
 **[Request a Free Consultation →](/contact)**
 
