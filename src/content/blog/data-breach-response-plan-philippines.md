@@ -4,15 +4,7 @@ description: 'A practical guide to creating and executing a data breach response
 pubDate: 2026-03-30
 category: 'Data Privacy Law'
 tags: ['Data Breach', 'NPC', 'RA 10173', 'Incident Response', 'Security', 'Philippines']
-# heroImage (uncomment when you add images): 'data-breach-response-philippines'
 ---
-
-> **Hero Image Recommendation for Unsplash:**
-> - **Search terms:** "cybersecurity alert emergency", "data security breach warning", "urgent business crisis response"
-> - **Alternative:** "emergency response team meeting", "cyber crisis management", "security incident alert"
-> - **Color overlay:** Red to deep blue gradient (#dc2626 to #1e3a8a) at 50% opacity
-> - **Title card text:** White text with urgent but professional styling, gold accent for "72-Hour Rule"
-> - **Design concept:** Conveys urgency and professionalism - could show emergency alert on computer screen, crisis management team in action, or abstract representation of rapid response
 
 Imagine this: It's Monday morning, and your IT team discovers that your customer database was accessed by an unauthorized party over the weekend. Customer names, email addresses, and possibly payment information have been compromised. **What do you do next?**
 

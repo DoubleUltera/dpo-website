@@ -379,6 +379,21 @@ img {
    Blog Post Content Formatting Styles
    ======================================== */
 
+/* Enhanced Prose Styles for Blog Content */
+.prose > * {
+  margin-bottom: 1.25rem;
+}
+
+.prose > h2 {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.prose > h3 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
 /* Callout Boxes */
 .callout-box {
   background-color: #eff6ff; /* blue-50 */

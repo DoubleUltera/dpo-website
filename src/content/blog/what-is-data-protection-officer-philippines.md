@@ -4,15 +4,7 @@ description: 'Learn about the role of a Data Protection Officer under the Philip
 pubDate: 2026-03-28
 category: 'Data Privacy Law'
 tags: ['DPO', 'RA 10173', 'Data Privacy Act', 'Compliance', 'Philippines']
-# heroImage (uncomment when you add images): 'data-protection-officer-philippines'
 ---
-
-> **Hero Image Recommendation for Unsplash:**
-> - **Search terms:** "business professional Philippines meeting", "corporate compliance officer", "professional Filipino business person"
-> - **Alternative:** "business handshake professional", "corporate governance meeting", "legal compliance consultant"
-> - **Color overlay:** Deep blue (#1e3a8a) at 60% opacity
-> - **Title card text:** White text with article title centered
-> - **Design concept:** Professional Filipino business professional in modern office setting, conveying trust and expertise
 
 If you're running a business in the Philippines that collects customer information, employee data, or any form of personal information, you've likely heard about the **Data Privacy Act of 2012 (RA 10173)** and the requirement to appoint a **Data Protection Officer (DPO)**. But what exactly does a DPO do, and does your business actually need one?
 

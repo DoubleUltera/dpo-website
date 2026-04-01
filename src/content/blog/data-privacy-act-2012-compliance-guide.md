@@ -4,15 +4,7 @@ description: 'A comprehensive guide to understanding and complying with RA 10173
 pubDate: 2026-03-27
 category: 'Compliance Tips'
 tags: ['RA 10173', 'Data Privacy Act', 'Compliance', 'Region 8', 'NPC']
-# heroImage (uncomment when you add images): 'data-privacy-compliance-philippines'
 ---
-
-> **Hero Image Recommendation for Unsplash:**
-> - **Search terms:** "legal compliance documents Philippines", "data security concept", "privacy protection shield"
-> - **Alternative:** "business compliance checklist", "digital security lock", "document protection security"
-> - **Color overlay:** Deep blue (#1e3a8a) gradient from left to right at 50% opacity
-> - **Title card text:** White text with gold (#f59e0b) accent line underneath
-> - **Design concept:** Clean, modern image suggesting security and compliance - could be a professional reviewing documents, or abstract security/lock imagery
 
 The **Philippine Data Privacy Act of 2012 (Republic Act No. 10173)**, also known as **RA 10173**, is the primary law governing the collection, use, and protection of personal information in the Philippines. If your business in Region 8 collects any form of customer data, employee information, or third-party personal data, this law applies to you.
 
