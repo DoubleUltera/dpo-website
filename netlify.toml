@@ -13,7 +13,7 @@
   command = "npm run build"
 
 [context.production.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "22"
 
 # Branch deploys (for testing other branches)
 [context.branch-deploy]
