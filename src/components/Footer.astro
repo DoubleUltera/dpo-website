@@ -5,7 +5,11 @@ const today = new Date();
 
 <footer>
 	<div class="site-name">{SITE_TITLE}</div>
-	<div>&copy; {today.getFullYear()} Atty. Renerio de Dios Jr. All Rights Reserved.</div>
+	<div class="address">
+		Unit 2, Pacer Apartments, Gurami Street, V&G Subdivision<br/>
+		Barangay 109-A, Tacloban City, Leyte 6500
+	</div>
+	<div class="copyright">&copy; {today.getFullYear()} Atty. Renerio de Dios Jr. All Rights Reserved.</div>
 </footer>
 <style>
 	footer {
@@ -16,7 +20,15 @@ const today = new Date();
 	}
 	.site-name {
 		font-weight: 600;
-		margin-bottom: 0.5em;
+		margin-bottom: 0.75em;
 		font-size: 1.1em;
+	}
+	.address {
+		font-size: 0.9em;
+		margin-bottom: 0.75em;
+		line-height: 1.6;
+	}
+	.copyright {
+		margin-top: 0.5em;
 	}
 </style>
