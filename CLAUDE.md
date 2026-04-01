@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This is a professional consulting website for **Atty. Renerio de Dios Jr.**, the only **TÜV Certified Data Protection Officer** in Region 8 (Eastern Visayas), Philippines. The website is designed to establish market dominance for DPO consulting services while offering complementary notarial services.
+This is a professional consulting website for **Atty. Renerio de Dios Jr.**, a **TÜV Certified Data Protection Officer** for Region 8 (Eastern Visayas), Philippines. The website is designed to establish market dominance for DPO consulting services while offering complementary notarial services.
 
 ### Business Context
 

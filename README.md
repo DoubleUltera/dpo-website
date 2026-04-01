@@ -1,6 +1,6 @@
 # DPO Consulting Website - Region 8, Philippines
 
-Professional website for Atty. Renerio de Dios Jr., TÜV Certified Data Protection Officer serving Eastern Visayas (Region 8), Philippines.
+Professional website for Atty. Renerio de Dios Jr., TÜV Certified Data Protection Officer for Region 8, Philippines.
 
 ## 🎯 Project Overview
 
