@@ -6,7 +6,11 @@ import HeaderLink from './HeaderLink.astro';
 <header>
 	<nav>
 		<a href="/" class="logo-link">
-			<img src="/logo-header.png" alt={SITE_TITLE} class="logo" />
+			<picture>
+				<source media="(max-width: 480px)" srcset="/logo-icon.png" />
+				<source media="(max-width: 768px)" srcset="/logo-medium.png" />
+				<img src="/logo-header.png" alt={SITE_TITLE} class="logo" />
+			</picture>
 		</a>
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
@@ -41,12 +45,17 @@ import HeaderLink from './HeaderLink.astro';
 		text-decoration: none;
 	}
 	.logo {
-		height: 70px;
+		height: 60px;
 		width: auto;
+	}
+	@media (max-width: 768px) {
+		.logo {
+			height: 55px;
+		}
 	}
 	@media (max-width: 480px) {
 		.logo {
-			height: 50px;
+			height: 45px;
 		}
 	}
 	nav {
