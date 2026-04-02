@@ -11,11 +11,6 @@ const description = "Contact our TÜV Certified Data Protection Officer for Regi
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
-		<!-- EmailJS Library -->
-		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-		<script type="text/javascript">
-			emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
-		</script>
 	</head>
 	<body>
 		<Header />
@@ -41,7 +36,8 @@ const description = "Contact our TÜV Certified Data Protection Officer for Regi
 						<div>
 							<h2 class="text-2xl font-semibold text-primary-900 mb-6">Request a Consultation</h2>
 
-							<form id="contact-form" class="space-y-6">
+							<form id="contact-form" name="contact" method="POST" data-netlify="true" class="space-y-6">
+								<input type="hidden" name="form-name" value="contact" />
 								<!-- Name -->
 								<div>
 									<label for="name">Full Name *</label>
@@ -286,7 +282,7 @@ const description = "Contact our TÜV Certified Data Protection Officer for Regi
 
 		<Footer />
 
-		<!-- EmailJS Form Handler -->
+		<!-- Netlify Form Handler -->
 		<script>
 			const contactForm = document.getElementById('contact-form');
 			const submitButton = contactForm.querySelector('button[type="submit"]');
@@ -295,7 +291,7 @@ const description = "Contact our TÜV Certified Data Protection Officer for Regi
 			const successMessage = document.getElementById('success-message');
 			const errorMessage = document.getElementById('error-message');
 
-			contactForm.addEventListener('submit', function(event) {
+			contactForm.addEventListener('submit', async function(event) {
 				event.preventDefault();
 
 				// Hide previous messages
@@ -307,49 +303,37 @@ const description = "Contact our TÜV Certified Data Protection Officer for Regi
 				submitText.classList.add('hidden');
 				submitLoading.classList.remove('hidden');
 
-				// Get form data
-				const formData = {
-					name: document.getElementById('name').value,
-					company: document.getElementById('company').value,
-					email: document.getElementById('email').value,
-					phone: document.getElementById('phone').value,
-					service: document.getElementById('service').value,
-					location: document.getElementById('location').value,
-					message: document.getElementById('message').value
-				};
+				try {
+					const formData = new FormData(contactForm);
 
-				// Send email using EmailJS
-				emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
-					.then(function(response) {
-						console.log('SUCCESS!', response.status, response.text);
+					const response = await fetch('/', {
+						method: 'POST',
+						headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+						body: new URLSearchParams(formData).toString()
+					});
 
+					if (response.ok) {
 						// Show success message
 						successMessage.classList.remove('hidden');
-
 						// Reset form
 						contactForm.reset();
-
-						// Reset button state
-						submitButton.disabled = false;
-						submitText.classList.remove('hidden');
-						submitLoading.classList.add('hidden');
-
 						// Scroll to success message
 						successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-					}, function(error) {
-						console.log('FAILED...', error);
-
-						// Show error message
-						errorMessage.classList.remove('hidden');
-
-						// Reset button state
-						submitButton.disabled = false;
-						submitText.classList.remove('hidden');
-						submitLoading.classList.add('hidden');
-
-						// Scroll to error message
-						errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-					});
+					} else {
+						throw new Error('Form submission failed');
+					}
+				} catch (error) {
+					console.error('Error:', error);
+					// Show error message
+					errorMessage.classList.remove('hidden');
+					// Scroll to error message
+					errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+				} finally {
+					// Reset button state
+					submitButton.disabled = false;
+					submitText.classList.remove('hidden');
+					submitLoading.classList.add('hidden');
+				}
 			});
 		</script>
 	</body>
