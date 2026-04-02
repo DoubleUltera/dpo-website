@@ -309,13 +309,14 @@ const description = "Contact our TÜV Certified Data Protection Officer for Regi
 				try {
 					const formData = new FormData(contactForm);
 
-					const response = await fetch('/contact/', {
+					const response = await fetch('/', {
 						method: 'POST',
 						headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 						body: new URLSearchParams(formData).toString()
 					});
 
-					if (response.ok) {
+					// Netlify returns 200 on success, but also accept redirects
+					if (response.ok || response.status === 303 || response.status === 302) {
 						// Show success message
 						successMessage.classList.remove('hidden');
 						// Reset form
@@ -323,10 +324,11 @@ const description = "Contact our TÜV Certified Data Protection Officer for Regi
 						// Scroll to success message
 						successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
 					} else {
+						console.error('Form error:', response.status, response.statusText);
 						throw new Error('Form submission failed');
 					}
 				} catch (error) {
-					console.error('Error:', error);
+					console.error('Form submission error:', error);
 					// Show error message
 					errorMessage.classList.remove('hidden');
 					// Scroll to error message
