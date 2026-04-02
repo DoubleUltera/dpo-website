@@ -6,9 +6,6 @@ import HeaderLink from './HeaderLink.astro';
 <header>
 	<nav>
 		<a href="/" class="logo-link">
-			<svg class="logo-icon" fill="currentColor" viewBox="0 0 24 24">
-				<path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V7.3l7-3.11v8.8z"></path>
-			</svg>
 			<span class="logo-text">De Dios Law <span class="logo-tagline">| DPO & Data Privacy Services</span></span>
 		</a>
 		<div class="internal-links">
@@ -42,18 +39,6 @@ import HeaderLink from './HeaderLink.astro';
 		gap: 0.5rem;
 		padding: 0.5em 0;
 		text-decoration: none;
-	}
-	.logo-icon {
-		width: 48px;
-		height: 48px;
-		color: var(--color-primary-700);
-		filter: drop-shadow(0 1px 2px rgba(30, 58, 138, 0.15));
-		transition: all 0.3s ease;
-	}
-	.logo-link:hover .logo-icon {
-		color: var(--color-accent-500);
-		filter: drop-shadow(0 2px 4px rgba(245, 158, 11, 0.3));
-		transform: scale(1.05);
 	}
 	.logo-text {
 		font-family: 'Poppins', sans-serif;
