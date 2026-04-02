@@ -6,7 +6,7 @@ import HeaderLink from './HeaderLink.astro';
 <header>
 	<nav>
 		<a href="/" class="logo-link">
-			<span class="logo-text">De Dios Law <span class="logo-tagline">| DPO & Data Privacy Services</span></span>
+			<img src="/logo-header.png" alt={SITE_TITLE} class="logo" />
 		</a>
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
@@ -40,22 +40,13 @@ import HeaderLink from './HeaderLink.astro';
 		padding: 0.5em 0;
 		text-decoration: none;
 	}
-	.logo-text {
-		font-family: 'Poppins', sans-serif;
-		font-weight: 600;
-		font-size: 1.35rem;
-		color: var(--color-primary-900);
+	.logo {
+		height: 70px;
+		width: auto;
 	}
-	.logo-tagline {
-		font-weight: 400;
-		color: var(--color-neutral-500);
-	}
-	@media (max-width: 640px) {
-		.logo-tagline {
-			display: none;
-		}
-		.logo-text {
-			font-size: 1rem;
+	@media (max-width: 480px) {
+		.logo {
+			height: 50px;
 		}
 	}
 	nav {
