@@ -47,6 +47,13 @@ import HeaderLink from './HeaderLink.astro';
 		width: 48px;
 		height: 48px;
 		color: var(--color-primary-700);
+		filter: drop-shadow(0 1px 2px rgba(30, 58, 138, 0.15));
+		transition: all 0.3s ease;
+	}
+	.logo-link:hover .logo-icon {
+		color: var(--color-accent-500);
+		filter: drop-shadow(0 2px 4px rgba(245, 158, 11, 0.3));
+		transform: scale(1.05);
 	}
 	.logo-text {
 		font-family: 'Poppins', sans-serif;
@@ -56,7 +63,7 @@ import HeaderLink from './HeaderLink.astro';
 	}
 	.logo-tagline {
 		font-weight: 400;
-		color: var(--color-neutral-600);
+		color: var(--color-neutral-500);
 	}
 	@media (max-width: 640px) {
 		.logo-tagline {
