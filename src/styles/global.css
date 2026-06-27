@@ -91,7 +91,7 @@ body {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poppins', 'Inter', system-ui, sans-serif;
+  font-family: 'Spectral', Georgia, 'Times New Roman', serif;
   font-weight: 600;
   color: var(--color-primary-900);
   line-height: 1.2;

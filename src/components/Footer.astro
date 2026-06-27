@@ -1,16 +1,82 @@
 ---
-import { SITE_TITLE } from '../consts';
+import { FACEBOOK_URL } from '../consts';
 const today = new Date();
 ---
 
 <footer>
-	&copy; {today.getFullYear()} {SITE_TITLE}. All Rights Reserved.
+	<div class="footer-inner">
+		<div class="footer-brand">
+			<span class="footer-logo">De Dios Law</span>
+			<p class="footer-tag">DPO &amp; Data Privacy Services</p>
+			<p class="footer-cred">TÜV Certified Data Protection Officer<br/>Cert #7000532 · valid to 2029</p>
+		</div>
+		<div class="footer-col">
+			<h4>Explore</h4>
+			<a href="/">Home</a>
+			<a href="/services/dpo-consulting">DPO Consulting</a>
+			<a href="/services/notarial">Notarial Services</a>
+			<a href="/blog">Blog</a>
+			<a href="/about">About</a>
+			<a href="/contact">Contact</a>
+		</div>
+		<div class="footer-col">
+			<h4>Get in touch</h4>
+			<a href="tel:+639196180265">+63 919 618 0265</a>
+			<a href="mailto:dpo@dedioslaw.ph">dpo@dedioslaw.ph</a>
+			<p class="footer-addr">Unit 2, Pacer Apartments, Gurami St.,<br/>V&amp;G Subdivision, Brgy 109-A,<br/>Tacloban City, Leyte 6500</p>
+			<a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Follow De Dios Law on Facebook">
+				<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+				<span>Follow on Facebook</span>
+			</a>
+		</div>
+	</div>
+	<div class="footer-bar">
+		<span>&copy; {today.getFullYear()} De Dios Law — DPO &amp; Data Privacy Services. All rights reserved.</span>
+		<span>Serving Leyte · Samar · Biliran — Region 8, Eastern Visayas</span>
+	</div>
 </footer>
 <style>
 	footer {
-		padding: 2em 1em 6em 1em;
-		background: linear-gradient(var(--gray-gradient)) no-repeat;
-		color: rgb(var(--gray));
-		text-align: center;
+		background: #0f172a;
+		color: #cbd5e1;
+		padding: 0;
+		margin: 0;
+	}
+	.footer-inner {
+		max-width: 1100px;
+		margin: 0 auto;
+		padding: 3rem 1.5rem 2rem;
+		display: grid;
+		grid-template-columns: 1.4fr 1fr 1.3fr;
+		gap: 2.5rem;
+	}
+	.footer-logo {
+		font-family: 'Spectral', Georgia, serif;
+		font-weight: 700; font-size: 1.5rem; color: #fff;
+	}
+	.footer-tag { color: #f59e0b; font-size: 0.85rem; letter-spacing: 0.04em; margin: 0.25rem 0 0.75rem; }
+	.footer-cred { font-size: 0.8rem; line-height: 1.5; color: #94a3b8; }
+	.footer-col h4 {
+		color: #fff; font-family: 'Inter', sans-serif; font-size: 0.95rem;
+		font-weight: 600; margin-bottom: 0.9rem;
+	}
+	.footer-col a {
+		display: block; color: #cbd5e1; text-decoration: none;
+		font-size: 0.9rem; padding: 0.3rem 0;
+	}
+	.footer-col a:hover { color: #f59e0b; }
+	.footer-addr { font-size: 0.82rem; line-height: 1.55; color: #94a3b8; margin-top: 0.6rem; }
+		.footer-social { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 0.9rem; color: #cbd5e1; text-decoration: none; font-size: 0.88rem; }
+		.footer-social:hover { color: #f59e0b; }
+		.footer-social svg { width: 18px; height: 18px; flex-shrink: 0; }
+	.footer-bar {
+		border-top: 1px solid #1e293b;
+		max-width: 1100px; margin: 0 auto; padding: 1.25rem 1.5rem;
+		display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+		font-size: 0.78rem; color: #64748b;
+	}
+	@media (max-width: 760px) {
+		.footer-inner { grid-template-columns: 1fr; gap: 1.75rem; }
+		.footer-bar { flex-direction: column; gap: 0.4rem; }
 	}
 </style>
