@@ -1,0 +1,93 @@
+---
+// Shared layout for the QR-targeted, FAQ-led landing pages (/start, /for/*).
+// Each consuming page passes its own copy + Q&A; this renders a mirror-the-print
+// intro, a <details> FAQ accordion, FAQPage JSON-LD, and one CTA (contact + call).
+import BaseHead from './BaseHead.astro';
+import Footer from './Footer.astro';
+import Header from './Header.astro';
+
+interface Faq { q: string; a: string; }
+interface Props {
+	title: string;
+	description: string;
+	badge: string;
+	heading: string;
+	intro: string[];          // short paragraphs that mirror the printed piece
+	faqs: Faq[];
+	ctaHeading: string;
+}
+const { title, description, badge, heading, intro, faqs, ctaHeading } = Astro.props;
+
+const faqSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'FAQPage',
+	mainEntity: faqs.map((f) => ({
+		'@type': 'Question',
+		name: f.q,
+		acceptedAnswer: { '@type': 'Answer', text: f.a },
+	})),
+};
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+		<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+	</head>
+	<body>
+		<Header />
+
+		<section class="section bg-gradient-to-br from-primary-50 to-white">
+			<div class="container">
+				<div class="max-w-3xl mx-auto">
+					<div class="text-center mb-6"><span class="badge-primary">{badge}</span></div>
+					<h1 class="text-center mb-6">{heading}</h1>
+					{intro.map((p) => (
+						<p class="text-lg text-neutral-700 text-center mb-4 max-w-2xl mx-auto" set:html={p} />
+					))}
+					<div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+						<a href="/contact" class="btn-primary">Get a free assessment</a>
+						<a href="tel:+639196180265" class="btn-secondary">Call +63 919 618 0265</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<div class="max-w-3xl mx-auto">
+					<h2 class="text-center mb-12">Questions, answered</h2>
+					<div class="space-y-6">
+						{faqs.map((f) => (
+							<details class="bg-white rounded-lg p-6 shadow-sm border border-neutral-100">
+								<summary class="font-semibold text-primary-900 cursor-pointer" set:html={f.q} />
+								<p class="mt-4 text-neutral-700 text-sm" set:html={f.a} />
+							</details>
+						))}
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section bg-primary-700 text-white">
+			<div class="container">
+				<div class="max-w-3xl mx-auto text-center">
+					<h2 class="mb-4" style="color: white;">{ctaHeading}</h2>
+					<p class="text-xl mb-8 text-primary-100">
+						Talk to a TÜV Certified Data Protection Officer — no obligation, no jargon.
+					</p>
+					<div class="flex flex-col sm:flex-row gap-4 justify-center">
+						<a href="/contact" class="btn bg-white text-primary-700 hover:bg-neutral-100">Request free consultation</a>
+						<a href="tel:+639196180265" class="btn border border-white text-white hover:bg-primary-600">Call +63 919 618 0265</a>
+					</div>
+					<p class="mt-8 text-sm text-primary-200">
+						Atty. Renerio de Dios Jr. · TÜV Cert #7000532 · Dulag, Leyte · serving all of Region 8
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<Footer />
+	</body>
+</html>

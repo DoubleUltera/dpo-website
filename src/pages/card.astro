@@ -1,0 +1,71 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+
+const links = [
+	{ href: '/start', label: 'Do I need a DPO?', sub: 'Plain-language starting point' },
+	{ href: '/for/banks', label: 'For banks', sub: 'NPC × BSP, financial-data breaches' },
+	{ href: '/for/lending', label: 'For lending & financing', sub: 'SEC + NPC, borrower data, apps' },
+	{ href: '/for/hotels', label: 'For hotels & resorts', sub: 'Guest data, CCTV, OTA bookings' },
+];
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead
+			title="Atty. Renerio de Dios Jr. — TÜV Certified DPO | Save Contact"
+			description="Save the contact details of Atty. Renerio de Dios Jr., TÜV Certified Data Protection Officer for Region 8, and find the right data-privacy answers for your business."
+		/>
+	</head>
+	<body>
+		<Header />
+
+		<section class="section bg-gradient-to-br from-primary-50 to-white">
+			<div class="container">
+				<div class="max-w-xl mx-auto text-center">
+					<span class="badge-primary">TÜV Certified Data Protection Officer</span>
+					<h1 class="mt-6 mb-3">Atty. Renerio de Dios Jr.</h1>
+					<p class="text-lg text-neutral-700 mb-1">Certified DPO &amp; Data Privacy Counsel — Region 8</p>
+					<p class="text-sm text-neutral-500 mb-8">TÜV Cert #7000532 · Dulag, Leyte · Leyte · Samar · Biliran</p>
+
+					<a href="/dedios.vcf" download class="btn-primary" style="width:100%; max-width:360px; margin:0 auto;">
+						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:0.5rem;" aria-hidden="true">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2M9 7a4 4 0 108 0 4 4 0 00-8 0zM20 8v6M23 11h-6"/>
+						</svg>
+						Save my contact
+					</a>
+
+					<div class="flex flex-col sm:flex-row gap-3 justify-center mt-4">
+						<a href="tel:+639196180265" class="btn-secondary">Call +63 919 618 0265</a>
+						<a href="/contact" class="btn-secondary">Send a message</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<div class="max-w-xl mx-auto">
+					<h2 class="text-center mb-8">Find the answers for your business</h2>
+					<div class="space-y-4">
+						{links.map((l) => (
+							<a href={l.href} class="card" style="display:block; text-decoration:none;">
+								<div class="card-body" style="display:flex; align-items:center; justify-content:space-between; gap:1rem;">
+									<div>
+										<div class="font-semibold text-primary-900">{l.label}</div>
+										<div class="text-sm text-neutral-600">{l.sub}</div>
+									</div>
+									<span class="text-primary-600 font-bold" aria-hidden="true">→</span>
+								</div>
+							</a>
+						))}
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<Footer />
+	</body>
+</html>

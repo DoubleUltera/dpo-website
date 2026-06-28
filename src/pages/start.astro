@@ -1,0 +1,46 @@
+---
+import FaqLanding from '../components/FaqLanding.astro';
+
+const faqs = [
+	{
+		q: 'What is the Data Privacy Act, in one sentence?',
+		a: 'RA 10173, the Data Privacy Act of 2012, is the Philippine law that says any business collecting personal information must protect it, use it only for declared purposes, and answer to the <strong>National Privacy Commission (NPC)</strong> if it doesn’t.',
+	},
+	{
+		q: 'Do I even need a Data Protection Officer?',
+		a: 'You likely do if your business <strong>processes sensitive personal information</strong> (health, financial, IDs, biometrics), if handling personal data is core to what you do, or if you employ around 250+ people. Banks, lending and financing firms, hospitals, schools, BPOs, and hotels almost always need one. If you’re unsure, a short assessment settles it.',
+	},
+	{
+		q: 'What is a DPO and what do they actually do?',
+		a: 'A Data Protection Officer is the person accountable for your data-privacy compliance: they build your privacy program, register you with the NPC, handle breaches, train staff, and act as your official contact with the NPC. You can appoint one in-house or engage an external DPO.',
+	},
+	{
+		q: 'Do I have to register with the NPC?',
+		a: 'If you meet the thresholds, yes — you register your Data Processing Systems with the NPC and renew it. Many businesses don’t realise they qualify until they’re assessed. We handle the eligibility check and the filing.',
+	},
+	{
+		q: 'What happens if I just ignore this?',
+		a: 'The NPC can investigate complaints and impose <strong>administrative fines reaching millions of pesos</strong>, and RA 10173 carries imprisonment for serious offences. Beyond penalties, a breach or a public complaint damages customer trust. Compliance is far cheaper than enforcement.',
+	},
+	{
+		q: 'My business is small. Is this overkill?',
+		a: 'Compliance scales. A small clinic, lending office, or hotel doesn’t need an enterprise program — it needs the right basics done properly: lawful basis, notices, security, a retention schedule, and a breach plan. That’s exactly what a right-sized engagement delivers.',
+	},
+	{
+		q: 'What does working with you look like?',
+		a: 'A free assessment tells you whether you need a DPO and registration, and what’s missing. From there I can serve as your external DPO (Cert #7000532, TÜV Certified), build your Privacy Management Program, and keep you compliant — based in Region 8, serving Leyte, Samar, and Biliran.',
+	},
+];
+---
+
+<FaqLanding
+	title="Do I Need a Data Protection Officer? | Start Here | TÜV Certified DPO Region 8"
+	description="A plain-language starting point for Philippine businesses: what the Data Privacy Act requires, whether you need a DPO, NPC registration, and the cost of ignoring it."
+	badge="Start Here"
+	heading="Do I even need a Data Protection Officer?"
+	intro={[
+		"You scanned this from our leaflet. If you collect names, IDs, or customer details, the Data Privacy Act applies to you. Here are the questions every Region 8 business owner asks first — answered plainly.",
+	]}
+	faqs={faqs}
+	ctaHeading="Find out where your business stands"
+/>

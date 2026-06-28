@@ -1,0 +1,46 @@
+---
+import FaqLanding from '../../components/FaqLanding.astro';
+
+const faqs = [
+	{
+		q: 'Our bank is already supervised by the BSP. Do we also answer to the NPC?',
+		a: 'Yes — they cover different things. The <strong>BSP</strong> regulates you as a financial institution (MORB, IT risk, consumer protection). The <strong>National Privacy Commission (NPC)</strong> regulates how you collect and handle <em>personal data</em> under the Data Privacy Act (RA 10173). A BSP-compliant bank can still be penalised by the NPC. The two overlap heavily, so your privacy program should be built to satisfy both at once.',
+	},
+	{
+		q: 'Does a bank legally need a Data Protection Officer?',
+		a: 'In practice, yes. Banks process <strong>sensitive personal and financial information</strong> as a core activity and on a large scale — exactly the criteria that require a designated DPO under RA 10173 and NPC Advisory No. 2017-01. The DPO is also the registered contact the NPC deals with.',
+	},
+	{
+		q: 'What happens if customer financial data is breached?',
+		a: 'A breach of financial data carries some of the highest stakes under the law: account numbers, balances, and IDs enable fraud directly. You must assess and, where required, notify the NPC and affected clients within <strong>72 hours</strong> of knowledge of the breach. Late or missing notification is itself a violation — on top of the breach.',
+	},
+	{
+		q: 'Do we have to register with the NPC, and how often?',
+		a: 'Banks meeting the thresholds must register their Data Processing Systems with the NPC and renew the registration. We handle eligibility assessment, the filing, and keeping the registration current so it does not lapse.',
+	},
+	{
+		q: 'We use third-party processors (core banking, e-KYC, collections). Are we still liable?',
+		a: 'Yes. As the Personal Information Controller, the bank stays accountable for data handled by vendors. That liability has to be managed through proper data-sharing and outsourcing agreements and vendor due diligence — which the DPO oversees.',
+	},
+	{
+		q: 'What can NPC penalties actually cost us?',
+		a: 'Beyond reputational damage and BSP scrutiny, NPC administrative fines and the imprisonment provisions of RA 10173 can reach <strong>millions of pesos</strong> per offence. For a bank, the cost of a compliant privacy program is a fraction of a single enforcement action.',
+	},
+	{
+		q: 'Can you act as our external DPO?',
+		a: 'Yes. As a TÜV Certified DPO (Cert #7000532) based in Region 8, I can serve as your designated external DPO, build your Privacy Management Program, train staff, and be your point of contact with the NPC — without the cost of a full-time hire.',
+	},
+];
+---
+
+<FaqLanding
+	title="Data Privacy Compliance for Banks in Region 8 | TÜV Certified DPO"
+	description="NPC and BSP overlap, financial-data breach duties, and DPO requirements for banks in Leyte, Samar & Biliran — answered by a TÜV Certified Data Protection Officer."
+	badge="For Banks"
+	heading="Data privacy compliance for banks"
+	intro={[
+		"You scanned this from our Bank Risk Summary. Here are straight answers to what banks in Region 8 actually ask about the Data Privacy Act — where it overlaps with the BSP, and what a breach of financial data really costs.",
+	]}
+	faqs={faqs}
+	ctaHeading="Protect your customers' financial data"
+/>
