@@ -63,7 +63,7 @@ const posts = (await getCollection('blog')).sort(
 						opacity: 1;
 					}
 
-					.gradient-card h3 {
+					.gradient-card h2 {
 						color: white;
 						font-size: 1.25rem;
 						font-weight: 600;
@@ -116,7 +116,7 @@ const posts = (await getCollection('blog')).sort(
 												{post.data.category}
 											</span>
 										)}
-										<h3>{post.data.title}</h3>
+										<h2>{post.data.title}</h2>
 									</div>
 								)}
 								<div class="card-body">

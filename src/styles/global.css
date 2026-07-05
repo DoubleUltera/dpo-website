@@ -131,15 +131,19 @@ h4 {
   }
 }
 
-/* Links */
-a {
-  color: var(--color-primary-600);
-  transition: color 0.2s;
-  text-decoration: none;
-}
+/* Links — in @layer base so Tailwind text-color utilities (e.g. text-white on a
+   button link) can override the default link color. Unlayered, this rule would
+   win over utilities and force links to primary-600 regardless of class. */
+@layer base {
+  a {
+    color: var(--color-primary-600);
+    transition: color 0.2s;
+    text-decoration: none;
+  }
 
-a:hover {
-  color: var(--color-primary-700);
+  a:hover {
+    color: var(--color-primary-700);
+  }
 }
 
 /* Buttons */
