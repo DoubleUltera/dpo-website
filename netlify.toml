@@ -31,18 +31,15 @@
   status = 200
 
 [[redirects]]
-  # Redirect www to non-www (if using custom domain)
-  from = "https://www.dporegion8.com/*"
-  to = "https://dporegion8.com/:splat"
+  # Redirect www to non-www
+  from = "https://www.dpo.dedioslaw.ph/*"
+  to = "https://dpo.dedioslaw.ph/:splat"
   status = 301
   force = true
-  # Note: Update domain name when finalized
 
-[[redirects]]
-  # Catch-all redirect for 404 errors to custom 404 page (if you create one)
-  from = "/*"
-  to = "/404"
-  status = 404
+# Note: Netlify automatically serves the built 404.html for unmatched routes,
+# so no catch-all redirect is needed (a `to = "/404"` rule would 404 on a
+# missing target). Astro generates /404.html from src/pages/404.astro.
 
 # Security headers for enhanced protection
 [[headers]]

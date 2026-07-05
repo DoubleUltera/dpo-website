@@ -350,6 +350,26 @@ img {
   outline-offset: 2px;
 }
 
+/* Accessibility - Skip to content link (WCAG 2.4.1 Bypass Blocks) */
+.skip-link {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(-120%);
+  z-index: 100;
+  background: var(--color-primary-700);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0 0 0.5rem 0;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+  color: #fff;
+}
+
 /* Print Styles */
 @media print {
   body {

@@ -2,6 +2,8 @@
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+import { Image } from 'astro:assets';
+import profilePhoto from '../assets/profile-photo.png';
 
 const title = "About Atty. Renerio de Dios Jr. | TÜV Certified DPO | Tacloban City";
 const description = "Meet Atty. Renerio de Dios Jr., TÜV Certified Data Protection Officer for Region 8. Licensed attorney, notary public, and data privacy expert serving Eastern Visayas, Philippines.";
@@ -54,6 +56,7 @@ const description = "Meet Atty. Renerio de Dios Jr., TÜV Certified Data Protect
 	</head>
 	<body>
 		<Header />
+		<main id="main-content">
 
 		<!-- Hero Section -->
 		<section class="section bg-gradient-to-br from-primary-50 to-white">
@@ -80,9 +83,11 @@ const description = "Meet Atty. Renerio de Dios Jr., TÜV Certified Data Protect
 					<div class="grid md:grid-cols-3 gap-8 mb-12">
 						<!-- Profile Photo -->
 						<div class="md:col-span-1">
-							<img
-								src="/profile-photo.png"
+							<Image
+								src={profilePhoto}
 								alt="Atty. Renerio de Dios Jr. - TÜV Certified Data Protection Officer"
+								width={400}
+								height={400}
 								class="aspect-square rounded-lg object-cover w-full shadow-lg"
 							/>
 						</div>
@@ -145,6 +150,7 @@ const description = "Meet Atty. Renerio de Dios Jr., TÜV Certified Data Protect
 			</div>
 		</section>
 
+		</main>
 		<Footer />
 	</body>
 </html>
