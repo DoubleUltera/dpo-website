@@ -78,7 +78,7 @@ Personal data can only be collected for **declared, specified, and legitimate pu
 Collect only the data that is **adequate, relevant, and necessary** for your stated purpose. Don't ask for information you don't actually need.
 
 ### 4. Consent (Where Required)
-In many cases, you must obtain **free, specific, informed, and explicit consent** before collecting or processing personal data.
+In many cases you must obtain consent before collecting or processing personal data. The DPA's formula is **freely given, specific, informed** — an indication of will **evidenced by written, electronic or recorded means**, given **before** processing. (Note there is no separate "explicit consent" tier in Philippine law; that is a GDPR concept.)
 
 **Example:** Before subscribing someone to your email marketing list, you need their clear consent—not just a pre-checked box.
 
@@ -130,7 +130,7 @@ Start by mapping out what personal data you collect:
 
 ### Step 2: Register with the National Privacy Commission
 
-If your organization meets certain criteria (processes sensitive data, employs 250+ people, or has data processing as a core activity), you **must register as a Personal Information Controller** with the NPC.
+If your organization meets **any one** of four grounds under NPC Circular 2022-04 Section 5, you **must register your data processing systems** with the NPC: you employ **250 or more persons**; you hold **sensitive personal information on 1,000 or more individuals**; your processing is **likely to pose a risk to data subjects' rights and freedoms**; or you carry out **automated decision-making or profiling** (this last one at any size). If none applies, you file the **Annex 1 notarized sworn declaration** instead — you are never simply left with nothing to file.
 
 **Registration includes:**
 - Organization details
@@ -139,7 +139,7 @@ If your organization meets certain criteria (processes sensitive data, employs 2
 - Purpose of processing
 - Security measures in place
 
-**Cost:** Registration is free, but there are annual renewal requirements.
+**Cost:** ₱500–₱2,500 initial and ₱350–₱1,000 renewal, set by the type and scope of the registrant rather than company size (NPC Schedule of Fees, Circular 2023-01). Most city-based Region 8 organizations pay ₱1,000 initial and ₱500 renewal; municipality-based ones pay ₱500 and ₱350. Registration must be renewed within the 30 days before it expires.
 
 ### Step 3: Create Essential Privacy Documents
 
@@ -158,7 +158,7 @@ Informs individuals about:
 
 **2. Consent Forms**
 
-For situations requiring explicit consent:
+For situations where consent is your lawful basis:
 - Email marketing subscriptions
 - Use of cookies on your website
 - Processing sensitive personal information
@@ -186,7 +186,7 @@ RA 10173 requires "reasonable and appropriate" security. For most businesses, th
 <div class="security-checklist">
 
 **Organizational Measures:**
-- ✓ Designate a Data Protection Officer (if required)
+- ✓ Designate a Data Protection Officer — required of every organization, with no size threshold
 - ✓ Train employees on data privacy
 - ✓ Implement access controls (who can access what data)
 - ✓ Create confidentiality agreements for employees
@@ -218,9 +218,9 @@ Your employees must understand:
 
 > **Recommendation:** Conduct annual privacy awareness training for all staff.
 
-### Step 6: Appoint a Data Protection Officer (If Required)
+### Step 6: Appoint a Data Protection Officer
 
-If your business processes sensitive data, employs 250+ people, or has data processing as a core activity, you **must designate a DPO**.
+**Every** organization that processes personal data must designate a DPO. There is no threshold, no size exemption, and no "if required" about it — IRR Section 26(a) and NPC Advisory 2017-01 apply the duty to "any natural or juridical person or other body involved in the processing of personal data". The thresholds you may have read about decide *registration*, not appointment.
 
 The DPO is responsible for:
 - Monitoring compliance with RA 10173
@@ -278,11 +278,14 @@ Based on my experience consulting with businesses across Eastern Visayas, here a
 
 ### NPC Can Impose:
 
-**Administrative Fines:**
-- Up to ₱5,000,000 for violations
+**Administrative Fines** (NPC Circular 2022-01):
+- **Grave infraction:** 0.5%–3% of your prior-year annual gross income
+- **Major infraction:** 0.25%–2% of annual gross income
+- **Other infractions**, including failure to register: ₱50,000–₱200,000 per infraction
+- Total for any **single act** is capped at ₱5,000,000 — that figure is a ceiling, not the standard fine
 
 **Criminal Penalties:**
-- Imprisonment of 1-6 years depending on the violation
+- Imprisonment of 6 months to 7 years depending on the violation (DPA Sections 25–34; the 7-year maximum is Section 28(b))
 
 **Other Consequences:**
 - Mandatory destruction of compromised data
@@ -325,6 +328,8 @@ Based on my experience consulting with businesses across Eastern Visayas, here a
 
 <div class="retention-table">
 
+> **On the "Legal Basis" column:** only the NPC-cited rows are data-privacy rules. The Labor Code, BIR and "medical standards" figures below are the retention periods those separate regimes impose, they are not NPC requirements, and they change — verify each against the current DOLE, BIR or DOH issuance before adopting it.
+
 | Data Type | Retention Period | Legal Basis | Disposal Method |
 |-----------|------------------|-------------|-----------------|
 | Employee records | 5 years after separation | Labor Code | Shred/Delete |
@@ -332,7 +337,7 @@ Based on my experience consulting with businesses across Eastern Visayas, here a
 | Customer purchase records | 5 years | Warranty/disputes | Secure delete |
 | Job applications (not hired) | 6 months | Recruitment needs | Shred/Delete |
 | Marketing consent | Until withdrawn | Active consent | Immediate delete |
-| CCTV footage | 30-60 days | Security purposes | Auto-overwrite |
+| CCTV footage | **No period is prescribed** — you set and document your own; 30–90 days is common practice | NPC Circular 2024-02 §5(B)(4) requires a *documented* period; §5(B)(4)(a) forbids deriving it from storage capacity | Auto-overwrite |
 | Health records | 10 years | Medical standards | Secure disposal |
 | Financial statements | 10 years | BIR/SEC | Secure archive |
 

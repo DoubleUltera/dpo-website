@@ -65,7 +65,7 @@ Under **Section 11 of RA 10173**, organizations must be transparent about data c
 
 ### The Violation
 
-Sending unsolicited marketing emails, text messages, or calls to customers without their **explicit consent**.
+Sending unsolicited marketing emails, text messages, or calls to customers without their **consent** — freely given, specific, informed, and obtained before you send.
 
 <div class="example-box">
 
@@ -79,7 +79,7 @@ Sending unsolicited marketing emails, text messages, or calls to customers witho
 
 ### Why It's a Problem
 
-**NPC Circular No. 16-02** requires **free, specific, informed, and explicit consent** for marketing communications. This is one of the most frequently reported violations to the NPC.
+**NPC Circular No. 2023-04** governs consent, and its **Section 14** deals specifically with direct marketing. Consent must be **freely given, specific and informed** — an indication of will evidenced by written, electronic or recorded means, obtained **before** you process. (Philippine law has no separate "explicit consent" tier; that is a GDPR concept. And NPC Circular 16-02 is about data sharing agreements involving government agencies — not marketing.) This is one of the most frequently reported violations to the NPC.
 
 ### How to Fix It
 
@@ -124,13 +124,15 @@ Keeping customer, employee, or client data forever "just in case" you might need
 
 ### Why It's a Problem
 
-The **proportionality principle** (Section 11 of RA 10173) requires that personal data be kept only for as long as necessary for the declared purpose. Indefinite storage creates unnecessary risk—the more data you have, the more you're exposed if there's a breach.
+The **retention limitation** rule (Section 11 of RA 10173, which sets out the general privacy principles — retention is its own paragraph, distinct from proportionality) requires that personal data be kept only for as long as necessary for the declared purpose. Indefinite storage creates unnecessary risk—the more data you have, the more you're exposed if there's a breach.
 
 ### How to Fix It
 
 **Create a Data Retention Schedule:**
 
 <div class="retention-schedule">
+
+> **Only the NPC-cited row below is a data-privacy rule.** The labour and BIR periods come from separate regimes, change over time, and should be verified against the current DOLE or BIR issuance before you adopt them.
 
 | Data Type | Retention Period | Reason |
 |-----------|-----------------|---------|
@@ -139,7 +141,7 @@ The **proportionality principle** (Section 11 of RA 10173) requires that persona
 | Customer purchase records | 5 years | Warranty/disputes |
 | Job applications (not hired) | 6 months | Recruitment needs |
 | Marketing consent | Until withdrawn | Active consent |
-| CCTV footage | 30-60 days | Security purposes |
+| CCTV footage | **No period prescribed** — set and document your own (30–90 days is common practice) | NPC Circular 2024-02 §5(B)(4); §5(B)(4)(a) forbids deriving it from storage capacity |
 
 </div>
 
@@ -226,15 +228,15 @@ Not reporting a personal data breach to the NPC within **72 hours** of becoming 
 
 ### Why It's a Problem
 
-**NPC Circular No. 16-03** requires immediate reporting of breaches that:
-- Involve sensitive personal information
-- Could result in real risk of serious harm to data subjects
-- Affect a significant number of individuals
+**NPC Circular No. 16-03 Section 11** requires notification when **all three** of these are true at once — it is conjunctive, not a menu:
+- **(A)** the breach involves sensitive personal information, **or** any other information that could enable identity fraud (this is where financial data, biometrics, usernames and passwords, and copies of IDs come in);
+- **(B)** there is reason to believe the information **may have been acquired by an unauthorized person**; **and**
+- **(C)** the PIC or the Commission believes the acquisition is **likely to give rise to a real risk of serious harm** to the affected data subjects.
 
 <div class="warning-box">
 
 **Failure to report can result in:**
-- Fines of up to ₱5,000,000
+- Failure to notify is a **Major Infraction** under NPC Circular 2022-01: **0.25%–2% of your annual gross income** (via DPA Section 20(f)). The ₱5,000,000 figure sometimes quoted is the cap on a single act, not this fine.
 - Criminal charges
 - Mandatory public disclosure
 - Loss of customer trust
@@ -304,7 +306,7 @@ Many businesses focus exclusively on customer data privacy while neglecting empl
 
 ### Why It's a Problem
 
-Employee data—especially health information, government IDs, bank details, and performance records—is **sensitive personal information** under RA 10173 and requires the highest level of protection.
+Some employee data is **sensitive personal information** under DPA Section 3(l) — health information and government-issued identifiers (SSS, TIN, PhilHealth) squarely are, and they require the highest level of protection. **Bank details and performance reviews are not SPI**; they are ordinary personal data you must still protect, and bank details are separately named in Circular 16-03 Section 11(A) as identity-fraud-enabling data for breach-notification purposes.
 
 ### How to Fix It
 
@@ -355,13 +357,9 @@ Failing to designate a Data Protection Officer (DPO) when your organization is l
 
 ### Why It's a Problem
 
-**NPC Circular No. 16-03** mandates DPO appointment for organizations that:
-- Process sensitive personal information
-- Have data processing as a core business activity
-- Employ 250 or more people
-- Conduct large-scale systematic monitoring
+**IRR Section 26(a)** and **NPC Advisory 2017-01** require **every** organization that processes personal data to designate a DPO — "any natural or juridical person or other body involved in the processing of personal data". There is no threshold and no small-business exemption. The 250-employee and 1,000-individual figures decide whether you must **register** with the NPC (Circular 2022-04 Section 5); they have never decided whether you need a DPO. And Circular 16-03 is about breach management, not DPO appointment.
 
-Operating without a required DPO is a direct violation and creates significant compliance gaps—no one is monitoring compliance, handling data subject requests, or serving as the NPC point of contact.
+Operating without a DPO is a direct violation and creates significant compliance gaps—no one is monitoring compliance, handling data subject requests, or serving as the NPC point of contact.
 
 ### How to Fix It
 

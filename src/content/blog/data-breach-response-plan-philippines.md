@@ -10,7 +10,7 @@ Imagine this: It's Monday morning, and your IT team discovers that your customer
 
 Under the **Data Privacy Act of 2012 (RA 10173)**, you have **72 hours** to report the breach to the National Privacy Commission—and the clock started the moment you became aware of it, not when you finish investigating.
 
-Most Philippine businesses have no plan for this scenario. And when a breach happens, panic, delays, and poor decisions can turn a manageable incident into a catastrophic compliance failure with multi-million peso fines and irreparable reputational damage.
+Most Philippine businesses have no plan for this scenario. And when a breach happens, panic, delays, and poor decisions can turn a manageable incident into a catastrophic compliance failure — NPC administrative fines run to **0.5%–3% of your prior-year gross income** for a grave infraction — plus irreparable reputational damage.
 
 This guide will help you create a practical data breach response plan that ensures your business can respond quickly, correctly, and in full compliance with Philippine law.
 
@@ -66,11 +66,14 @@ Under **NPC Circular No. 16-03**, a **personal data breach** is:
 
 You **must report** to the NPC within **72 hours** if the breach involves:
 
-**1. Sensitive Personal Information**
-- Health records, medical data
-- Government-issued IDs (SSS, TIN, passport)
-- Financial information (bank accounts, credit cards)
-- Biometric data (fingerprints, facial recognition)
+**1. Sensitive personal information — or any other data that could enable identity fraud**
+
+Circular 16-03 Section 11(A) covers both, so this list is wider than the DPA's SPI definition. It reaches:
+- Health records and medical data *(SPI under DPA §3(l)(2))*
+- Government-issued IDs — SSS, TIN, passport *(SPI under DPA §3(l)(3))*
+- Financial information such as bank accounts and credit cards *(**not** SPI, but expressly identity-fraud-enabling)*
+- Biometric data — fingerprints, facial recognition *(**not** SPI either, same reason)*
+- Usernames and passwords
 
 **2. Real Risk of Serious Harm**
 Even if not "sensitive," if the breach could cause:
@@ -90,8 +93,8 @@ The larger the breach, the higher the likelihood of NPC reporting requirements.
 <div class="warning-box">
 
 **Penalties for Late Reporting:**
-- Administrative fines up to ₱5,000,000
-- Criminal charges (imprisonment of 1-6 years)
+- Failure to notify is a **Major Infraction** under NPC Circular 2022-01: **0.25%–2% of your annual gross income** (via DPA Section 20(f)). ₱5,000,000 is the cap on a single act, not this fine.
+- Criminal charges — imprisonment of 6 months to 7 years depending on the offence (DPA Sections 25–34; concealing a breach involving SPI is Section 30, 1½ to 5 years)
 - Mandatory public disclosure
 - NPC-mandated compliance audits
 - Reputational damage and loss of customer trust
@@ -199,11 +202,13 @@ Designate roles and responsibilities:
 
 <div class="risk-assessment-table">
 
-| Risk Level | Criteria | NPC Reporting Required? |
-|------------|----------|-------------------------|
-| **High** | Sensitive personal information + significant harm likely | YES - Immediate |
-| **Medium** | Personal information + possible harm | YES - Within 72 hours |
-| **Low** | Minimal personal information, unlikely harm | Possibly - consult DPO |
+| Circular 16-03 §11 condition | Question to answer | |
+|---|---|---|
+| **(A)** | Does the breach involve SPI, **or** other data that could enable identity fraud? | |
+| **(B)** | Is there reason to believe it **may have been acquired by an unauthorized person**? | |
+| **(C)** | Is that acquisition **likely to give rise to a real risk of serious harm**? | |
+
+**All three must be true together.** If they are, you notify within **72 hours** — there is no "immediate" tier below 72 hours and no sliding scale. If any one is false, notification is not required, but document the assessment: Section 20 obliges you to keep the record either way, and the NPC can require you to notify anyway.
 
 </div>
 
@@ -237,9 +242,9 @@ The NPC requires the following information:
 <div class="reporting-box">
 
 **How to Report:**
-1. Email: [complaints@privacy.gov.ph](mailto:complaints@privacy.gov.ph)
-2. NPC Hotline: 8234-2228
-3. Online form: [https://privacy.gov.ph](https://privacy.gov.ph)
+1. **Data Breach Notification Management System (DBNMS)** — [https://dbnms.privacy.gov.ph](https://dbnms.privacy.gov.ph). This is the operative channel; file here.
+2. Email: [complaints@privacy.gov.ph](mailto:complaints@privacy.gov.ph) (designated by Circular 16-03 Section 23)
+3. NPC Hotline: +632 5322 1322
 
 **Subject Line:** "Data Breach Notification - [Your Company Name]"
 
@@ -368,7 +373,8 @@ Here's a simple template you can customize:
 5. Retrain staff
 
 ## Key Contacts
-- NPC Complaints: complaints@privacy.gov.ph | 8234-2228
+- NPC Breach Notification: https://dbnms.privacy.gov.ph
+- NPC Complaints: complaints@privacy.gov.ph | +632 5322 1322
 - IT Security Consultant: [Name, Contact]
 - Forensics Expert: [Name, Contact]
 - Legal Counsel: [Name, Contact]

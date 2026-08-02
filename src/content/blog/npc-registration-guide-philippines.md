@@ -18,63 +18,65 @@ This guide walks you through the entire NPC registration process, helping you de
 
 ### Quick Assessment: Do You Need to Register?
 
-Not all businesses are required to register with the NPC, but many are. Under **NPC Circular No. 16-03**, your organization **must register** if you meet **any** of these criteria:
+First, separate two things that are constantly confused. **Every** organization that processes personal data must designate a Data Protection Officer — there is no size threshold and no small-business exemption (IRR Section 26(a); NPC Advisory 2017-01). **Registration** is the narrower duty. Under **NPC Circular No. 2022-04**, you must register your data processing systems if you meet **any one** of these four grounds:
 
 </div>
 
-### 1. You Process Sensitive Personal Information
+### 1. You Employ 250 or More Persons
 
-If your business handles **sensitive personal information (SPI)** such as:
-- Health or medical records
-- Government-issued IDs (SSS, TIN, passport, driver's license)
-- Biometric data (fingerprints, facial recognition, iris scans)
-- Financial account information
-- Sexual orientation or preferences
-- Marital status, race, ethnic origin, political affiliations, or religious beliefs
+Circular 2022-04 Section 5 counts **persons employed**. It is an exact figure, not an "around 250".
+
+> **Note:** The circular says "employs 250 or more persons" and defines nothing further. It does not tell you to count a contractor's or vendor's own staff as yours, and students, patients or customers are not employees.
+
+### 2. You Process Sensitive Personal Information of 1,000 or More Individuals
+
+Sensitive personal information alone is not a trigger — the **1,000-individual count** is what matters. And "sensitive personal information" is a closed list under **DPA Section 3(l)**:
+
+- Race, ethnic origin, marital status, age, colour, and religious, philosophical or political affiliations
+- Health, education, genetic or sexual life, and any offence proceeding or its disposal or sentence
+- **Information issued by government agencies peculiar to an individual** — SSS and TIN numbers, health records, licences, tax returns
+- Anything classified by executive order or an act of Congress
 
 <div class="example-box">
 
-**Examples:** Hospitals, clinics, banks, insurance companies, lending institutions, diagnostic laboratories, pharmacies processing patient data
+**Note what is *not* on that list: financial account information and biometric data.** Bank balances, transaction history and fingerprint templates are personal data you must protect, and biometrics and financial data are expressly named in **NPC Circular 16-03 Section 11(A)** as identity-fraud-enabling data that trigger breach notification — but they are not sensitive personal information under Section 3(l). The government-issued IDs in a KYC file are.
+
+**Examples:** hospitals, clinics, diagnostic laboratories and pharmacies holding patient records for 1,000+ people; schools holding student health and education records at that scale.
 
 </div>
 
-### 2. You Process Personal Data as a Core Business Activity
+### 3. Your Processing Is Likely to Pose a Risk to Rights and Freedoms
 
-If data processing is the **primary purpose** of your business operations:
-- BPO and call centers handling customer databases
-- Data analytics and market research firms
-- Background check and credit reporting agencies
-- Recruitment agencies maintaining applicant databases
-- Marketing agencies processing consumer data
+Circular 2022-04's Annex 1 spells out what this covers: information likely to affect **national security, public safety, public order or public health**; information required by law to be **confidential**; or **vulnerable data subjects** — minors, the mentally ill, asylum seekers, the elderly, patients, persons involved in criminal offences, or any relationship where a power imbalance exists.
 
-### 3. You Employ 250 or More People
+### 4. You Do Automated Decision-Making or Profiling
 
-Organizations with **250 or more employees** must register, regardless of what type of data they process or what industry they're in.
+Under **Section 5(A)**, a data processing system involving automated decision-making or profiling must be registered **in all instances** — this ground has no threshold at all. Video analytics and facial recognition fall here, whatever the size of the business.
 
-> **Note:** This includes all employees—permanent, contractual, part-time, and outsourced staff.
+<div class="warning-box">
 
-### 4. You Conduct Large-Scale Systematic Monitoring
+**Two concepts you may have read elsewhere do not appear in Philippine law.** "Data processing as a **core business activity**" and "**large-scale systematic monitoring**" are Article 37 of the EU's GDPR. Neither is a registration ground under Circular 2022-04, and neither gates the duty to appoint a DPO.
 
-If your business systematically monitors individuals on a large scale through:
-- Extensive CCTV surveillance networks
-- GPS tracking of employees or customers
-- Online behavior tracking and profiling
-- Geolocation monitoring systems
+</div>
 
 ---
 
 ## What If You're Not Required to Register?
 
-Even if you don't meet the criteria above, you still must comply with **RA 10173**—you just don't need to formally register with the NPC.
+You are exempt from **registration** — not from the Data Privacy Act, and not from having a DPO.
 
 <div class="warning-box">
 
 **You still need to:**
+- **Designate a Data Protection Officer** — this applies to every organization, with no threshold
+- **File a notarized Sworn Declaration with the NPC** using **Annex 1 of Circular 2022-04**, attesting that you meet none of the four grounds. There is no do-nothing option: not registering is itself a filing.
 - Implement privacy notices
 - Obtain consent where required
 - Protect personal data with security measures
 - Respond to data subject requests
 - Report data breaches within 72 hours
+
+**And keep watching the thresholds.** Annex 1 binds you to re-file within **10 days** of any change to your contact details, and to **register within 20 days** once any exemption ground stops being true.
 
 </div>
 
@@ -82,29 +84,23 @@ Even if you don't meet the criteria above, you still must comply with **RA 10173
 
 ## Step-by-Step NPC Registration Process
 
-### Step 1: Determine Your Registration Category
+### Step 1: Confirm Which of the Four Grounds Applies
 
-The NPC has two registration types:
+There is no "Category A / Category B" split — the NPC does not use those labels. There is one question: does **any one** of the four grounds in Section 5 apply to you?
 
 <div class="registration-categories">
 
-**Category A: Organizations Required to Appoint a DPO**
-- Process sensitive personal information
-- Data processing is a core activity
-- Employ 250+ people
-- Conduct large-scale systematic monitoring
+**If yes** — register every data processing system you operate, and be ready to identify which ground you fall under.
 
-**Category B: Organizations NOT Required to Appoint a DPO**
-- Voluntarily registering for compliance purposes
-- Process personal data but don't meet Category A criteria
+**If no** — you do not register. You file the **Annex 1 notarized Sworn Declaration** instead, and you still designate a DPO.
 
 </div>
 
-> **Most Region 8 businesses requiring registration fall under Category A.**
+> **Either way you need a DPO.** Registration decides the filing, not the appointment.
 
-### Step 2: Appoint a Data Protection Officer (If Required)
+### Step 2: Appoint a Data Protection Officer
 
-Before you can register, Category A organizations must designate a **Data Protection Officer**.
+Every organization that processes personal data must designate one before it files — registering or declaring.
 
 **Options:**
 1. **Internal DPO** - A qualified employee dedicated to data protection
@@ -173,10 +169,11 @@ Before registration, you should have basic privacy documentation in place:
 
 ### Step 5: Register Online via the NPC Portal
 
-**Access the NPC Privacy Portal:**
-- Visit: [https://privacy.gov.ph](https://privacy.gov.ph)
-- Click "PIC/PIP Registration"
-- Create an account
+**Access the NPC Registration System (NPCRS):**
+- Visit: [https://npcregistration.privacy.gov.ph](https://npcregistration.privacy.gov.ph)
+- Create an account and enrol your organization
+
+Registration is **online only**. Circular 2022-04 Section 9 does not allow physical or alternate filing, so there is no walk-in or email route.
 
 **Complete the Online Form:**
 
@@ -202,18 +199,25 @@ Before registration, you should have basic privacy documentation in place:
 
 <div class="pricing-box">
 
-**Current Registration Fees (as of 2026):**
-- **Category A (with DPO requirement):** FREE for initial registration
-- **Annual Renewal:** FREE
+**Registration is not free.** The NPC's Schedule of Fees (Circular 2023-01) sets them by **type and scope of the registrant**, not by company size:
 
-**Note:** While registration itself is free, you may need to invest in compliance infrastructure (policies, training, security measures) and potentially a DPO consultant.
+| Registrant | Initial | Renewal |
+|---|---|---|
+| Individual / Professional | ₱500 | ₱350 |
+| Organization — Multinational / National / Foreign Branch | ₱2,500 | ₱1,000 |
+| Organization — Regional / Provincial / Metro Manila / **Cities** | ₱1,000 | ₱500 |
+| Organization — **Municipalities** | ₱500 | ₱350 |
+
+**For Region 8 that usually means ₱1,000** if you operate in a city such as Tacloban, Ormoc, Calbayog, Catbalogan, Maasin or Borongan, and **₱500** if you are in a municipality. A major amendment (change of name or principal office) is charged at the same three organization rates, and a certified true copy of your certificate is ₱100.
+
+**Note:** the schedule prescribes no fee for the Annex 1 sworn declaration filed by organizations that meet none of the four registration grounds. Beyond the fee itself you will also need to invest in compliance infrastructure (policies, training, security measures) and potentially a DPO consultant.
 
 </div>
 
 ### Step 7: Submit and Await Approval
 
 After submitting your registration:
-- NPC reviews your application (typically 15-30 days)
+- NPC reviews your application. The circular sets no review SLA; the only period it fixes is **5 days** for you to cure any deficiency the NPC flags
 - NPC may request additional information or clarifications
 - Once approved, you receive a **Certificate of Registration**
 - Registration is valid for **one year** and must be renewed annually
@@ -226,7 +230,7 @@ You must renew your registration **every year** by:
 - Confirming your DPO is still appointed
 - Certifying continued compliance
 
-**Renewal deadline:** Within the anniversary month of your initial registration
+**Renewal deadline:** Circular 2022-04 Section 18 allows renewal **only within the 30 days before your certificate expires** — not in the anniversary month of your original filing. Renew too early or too late and it lapses.
 
 ---
 
@@ -237,7 +241,7 @@ You must renew your registration **every year** by:
 ### 1. Waiting Until an Audit to Register
 **Problem:** Many businesses only register when facing an NPC investigation or audit.
 
-**Solution:** Register proactively—it's free and demonstrates good faith compliance.
+**Solution:** Register proactively. The fee is ₱500–₱2,500 depending on your scope of operations, and filing early demonstrates good-faith compliance.
 
 ### 2. Incomplete Data Inventory
 **Problem:** Listing only customer data while forgetting employee records, CCTV footage, supplier information, etc.
@@ -275,7 +279,7 @@ You must renew your registration **every year** by:
 Failing to register with the NPC when legally required can result in:
 
 **Administrative Penalties:**
-- Fines up to ₱5,000,000
+- Failure to register is an **Other Infraction** under NPC Circular 2022-01: **₱50,000–₱200,000 per infraction**. (The ₱5,000,000 figure you may have seen is the *cap on a single act*, not the fine for failing to register.)
 - Mandatory compliance orders
 - Suspension of data processing operations
 
@@ -299,10 +303,10 @@ Failing to register with the NPC when legally required can result in:
 
 <div class="industry-card">
 
-- **Required:** Yes (sensitive personal information)
+- **Required:** Yes, once patient records reach 1,000 individuals (health data is SPI) — and patients are vulnerable data subjects
 - **Critical data:** Patient records, medical history, test results
-- **DPO Required:** Yes
-- **Key compliance:** HIPAA-equivalent Philippine standards
+- **DPO Required:** Yes — as for every organization
+- **Key compliance:** DPA Section 13 grounds for health data, plus the DOH–NPC joint memorandum circulars. There is no Philippine HIPAA — the local rules are the DPA and the NPC issuances.
 
 </div>
 
@@ -310,9 +314,9 @@ Failing to register with the NPC when legally required can result in:
 
 <div class="industry-card">
 
-- **Required:** Yes (sensitive personal information)
+- **Required:** Yes in practice — the government-issued IDs in KYC files are SPI, and credit scoring is profiling, which must be registered at any size
 - **Critical data:** Account numbers, credit history, financial transactions
-- **DPO Required:** Yes
+- **DPO Required:** Yes — as for every organization
 - **Key compliance:** BSP and insurance commission regulations
 
 </div>
@@ -321,9 +325,9 @@ Failing to register with the NPC when legally required can result in:
 
 <div class="industry-card">
 
-- **Required:** Yes (data processing as core activity)
+- **Required:** Yes in practice — BPOs typically pass 250 persons employed, and client data often crosses the 1,000-individual SPI count
 - **Critical data:** Customer databases, call recordings, personal information for clients
-- **DPO Required:** Yes
+- **DPO Required:** Yes — as for every organization
 - **Key compliance:** Data Processing Agreements with clients
 
 </div>
@@ -334,7 +338,7 @@ Failing to register with the NPC when legally required can result in:
 
 - **Required:** Depends on size and data processed
 - **Critical data:** Customer names, addresses, purchase history, payment info
-- **DPO Required:** If processing payment data or 250+ employees
+- **DPO Required:** Yes — every organization needs one. Registration is the part that turns on the four grounds.
 - **Key compliance:** PCI-DSS for payment data
 
 </div>
@@ -343,9 +347,9 @@ Failing to register with the NPC when legally required can result in:
 
 <div class="industry-card">
 
-- **Required:** If processing sensitive student data or 250+ employees
+- **Required:** If it employs 250 or more **persons** (students are not employees), or holds SPI — student health and education records — on 1,000 or more individuals. Minors are vulnerable data subjects, which is a ground on its own
 - **Critical data:** Student records, grades, parental information
-- **DPO Required:** Often yes, especially universities
+- **DPO Required:** Yes — every school, whatever its size
 - **Key compliance:** Parental consent for minors
 
 </div>
@@ -358,8 +362,9 @@ Use this checklist to ensure you're ready to register:
 
 <div class="registration-checklist">
 
-- [ ] Determined that your organization requires registration
-- [ ] Appointed a qualified Data Protection Officer (if required)
+- [ ] Determined which of the four grounds applies — or that none does
+- [ ] Appointed a qualified Data Protection Officer (required either way)
+- [ ] If no ground applies: prepared the Annex 1 notarized Sworn Declaration instead
 - [ ] Created a comprehensive data inventory
 - [ ] Drafted Privacy Notice/Privacy Policy
 - [ ] Implemented reasonable security measures (organizational, physical, technical)
@@ -367,7 +372,7 @@ Use this checklist to ensure you're ready to register:
 - [ ] Prepared Data Breach Response Plan
 - [ ] Obtained DTI/SEC registration documents
 - [ ] Documented DPO appointment letter or contract
-- [ ] Created account on NPC Privacy Portal
+- [ ] Created an NPCRS account at npcregistration.privacy.gov.ph
 - [ ] Gathered all required information and supporting documents
 - [ ] Completed online registration form
 - [ ] Set calendar reminder for annual renewal
@@ -382,10 +387,10 @@ Use this checklist to ensure you're ready to register:
 
 **National Privacy Commission**
 - **Website:** [https://privacy.gov.ph](https://privacy.gov.ph)
-- **Registration Portal:** [https://privacy.gov.ph/pic-pip-registration](https://privacy.gov.ph/pic-pip-registration)
+- **Registration Portal (NPCRS):** [https://npcregistration.privacy.gov.ph](https://npcregistration.privacy.gov.ph)
 - **Email:** info@privacy.gov.ph
-- **Hotline:** 8234-2228
-- **Address:** 5th Floor, Philippine International Convention Center (PICC), Vicente Sotto Street, Pasay City
+- **Hotline:** +632 5322 1322
+- **Address:** 5th Floor, Philippine International Convention Center (PICC), Vicente Sotto Avenue, Pasay City
 
 </div>
 
@@ -416,7 +421,7 @@ As a **TÜV Certified Data Protection Officer**, I help Region 8 businesses:
 
 ## The Bottom Line
 
-NPC registration is not optional if your business processes sensitive personal information, has data processing as a core activity, employs 250+ people, or conducts large-scale monitoring. The good news is that registration itself is **free**, and with proper preparation, it's straightforward.
+NPC registration is not optional if your business employs 250 or more persons, holds sensitive personal information on 1,000 or more individuals, processes data likely to pose a risk to rights and freedoms, or does automated decision-making or profiling. If none of the four applies you file the Annex 1 notarized sworn declaration instead — and either way you must designate a DPO. The fee is modest (**₱500–₱2,500** under the NPC Schedule of Fees, by scope of operations — ₱1,000 for most city-based Region 8 organizations) and with proper preparation the filing is straightforward.
 
 <div class="summary-box">
 

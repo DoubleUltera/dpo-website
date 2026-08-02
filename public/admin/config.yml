@@ -9,8 +9,8 @@ media_folder: "src/assets/blog"
 public_folder: "/src/assets/blog"
 
 # Site URL (update this when deploying)
-site_url: https://superb-dieffenbachia-f461b8.netlify.app
-display_url: https://superb-dieffenbachia-f461b8.netlify.app
+site_url: https://dpo.dedioslaw.ph
+display_url: https://dpo.dedioslaw.ph
 
 # Logo (can be customized later)
 # logo_url: /images/logo.svg
@@ -37,35 +37,9 @@ collections:
          hint: "Add relevant keywords (e.g., NPC, DPA 2012, GDPR, Region 8)"}
       - {label: "Body", name: "body", widget: "markdown", required: true}
 
-  - name: "pages"
-    label: "Pages"
-    files:
-      - label: "About Page"
-        name: "about"
-        file: "src/pages/about-content.md"
-        fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Content", name: "body", widget: "markdown"}
-
-      - label: "Homepage"
-        name: "home"
-        file: "src/content/homepage.md"
-        fields:
-          - {label: "Hero Heading", name: "heroHeading", widget: "string"}
-          - {label: "Hero Subheading", name: "heroSubheading", widget: "text"}
-          - {label: "Call to Action Text", name: "ctaText", widget: "string", default: "Request Quote"}
-          - {label: "About Section", name: "aboutSection", widget: "markdown"}
-          - {label: "Services Section", name: "servicesSection", widget: "markdown"}
-
 # Editor configuration
 editor:
   preview: true
 
 # Publish mode
 publish_mode: editorial_workflow
-
-# Enable media library
-media_library:
-  name: uploadcare
-  config:
-    publicKey: demo # Replace with your Uploadcare public key later (or use default)

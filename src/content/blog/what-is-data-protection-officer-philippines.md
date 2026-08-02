@@ -55,44 +55,45 @@ The DPO keeps detailed records of what personal data the organization collects, 
 
 <div class="callout-box">
 
-### Quick Assessment: DPO Requirement Checklist
+### Quick Assessment: Do You Need a DPO?
 
-Under **NPC Circular No. 16-03**, your organization **must appoint a DPO** if you meet **any** of these criteria:
+**Yes.** If your organization processes personal data at all, it must designate one.
 
-- ✓ You process **sensitive personal information** (health records, IDs, biometric data, financial info)
-- ✓ Data processing is a **core business activity** (BPO, analytics, credit reporting)
-- ✓ You employ **250 or more people**
-- ✓ You conduct **large-scale systematic monitoring** (extensive CCTV, tracking systems)
+**IRR Section 26(a)** puts the duty on "**any** natural or juridical person or other body involved in the processing of personal data", and **NPC Advisory 2017-01** says the same. There is no size threshold, no small-business exemption, and no list of qualifying criteria to check yourself against. A three-person clinic in Tacloban owes the same designation as a bank.
 
 </div>
 
-### 1. You Process Sensitive Personal Information
+### What the Thresholds Actually Decide
 
-If your organization handles **sensitive personal information** such as:
-- Health or medical records
-- Government-issued identification numbers (SSS, TIN, passport numbers)
-- Biometric data (fingerprints, facial recognition)
-- Financial information
-- Racial or ethnic origin
-- Religious or political affiliations
+The figures you may have seen — 250 employees, 1,000 individuals, "core activity", "large-scale systematic monitoring" — are a different question, and two of them are not Philippine law at all.
 
-**Examples:** Hospitals, clinics, insurance companies, banks, lending companies, diagnostic centers
+**Registration** with the NPC is triggered by any one of four grounds under **Circular 2022-04 Section 5**: you employ 250 or more persons; you hold **sensitive** personal information on 1,000 or more individuals; your processing is likely to pose a risk to rights and freedoms; or you carry out automated decision-making or profiling (no threshold on that one).
 
-### 2. Data Processing is a Core Business Activity
+**"Core business activity" and "large-scale systematic monitoring" appear nowhere in the DPA, its IRR, or any NPC circular.** They are Article 37 of the EU's GDPR, and they neither trigger registration here nor decide whether you need a DPO.
 
-If your organization's primary business involves processing personal data at scale, such as:
-- BPO and call centers handling customer databases
-- Data analytics and market research firms
-- Credit reporting agencies
-- Background check companies
+And if none of the four grounds applies? You still designate a DPO — and you file a **notarized sworn declaration** with the NPC saying so (Circular 2022-04, Annex 1). There is no do-nothing option.
 
-### 3. You Employ at Least 250 People
+### Sensitive Personal Information — the Closed List
 
-Organizations with **250 or more employees** are required to designate a DPO, regardless of the type of data processed.
+**DPA Section 3(l)** defines SPI exhaustively:
+- Race, ethnic origin, marital status, age, colour, and religious, philosophical or political affiliations
+- Health, education, genetic or sexual life; any offence proceeding, its disposal, or the sentence
+- **Information issued by government agencies peculiar to an individual** — SSS and TIN numbers, health records, licences, tax returns
+- Anything classified by executive order or act of Congress
 
-### 4. Large-Scale Systematic Monitoring
+**Financial account information and biometric data are not on that list.** They still need protecting, and Circular 16-03 Section 11(A) names both as identity-fraud-enabling data for breach-notification purposes — but they are not SPI.
 
-If your business systematically monitors individuals on a large scale (e.g., through surveillance systems, tracking technologies, or behavioral analytics), a DPO is required.
+**Examples of organizations holding real volumes of SPI:** hospitals, clinics, diagnostic centres, schools, insurers, and the government-issued IDs held by banks and lending companies.
+
+### The Other Three Registration Grounds
+
+**Risk to rights and freedoms.** Circular 2022-04's Annex 1 spells this out: information likely to affect national security, public safety, public order or public health; information required by law to be confidential; or **vulnerable data subjects** — minors, the mentally ill, asylum seekers, the elderly, patients, persons involved in criminal offences, or any relationship with a power imbalance. A school or a clinic can land here on the nature of its data alone.
+
+**250 or more persons employed.** An exact count of *persons employed* — not students, not patients, not customers, and not an approximate "around 250".
+
+**Automated decision-making or profiling.** Under Section 5(A) this must be registered **in all instances**, with no threshold whatsoever. Credit scoring, video analytics and facial recognition all fall here — which is why a small lending office or a single hotel running face recognition on its cameras can owe registration when a much larger business does not.
+
+None of the four is about "core business activity" or "large-scale systematic monitoring". Those two phrases are GDPR Article 37, and organizations that assess themselves against them reach the wrong answer in both directions — BPOs conclude they must register when they may not, and small clinics conclude they are exempt when the vulnerable-data-subject ground catches them.
 
 ---
 
@@ -160,12 +161,12 @@ My **TÜV Certified Data Protection Officer** credential means I've undergone ri
 
 <div class="warning-box">
 
-### Consequences of Failing to Appoint a Required DPO
+### Consequences of Failing to Appoint a DPO
 
-Failing to appoint a required DPO or maintain proper data protection practices can result in severe penalties under RA 10173:
+Failing to appoint a DPO or to maintain proper data protection practices can result in severe penalties under RA 10173:
 
-- **Administrative fines:** Up to ₱5,000,000
-- **Criminal penalties:** Imprisonment of 1-6 years
+- **Administrative fines** (NPC Circular 2022-01): **0.5%–3%** of prior-year annual gross income for a grave infraction, **0.25%–2%** for a major one, and **₱50,000–₱200,000 per infraction** for failing to register. ₱5,000,000 is the cap on any **single act** — a ceiling, not the standard fine
+- **Criminal penalties:** imprisonment of 6 months to 7 years depending on the offence (DPA Sections 25–34; the 7-year maximum is Section 28(b))
 - **Reputational damage:** Loss of customer trust
 - **Business disruption:** NPC can order suspension of data processing activities
 
@@ -175,9 +176,9 @@ Failing to appoint a required DPO or maintain proper data protection practices c
 
 ## The Bottom Line
 
-If your organization processes sensitive personal information, employs 250+ people, or has data processing as a core business activity, **you are required by law to appoint a Data Protection Officer**.
+If your organization processes personal data, **you are required by law to designate a Data Protection Officer** — whatever your size, and whatever kind of data you hold. The 250-employee and 1,000-individual figures decide whether you must additionally *register* with the NPC; they have never decided whether you need a DPO.
 
-Even if you're not legally required, appointing a DPO is a smart business decision that:
+Beyond satisfying the legal duty, a capable DPO is a smart business decision that:
 - Protects your customers' privacy
 - Reduces risk of costly data breaches
 - Builds trust with clients and partners
