@@ -2,7 +2,7 @@
 title: 'Data Privacy Act of 2012: Essential Compliance Guide for Region 8 Businesses'
 description: 'A comprehensive guide to understanding and complying with RA 10173 (Data Privacy Act of 2012) for businesses in Eastern Visayas, Philippines.'
 pubDate: 2026-03-27
-updatedDate: 2026-08-02
+updatedDate: 2026-08-03
 category: 'Compliance Tips'
 tags: ['RA 10173', 'Data Privacy Act', 'Compliance', 'Region 8', 'NPC']
 ---
@@ -286,7 +286,7 @@ Based on my experience consulting with businesses across Eastern Visayas, here a
 - Total for any **single act** is capped at ₱5,000,000 — that figure is a ceiling, not the standard fine
 
 **Criminal Penalties:**
-- Imprisonment of 6 months to 7 years depending on the violation (DPA Sections 25–34; the 7-year maximum is Section 28(b))
+- Imprisonment of 6 months to 7 years depending on the violation (DPA Sections 25–34; the 7-year maximum is Section 28, second paragraph)
 
 **Other Consequences:**
 - Mandatory destruction of compromised data

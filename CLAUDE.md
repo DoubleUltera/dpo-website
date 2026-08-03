@@ -251,9 +251,9 @@ emailjs.send('service_id', 'template_attorney_notification', {
 
 `BlogPosting` is built in the layout, so every post gets one from its own
 frontmatter. `dateModified` comes from `updatedDate` and falls back to
-`pubDate` — all five posts carry `updatedDate: 2026-08-02`, the day their legal
-content was corrected, which is also what renders as the "Last updated on" line
-in the hero. Decap CMS exposes the field, so it can be maintained without
+`pubDate` — three posts carry `updatedDate: 2026-08-02`, the day their legal
+content was corrected, and two carry `2026-08-03` from the audit-of-the-audit
+pass. That is what renders as the "Last updated on" line in the hero. Decap CMS exposes the field, so it can be maintained without
 touching code. Keep it honest: bump it when the content actually changes.
 
 **FAQ copy is generated, never hardcoded twice.** Every page with a `FAQPage`

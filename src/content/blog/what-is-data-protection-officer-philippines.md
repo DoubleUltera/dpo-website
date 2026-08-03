@@ -2,7 +2,7 @@
 title: 'What is a Data Protection Officer and Why Your Philippine Business Needs One'
 description: 'Learn about the role of a Data Protection Officer under the Philippine Data Privacy Act of 2012 and whether your organization is required to appoint one.'
 pubDate: 2026-03-28
-updatedDate: 2026-08-02
+updatedDate: 2026-08-03
 category: 'Data Privacy Law'
 tags: ['DPO', 'RA 10173', 'Data Privacy Act', 'Compliance', 'Philippines']
 ---
@@ -13,7 +13,7 @@ If you're running a business in the Philippines that collects customer informati
 
 ## What is a Data Protection Officer?
 
-A Data Protection Officer is a professional designated to oversee an organization's data protection strategy and ensure compliance with data privacy laws. Under the Philippine **Data Privacy Act of 2012 (Republic Act No. 10173)**, certain organizations are required to appoint a DPO to act as the point of contact between the organization, data subjects (the individuals whose data is being processed), and the **National Privacy Commission (NPC)**.
+A Data Protection Officer is a professional designated to oversee an organization's data protection strategy and ensure compliance with data privacy laws. Under the Philippine **Data Privacy Act of 2012 (Republic Act No. 10173)** and its IRR, **every** organization that processes personal data is required to designate one — there is no size threshold and no small-business exemption (IRR Section 26(a); NPC Advisory No. 2017-01). The DPO acts as the point of contact between the organization, data subjects (the individuals whose data is being processed), and the **National Privacy Commission (NPC)**.
 
 > **Think of a DPO as your organization's data privacy guardian**—someone who ensures that personal data is handled lawfully, securely, and ethically.
 
@@ -167,7 +167,7 @@ My **TÜV Certified Data Protection Officer** credential means I've undergone ri
 Failing to appoint a DPO or to maintain proper data protection practices can result in severe penalties under RA 10173:
 
 - **Administrative fines** (NPC Circular 2022-01): **0.5%–3%** of prior-year annual gross income for a grave infraction, **0.25%–2%** for a major one, and **₱50,000–₱200,000 per infraction** for failing to register. ₱5,000,000 is the cap on any **single act** — a ceiling, not the standard fine
-- **Criminal penalties:** imprisonment of 6 months to 7 years depending on the offence (DPA Sections 25–34; the 7-year maximum is Section 28(b))
+- **Criminal penalties:** imprisonment of 6 months to 7 years depending on the offence (DPA Sections 25–34; the 7-year maximum is Section 28, second paragraph)
 - **Reputational damage:** Loss of customer trust
 - **Business disruption:** NPC can order suspension of data processing activities
 
