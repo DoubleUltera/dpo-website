@@ -7,6 +7,42 @@ import profilePhoto from '../assets/profile-photo.png';
 
 const title = "TÜV Certified Data Protection Officer | DPO Services Region 8 Philippines";
 const description = "Atty. Renerio de Dios Jr. - TÜV Certified Data Protection Officer for Region 8, Philippines. Expert data privacy compliance consulting for Leyte, Samar & Biliran. Get your custom quote.";
+
+// One source for both the FAQPage JSON-LD and the visible accordion below —
+// they used to be hardcoded separately and drifted apart. Same shape as the
+// `faqs` array the /for landing pages pass to FaqLanding.
+const faqs = [
+	{
+		q: 'Does my business actually need a Data Protection Officer?',
+		a: 'Yes. Under <strong>IRR Section 26(a)</strong> and <strong>NPC Advisory 2017-01</strong>, every organization that processes personal data must designate a DPO — there is no size threshold and no small-business exemption. What size decides is whether you must also <em>register</em> your data processing systems with the NPC: 250 or more persons employed, sensitive personal information on 1,000 or more individuals, processing likely to pose a risk to rights and freedoms, or automated decision-making or profiling. If none of those applies you still appoint a DPO and file a notarized sworn declaration instead. A short assessment settles it — <a href="/start" class="text-primary-700 underline">start here</a>.',
+	},
+	{
+		q: 'How much does DPO consulting cost?',
+		a: "Pricing depends on your organization's size, industry, and the scope of work. We offer flexible models — monthly retainers, project-based, or hourly. There's no public price list because every business is different; contact us for a quote tailored to you.",
+	},
+	{
+		q: 'What is TÜV certification and why does it matter?',
+		a: "TÜV is a globally recognized certification body. A TÜV Certified Data Protection Officer (Cert #7000532) has passed rigorous training and examination in data protection law, privacy management, and risk assessment — so you're working with a verified expert, not just a self-described one.",
+	},
+	{
+		q: 'What happens if I just ignore the Data Privacy Act?',
+		a: 'The National Privacy Commission can investigate complaints and impose administrative fines of <strong>0.5%–3% of your prior-year annual gross income</strong> for a grave infraction — capped at ₱5 million for any single act — plus <strong>₱50,000–₱200,000 per infraction</strong> for failing to register. RA 10173 carries imprisonment separately, for serious offences, and it falls on responsible officers personally. Beyond penalties, a breach or public complaint damages customer trust. Compliance is far cheaper than enforcement.',
+	},
+	{
+		q: 'Do you serve businesses outside Region 8?',
+		a: "I'm based in Dulag, Leyte and specialize in Region 8 (Leyte, Samar, Biliran), but I can serve organizations anywhere in the Philippines through remote consulting, virtual training, and periodic on-site visits as needed.",
+	},
+];
+
+const faqSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'FAQPage',
+	mainEntity: faqs.map((f) => ({
+		'@type': 'Question',
+		name: f.q,
+		acceptedAnswer: { '@type': 'Answer', text: f.a },
+	})),
+};
 ---
 
 <!doctype html>
@@ -52,19 +88,7 @@ const description = "Atty. Renerio de Dios Jr. - TÜV Certified Data Protection 
 		}
 		</script>
 		<!-- FAQ Schema -->
-		<script type="application/ld+json">
-		{
-			"@context": "https://schema.org",
-			"@type": "FAQPage",
-			"mainEntity": [
-				{ "@type": "Question", "name": "Does my business actually need a Data Protection Officer?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Under IRR Section 26(a) and NPC Advisory 2017-01, every organization that processes personal data must designate a DPO — there is no size threshold and no small-business exemption. What size decides is whether you must also register your data processing systems with the NPC: 250 or more persons employed, sensitive personal information on 1,000 or more individuals, processing likely to pose a risk to rights and freedoms, or automated decision-making or profiling. If none of those applies you still appoint a DPO and file a notarized sworn declaration instead." } },
-				{ "@type": "Question", "name": "How much does DPO consulting cost?", "acceptedAnswer": { "@type": "Answer", "text": "Pricing depends on your organization's size, industry, and the scope of work. We offer flexible models — monthly retainers, project-based, or hourly. There is no public price list because every business is different; contact us for a quote tailored to you." } },
-				{ "@type": "Question", "name": "What is TÜV certification and why does it matter?", "acceptedAnswer": { "@type": "Answer", "text": "TÜV is a globally recognized certification body. A TÜV Certified Data Protection Officer (Cert #7000532) has passed rigorous training and examination in data protection law, privacy management, and risk assessment, so you are working with a verified expert." } },
-				{ "@type": "Question", "name": "What happens if I just ignore the Data Privacy Act?", "acceptedAnswer": { "@type": "Answer", "text": "The National Privacy Commission can investigate complaints and impose administrative fines of 0.5% to 3% of your prior-year annual gross income for a grave infraction, capped at 5 million pesos for any single act, plus 50,000 to 200,000 pesos per infraction for failing to register. RA 10173 carries imprisonment separately for serious offences, falling on responsible officers personally. Beyond penalties, a breach or public complaint damages customer trust." } },
-				{ "@type": "Question", "name": "Do you serve businesses outside Region 8?", "acceptedAnswer": { "@type": "Answer", "text": "Based in Dulag, Leyte and specializing in Region 8 (Leyte, Samar, Biliran), services are available anywhere in the Philippines through remote consulting, virtual training, and periodic on-site visits as needed." } }
-			]
-		}
-		</script>
+		<script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
 	</head>
 	<body>
 		<Header />
@@ -415,26 +439,12 @@ const description = "Atty. Renerio de Dios Jr. - TÜV Certified Data Protection 
 				<div class="max-w-3xl mx-auto">
 					<h2 class="text-center mb-12">Frequently Asked Questions</h2>
 					<div class="space-y-6">
-						<details class="bg-white rounded-lg p-6 shadow-sm">
-							<summary class="font-semibold text-primary-900 cursor-pointer">Does my business actually need a Data Protection Officer?</summary>
-							<p class="mt-4 text-neutral-700 text-sm">Yes. Under <strong>IRR Section 26(a)</strong> and <strong>NPC Advisory 2017-01</strong>, every organization that processes personal data must designate a DPO — there is no size threshold and no small-business exemption. What size decides is whether you must also <em>register</em> your data processing systems with the NPC: 250 or more persons employed, sensitive personal information on 1,000 or more individuals, processing likely to pose a risk to rights and freedoms, or automated decision-making or profiling. If none of those applies you still appoint a DPO and file a notarized sworn declaration instead. A short assessment settles it — <a href="/start" class="text-primary-700 underline">start here</a>.</p>
-						</details>
-						<details class="bg-white rounded-lg p-6 shadow-sm">
-							<summary class="font-semibold text-primary-900 cursor-pointer">How much does DPO consulting cost?</summary>
-							<p class="mt-4 text-neutral-700 text-sm">Pricing depends on your organization's size, industry, and the scope of work. We offer flexible models — monthly retainers, project-based, or hourly. There's no public price list because every business is different; contact us for a quote tailored to you.</p>
-						</details>
-						<details class="bg-white rounded-lg p-6 shadow-sm">
-							<summary class="font-semibold text-primary-900 cursor-pointer">What is TÜV certification and why does it matter?</summary>
-							<p class="mt-4 text-neutral-700 text-sm">TÜV is a globally recognized certification body. A TÜV Certified Data Protection Officer (Cert #7000532) has passed rigorous training and examination in data protection law, privacy management, and risk assessment — so you're working with a verified expert, not just a self-described one.</p>
-						</details>
-						<details class="bg-white rounded-lg p-6 shadow-sm">
-							<summary class="font-semibold text-primary-900 cursor-pointer">What happens if I just ignore the Data Privacy Act?</summary>
-							<p class="mt-4 text-neutral-700 text-sm">The National Privacy Commission can investigate complaints and impose administrative fines of <strong>0.5%–3% of your prior-year annual gross income</strong> for a grave infraction — capped at ₱5 million for any single act — plus <strong>₱50,000–₱200,000 per infraction</strong> for failing to register. RA 10173 carries imprisonment separately, for serious offences, and it falls on responsible officers personally. Beyond penalties, a breach or public complaint damages customer trust. Compliance is far cheaper than enforcement.</p>
-						</details>
-						<details class="bg-white rounded-lg p-6 shadow-sm">
-							<summary class="font-semibold text-primary-900 cursor-pointer">Do you serve businesses outside Region 8?</summary>
-							<p class="mt-4 text-neutral-700 text-sm">I'm based in Dulag, Leyte and specialize in Region 8 (Leyte, Samar, Biliran), but I can serve organizations anywhere in the Philippines through remote consulting, virtual training, and periodic on-site visits as needed.</p>
-						</details>
+						{faqs.map((f) => (
+							<details class="bg-white rounded-lg p-6 shadow-sm">
+								<summary class="font-semibold text-primary-900 cursor-pointer" set:html={f.q} />
+								<p class="mt-4 text-neutral-700 text-sm" set:html={f.a} />
+							</details>
+						))}
 					</div>
 					<p class="text-center mt-8">
 						<a href="/services/dpo-consulting#services" class="text-primary-700 font-semibold underline">See all questions and services →</a>

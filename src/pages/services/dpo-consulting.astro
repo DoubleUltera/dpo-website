@@ -5,6 +5,54 @@ import Header from '../../components/Header.astro';
 
 const title = "Data Protection Officer (DPO) Consulting Services | TÜV Certified | Region 8 Philippines";
 const description = "Expert TÜV certified DPO consulting for Philippine businesses. Privacy Management Program implementation, Data Privacy Act compliance, NPC registration, and data breach response. Serving Leyte, Samar & Biliran.";
+
+// One source for both the FAQPage JSON-LD and the visible accordion below.
+// The two used to be separate lists with different questions, so the schema
+// advertised answers a reader could not find on the page.
+const faqs = [
+	{
+		q: 'What is a Data Protection Officer (DPO)?',
+		a: "A Data Protection Officer is the person accountable for an organization's data privacy compliance — the NPC's registered point of contact, the one who handles data-subject complaints, and the one who keeps the Privacy Management Program running. Under the Data Privacy Act of 2012 (RA 10173) and <strong>Section 26(a) of its IRR</strong>, every organization that processes personal data must designate one, whatever its size.",
+	},
+	{
+		q: 'Does my business need a Data Protection Officer?',
+		a: 'Yes. <strong>IRR Section 26(a)</strong> and <strong>NPC Advisory 2017-01</strong> require every organization that processes personal data to designate a DPO, with no threshold and no exemption for small businesses. The 250-employee and 1,000-individual figures decide whether you must <em>additionally register</em> your data processing systems with the NPC under <strong>Circular 2022-04</strong> — they do not decide whether you need a DPO.',
+	},
+	{
+		q: 'What is the difference between an in-house DPO and a DPO consultant?',
+		a: 'An in-house DPO is a full-time employee dedicated solely to your organization. A DPO consultant provides expert services on a contractual basis, offering flexibility and cost savings while maintaining independence. For many Region 8 businesses, a consultant DPO provides the same expertise at a fraction of the cost of a full-time hire.',
+	},
+	{
+		q: 'How much does DPO consulting cost?',
+		a: "Pricing depends on your organization's size, industry, data processing complexity, and scope of services needed. We offer flexible engagement models including monthly retainers, project-based pricing, and hourly consulting. Contact us for a customized quote tailored to your specific requirements.",
+	},
+	{
+		q: 'What is the TÜV certification and why does it matter?',
+		a: "TÜV (Technischer Überwachungsverein) is a globally recognized certification body. The TÜV Certified Data Protection Officer credential validates that I have undergone rigorous training and examination in data protection laws, GDPR, privacy management, and risk assessment. It ensures you're working with a professionally certified expert who meets international standards.",
+	},
+	{
+		q: 'Can you serve as DPO for multiple companies?',
+		a: 'Yes, as an external DPO consultant, I can serve multiple organizations simultaneously, provided there are no conflicts of interest. This is permitted under <strong>NPC Circular 2022-04 Section 8</strong> (a Common DPO, no NPC approval required) and the outsourcing provision of NPC Advisory 2017-01, and is a common practice that allows small and medium businesses to access expert DPO services cost-effectively.',
+	},
+	{
+		q: 'How long does it take to implement a Privacy Management Program?',
+		a: 'Implementation timelines vary based on your current compliance level and organizational complexity. A basic PMP for a small business can be implemented in 4-6 weeks, while larger organizations with complex data processing may require 3-6 months. We provide a detailed timeline during the initial consultation.',
+	},
+	{
+		q: 'Do you provide services outside of Region 8?',
+		a: "While I'm based in Dulag, Leyte and specialize in Region 8 (Leyte, Samar, Biliran), I can provide DPO consulting services to organizations anywhere in the Philippines through remote consulting, virtual training, and periodic on-site visits as needed.",
+	},
+];
+
+const faqSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'FAQPage',
+	mainEntity: faqs.map((f) => ({
+		'@type': 'Question',
+		name: f.q,
+		acceptedAnswer: { '@type': 'Answer', text: f.a },
+	})),
+};
 ---
 
 <!doctype html>
@@ -41,34 +89,7 @@ const description = "Expert TÜV certified DPO consulting for Philippine busines
 		}
 		</script>
 		<!-- FAQ Schema -->
-		<script type="application/ld+json">
-		{
-			"@context": "https://schema.org",
-			"@type": "FAQPage",
-			"mainEntity": [{
-				"@type": "Question",
-				"name": "What is a Data Protection Officer (DPO)?",
-				"acceptedAnswer": {
-					"@type": "Answer",
-					"text": "A Data Protection Officer (DPO) is a professional responsible for overseeing an organization's data privacy compliance strategy. Under the Philippine Data Privacy Act of 2012 (RA 10173) and Section 26(a) of its IRR, every organization that processes personal data must designate one, whatever its size."
-				}
-			}, {
-				"@type": "Question",
-				"name": "Does my business need a Data Protection Officer?",
-				"acceptedAnswer": {
-					"@type": "Answer",
-					"text": "Yes. IRR Section 26(a) and NPC Advisory 2017-01 require every organization that processes personal data to designate a DPO, with no threshold and no exemption for small businesses. The 250-employee and 1,000-individual figures decide whether you must additionally register your data processing systems with the NPC under Circular 2022-04, not whether you need a DPO."
-				}
-			}, {
-				"@type": "Question",
-				"name": "What is TÜV certification for DPO?",
-				"acceptedAnswer": {
-					"@type": "Answer",
-					"text": "TÜV certification is an internationally recognized credential that validates a Data Protection Officer's expertise in data privacy laws, compliance frameworks, and privacy management programs. It ensures the highest standards of professional competence."
-				}
-			}]
-		}
-		</script>
+		<script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
 	</head>
 	<body>
 		<Header />
@@ -516,59 +537,12 @@ const description = "Expert TÜV certified DPO consulting for Philippine busines
 					<h2 class="text-center mb-12">Frequently Asked Questions</h2>
 
 					<div class="space-y-6">
-						<details class="bg-white rounded-lg p-6 shadow-sm">
-							<summary class="font-semibold text-primary-900 cursor-pointer">
-								What is the difference between an in-house DPO and a DPO consultant?
-							</summary>
-							<p class="mt-4 text-neutral-700 text-sm">
-								An in-house DPO is a full-time employee dedicated solely to your organization. A DPO consultant provides expert services on a contractual basis, offering flexibility and cost savings while maintaining independence. For many Region 8 businesses, a consultant DPO provides the same expertise at a fraction of the cost of a full-time hire.
-							</p>
-						</details>
-
-						<details class="bg-white rounded-lg p-6 shadow-sm">
-							<summary class="font-semibold text-primary-900 cursor-pointer">
-								How much does DPO consulting cost?
-							</summary>
-							<p class="mt-4 text-neutral-700 text-sm">
-								Pricing depends on your organization's size, industry, data processing complexity, and scope of services needed. We offer flexible engagement models including monthly retainers, project-based pricing, and hourly consulting. Contact us for a customized quote tailored to your specific requirements.
-							</p>
-						</details>
-
-						<details class="bg-white rounded-lg p-6 shadow-sm">
-							<summary class="font-semibold text-primary-900 cursor-pointer">
-								What is the TÜV certification and why does it matter?
-							</summary>
-							<p class="mt-4 text-neutral-700 text-sm">
-								TÜV (Technischer Überwachungsverein) is a globally recognized certification body. TÜV Certified Data Protection Officer credential validates that I have undergone rigorous training and examination in data protection laws, GDPR, privacy management, and risk assessment. It ensures you're working with a professionally certified expert who meets international standards.
-							</p>
-						</details>
-
-						<details class="bg-white rounded-lg p-6 shadow-sm">
-							<summary class="font-semibold text-primary-900 cursor-pointer">
-								Can you serve as DPO for multiple companies?
-							</summary>
-							<p class="mt-4 text-neutral-700 text-sm">
-								Yes, as an external DPO consultant, I can serve multiple organizations simultaneously, provided there are no conflicts of interest. This is permitted under <strong>NPC Circular 2022-04 Section 8</strong> (a Common DPO, no NPC approval required) and the outsourcing provision of NPC Advisory 2017-01, and is a common practice that allows small and medium businesses to access expert DPO services cost-effectively.
-							</p>
-						</details>
-
-						<details class="bg-white rounded-lg p-6 shadow-sm">
-							<summary class="font-semibold text-primary-900 cursor-pointer">
-								How long does it take to implement a Privacy Management Program?
-							</summary>
-							<p class="mt-4 text-neutral-700 text-sm">
-								Implementation timelines vary based on your current compliance level and organizational complexity. A basic PMP for a small business can be implemented in 4-6 weeks, while larger organizations with complex data processing may require 3-6 months. We provide a detailed timeline during the initial consultation.
-							</p>
-						</details>
-
-						<details class="bg-white rounded-lg p-6 shadow-sm">
-							<summary class="font-semibold text-primary-900 cursor-pointer">
-								Do you provide services outside of Region 8?
-							</summary>
-							<p class="mt-4 text-neutral-700 text-sm">
-								While I'm based in Dulag, Leyte and specialize in Region 8 (Leyte, Samar, Biliran), I can provide DPO consulting services to organizations anywhere in the Philippines through remote consulting, virtual training, and periodic on-site visits as needed.
-							</p>
-						</details>
+						{faqs.map((f) => (
+							<details class="bg-white rounded-lg p-6 shadow-sm">
+								<summary class="font-semibold text-primary-900 cursor-pointer" set:html={f.q} />
+								<p class="mt-4 text-neutral-700 text-sm" set:html={f.a} />
+							</details>
+						))}
 					</div>
 				</div>
 			</div>
