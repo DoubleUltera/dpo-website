@@ -138,7 +138,7 @@ dpo-website/
 │   └── consts.ts                       # Site configuration (name, description)
 │
 ├── astro.config.mjs                    # Astro config (integrations, site URL)
-├── check-faq-parity.mjs                # Build gate: FAQ JSON-LD must match visible copy
+├── check-schema.mjs                    # Build gate: FAQ parity + BlogPosting completeness
 ├── netlify.toml                        # Netlify build settings, redirects, headers
 ├── DEPLOYMENT.md                       # Complete deployment guide
 ├── README.md                           # Project overview and quick start
@@ -245,10 +245,14 @@ emailjs.send('service_id', 'template_attorney_notification', {
 | About | `Person` + `Occupation` |
 | DPO Consulting | `Service`, `FAQPage` |
 | `/start`, `/for/banks`, `/for/hotels`, `/for/lending` | `FAQPage` (one each, via `FaqLanding`) |
+| Each blog post | `BlogPosting` (via `BlogPost.astro`) |
 
-**Blog posts carry no `BlogPosting` schema.** They never have — an earlier
-version of this file claimed otherwise. Adding it is an open opportunity, not a
-regression.
+`BlogPosting` is built in the layout, so every post gets one from its own
+frontmatter. `dateModified` comes from `updatedDate` and falls back to
+`pubDate` — all five posts carry `updatedDate: 2026-08-02`, the day their legal
+content was corrected, which is also what renders as the "Last updated on" line
+in the hero. Decap CMS exposes the field, so it can be maintained without
+touching code. Keep it honest: bump it when the content actually changes.
 
 **FAQ copy is generated, never hardcoded twice.** Every page with a `FAQPage`
 block declares a `const faqs = [{ q, a }]` array and renders **both** the JSON-LD
@@ -256,7 +260,7 @@ and the visible `<details>` accordion from it. The `/for/*` pages and `/start`
 pass theirs to `FaqLanding`; `index.astro` and `dpo-consulting.astro` do it
 inline.
 
-This is enforced, not conventional. `check-faq-parity.mjs` runs as part of
+This is enforced, not conventional. `check-schema.mjs` runs as part of
 `npm run build` — which is Netlify's build command — and **fails the deploy** if
 any `FAQPage` answer is missing from the rendered body of its own page. The rule
 exists because a correction was once applied to a homepage JSON-LD block and not
@@ -363,13 +367,14 @@ tags: ['RA 10173', 'NPC', 'Compliance', etc.]
 ```bash
 npm install          # Install dependencies
 npm run dev          # Start dev server (localhost:4321)
-npm run build        # Build production site, then run the FAQ parity gate
+npm run build        # Build production site, then run the JSON-LD schema gate
 npm run preview      # Preview production build
 ```
 
-`npm run build` is `astro build && node check-faq-parity.mjs`. A non-zero exit
-from the gate is a real failure — some page's FAQ JSON-LD no longer matches its
-visible copy. Fix the page; do not bypass the check.
+`npm run build` is `astro build && node check-schema.mjs`. A non-zero exit from
+the gate is a real failure — either a page's FAQ JSON-LD no longer matches its
+visible copy, or a blog post is missing a well-formed `BlogPosting` block. Fix
+the page; do not bypass the check.
 
 ### Production Deployment (Automatic via Netlify)
 
@@ -540,9 +545,10 @@ Neutrals:
 - Syntax errors in .astro files
 - Missing frontmatter in blog posts
 - Invalid YAML in config files
-- **FAQ parity gate failed** — `check-faq-parity.mjs` names the page and the
-  question whose JSON-LD answer is absent from the visible copy. Make that page
-  render both surfaces from its `faqs` array; do not remove the gate.
+- **Schema gate failed** — `check-schema.mjs` names the page and the problem.
+  For an FAQ mismatch, make that page render both surfaces from its `faqs`
+  array. For a `BlogPosting` complaint, check the post's frontmatter. Do not
+  remove the gate.
 
 **Solution:** Test locally with `npm run build`
 
@@ -629,12 +635,11 @@ tags: ['Array', 'of', 'strings']
       landing pages, all QR targets on print collateral
 - [x] Legal-accuracy audit of every page and post against RA 10173, its IRR
       and the NPC circulars (2026-08-02, see `../AUDIT-REPORT-2026-08-02.md`)
-- [x] FAQ copy generated from one array per page + `check-faq-parity.mjs`
-      build gate
+- [x] FAQ copy generated from one array per page, `BlogPosting` schema on every
+      post, both enforced by the `check-schema.mjs` build gate
 
 ### ⏭️ Open
 - [ ] Real client testimonials — the homepage cards are currently unattributed
-- [ ] `BlogPosting` schema on blog posts (never implemented)
 - [ ] Google Business Profile
 
 ## Support Resources

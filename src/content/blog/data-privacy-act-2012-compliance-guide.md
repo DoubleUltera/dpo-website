@@ -2,6 +2,7 @@
 title: 'Data Privacy Act of 2012: Essential Compliance Guide for Region 8 Businesses'
 description: 'A comprehensive guide to understanding and complying with RA 10173 (Data Privacy Act of 2012) for businesses in Eastern Visayas, Philippines.'
 pubDate: 2026-03-27
+updatedDate: 2026-08-02
 category: 'Compliance Tips'
 tags: ['RA 10173', 'Data Privacy Act', 'Compliance', 'Region 8', 'NPC']
 ---

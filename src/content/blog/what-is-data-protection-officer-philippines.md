@@ -2,6 +2,7 @@
 title: 'What is a Data Protection Officer and Why Your Philippine Business Needs One'
 description: 'Learn about the role of a Data Protection Officer under the Philippine Data Privacy Act of 2012 and whether your organization is required to appoint one.'
 pubDate: 2026-03-28
+updatedDate: 2026-08-02
 category: 'Data Privacy Law'
 tags: ['DPO', 'RA 10173', 'Data Privacy Act', 'Compliance', 'Philippines']
 ---

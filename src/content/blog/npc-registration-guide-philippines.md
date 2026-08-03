@@ -2,6 +2,7 @@
 title: 'How to Register Your Business with the National Privacy Commission (Complete Guide)'
 description: 'Step-by-step guide to registering your organization as a Personal Information Controller with the NPC under RA 10173, including requirements and common mistakes.'
 pubDate: 2026-03-29
+updatedDate: 2026-08-02
 category: 'Compliance Tips'
 tags: ['NPC', 'Registration', 'RA 10173', 'Compliance', 'Philippines', 'PIC']
 ---

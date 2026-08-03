@@ -8,12 +8,43 @@ import Header from '../components/Header.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage, category } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, category, tags } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const postSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'BlogPosting',
+	headline: title,
+	description,
+	datePublished: pubDate.toISOString(),
+	// Google treats a missing dateModified as "never revised"; these posts are
+	// corrected against NPC issuances, so fall back to the publication date.
+	dateModified: (updatedDate ?? pubDate).toISOString(),
+	author: {
+		'@type': 'Person',
+		name: 'Atty. Renerio de Dios Jr.',
+		jobTitle: 'TÜV Certified Data Protection Officer',
+		url: new URL('about', Astro.site).href,
+	},
+	publisher: {
+		'@type': 'Organization',
+		name: 'De Dios Law',
+		url: Astro.site?.href,
+	},
+	image: new URL(heroImage?.src ?? '/og-default.png', Astro.site).href,
+	mainEntityOfPage: canonicalURL.href,
+	url: canonicalURL.href,
+	inLanguage: 'en-PH',
+	...(category && { articleSection: category }),
+	...(tags?.length && { keywords: tags.join(', ') }),
+};
 ---
 
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={title} description={description} image={heroImage} />
+		<script type="application/ld+json" set:html={JSON.stringify(postSchema)}></script>
 		<style>
 			main {
 				width: 100%;

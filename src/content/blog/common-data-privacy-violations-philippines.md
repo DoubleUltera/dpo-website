@@ -2,6 +2,7 @@
 title: '7 Common Data Privacy Violations in the Philippines (And How to Avoid Them)'
 description: 'Learn about the most frequent data privacy violations under RA 10173 that Philippine businesses make—and practical steps to avoid costly NPC penalties.'
 pubDate: 2026-03-26
+updatedDate: 2026-08-02
 category: 'Compliance Tips'
 tags: ['Data Privacy Act', 'Violations', 'NPC', 'Compliance', 'Best Practices']
 ---
