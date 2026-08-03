@@ -22,3 +22,6 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# schema.org vocabulary cache for tools/validate-schema-vocab.py
+tools/.schemaorg-cache.jsonld

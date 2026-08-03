@@ -139,6 +139,8 @@ dpo-website/
 │
 ├── astro.config.mjs                    # Astro config (integrations, site URL)
 ├── check-schema.mjs                    # Build gate: FAQ parity + BlogPosting completeness
+├── tools/
+│   └── validate-schema-vocab.py        # Manual: every JSON-LD property checked against schema.org
 ├── netlify.toml                        # Netlify build settings, redirects, headers
 ├── DEPLOYMENT.md                       # Complete deployment guide
 ├── README.md                           # Project overview and quick start
@@ -266,6 +268,28 @@ any `FAQPage` answer is missing from the rendered body of its own page. The rule
 exists because a correction was once applied to a homepage JSON-LD block and not
 to the accordion beside it, so the published page contradicted its own
 structured data and every grep for the corrected text reported it clean.
+
+**FAQ rich results no longer exist.** Google restricted them to authoritative
+government and health sites in September 2023 and retired the feature entirely
+on **7 May 2026**, removing the documentation that June. The `FAQPage` markup is
+still valid structured data and still describes the page to non-Google consumers,
+so it stays — but do not expect an FAQ rich result in Search, and do not judge
+the markup by whether one appears. The parity rule earns its keep for accuracy,
+not for rich results: it is what stops the page from contradicting itself.
+
+**Validating changes.** `tools/validate-schema-vocab.py` checks every JSON-LD
+block on the live site (or a local `dist/`) against the real schema.org
+vocabulary — are the types real, is each property allowed on the type it is
+attached to — plus Google's Article recommendations. It is deliberately **not**
+in `npm run build`: it downloads a 1.5 MB vocabulary, and a network hiccup must
+never fail a deploy. Run it by hand after editing any JSON-LD block. It caught
+`issuedBy` on an `EducationalOccupationalCredential`, which is valid only on
+`Certification`/`Permit`/`Ticket` — the correct property on a credential is
+`recognizedBy`. Neither the build gate nor a grep can see that class of error.
+
+Google's Rich Results Test (https://search.google.com/test/rich-results) stays
+the authority on whether a rich result is actually *shown*; the script only
+checks the vocabulary is used correctly.
 
 Answers may contain `<strong>`, `<em>` and `<a>` — Google permits that tag set
 in FAQ answers, and emitting the identical string on both surfaces is what makes
