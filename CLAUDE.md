@@ -30,7 +30,7 @@ This is a professional consulting website for **Atty. Renerio de Dios Jr.**, a *
 
 ### Technology Stack Rationale
 
-**Astro 4.x** - Static Site Generator
+**Astro 6.x** - Static Site Generator
 - **Why:** Fastest loading times (95+ PageSpeed score), SEO-optimized, zero JavaScript by default
 - **Alternative considered:** WordPress (rejected due to cost: ₱2,000-5,000/year hosting + security issues)
 - **Cost:** FREE (open-source)
@@ -83,34 +83,50 @@ dpo-website/
 │   ├── admin/                          # Decap CMS
 │   │   ├── config.yml                  # CMS configuration (collections, fields, workflow)
 │   │   └── index.html                  # CMS entry point (loads from CDN)
+│   ├── fonts/                          # Atkinson Hyperlegible (self-hosted)
+│   ├── qr-*.svg                        # QR codes on print collateral → /start, /for/*, /card
+│   ├── dedios.vcf                      # vCard served from /card
+│   ├── og-default.png                  # Open Graph fallback image
+│   ├── favicon.*, apple-touch-icon.png
+│   ├── robots.txt
 │   ├── tuv-certificate.pdf             # TÜV DPO Certificate #7000532
 │   └── dpo-attendance-certificate.pdf  # Training certificate
 │
 ├── src/
 │   ├── components/
-│   │   ├── BaseHead.astro              # SEO meta tags, Open Graph, Google Fonts
+│   │   ├── BaseHead.astro              # SEO meta tags, Open Graph, fonts, GA4
+│   │   ├── FaqLanding.astro            # Whole-page layout for the /for/* landing pages
 │   │   ├── Footer.astro                # Site footer with copyright
-│   │   └── Header.astro                # Navigation with mobile menu
+│   │   ├── FormattedDate.astro         # Date formatting for blog posts
+│   │   ├── Header.astro                # Navigation with mobile menu
+│   │   └── HeaderLink.astro            # Nav link with active state
 │   │
 │   ├── content/
-│   │   ├── blog/                       # Blog posts (Markdown + frontmatter)
-│   │   │   ├── what-is-data-protection-officer-philippines.md
-│   │   │   ├── data-privacy-act-2012-compliance-guide.md
-│   │   │   ├── common-data-privacy-violations-philippines.md
-│   │   │   ├── npc-registration-guide-philippines.md
-│   │   │   └── data-breach-response-plan-philippines.md
-│   │   └── config.ts                   # Content collections schema
+│   │   └── blog/                       # Blog posts (Markdown + frontmatter)
+│   │       ├── what-is-data-protection-officer-philippines.md
+│   │       ├── data-privacy-act-2012-compliance-guide.md
+│   │       ├── common-data-privacy-violations-philippines.md
+│   │       ├── npc-registration-guide-philippines.md
+│   │       └── data-breach-response-plan-philippines.md
 │   │
 │   ├── layouts/
-│   │   └── BlogPost.astro              # Blog post layout with schema markup
+│   │   └── BlogPost.astro              # Blog post layout
 │   │
 │   ├── pages/
-│   │   ├── index.astro                 # Homepage with TÜV badge, services, regional focus
+│   │   ├── index.astro                 # Homepage — TÜV badge, services, FAQ
 │   │   ├── about.astro                 # Credentials, certifications, Person schema
 │   │   ├── contact.astro               # EmailJS form with dual workflow
+│   │   ├── card.astro                  # Digital calling card (QR target, serves the vCard)
+│   │   ├── start.astro                 # Leaflet QR landing page — assessment CTA
+│   │   ├── 404.astro
+│   │   ├── rss.xml.js                  # RSS feed
 │   │   ├── blog/
 │   │   │   ├── index.astro             # Blog listing page
 │   │   │   └── [...slug].astro         # Dynamic blog post routes
+│   │   ├── for/                        # Industry landing pages (QR targets on print collateral)
+│   │   │   ├── banks.astro
+│   │   │   ├── hotels.astro
+│   │   │   └── lending.astro
 │   │   └── services/
 │   │       ├── dpo-consulting.astro    # Primary service (6 offerings, FAQ, schema)
 │   │       └── notarial.astro          # Complementary service (6 categories)
@@ -118,15 +134,19 @@ dpo-website/
 │   ├── styles/
 │   │   └── global.css                  # Custom CSS variables, component classes
 │   │
+│   ├── content.config.ts               # Content collections schema
 │   └── consts.ts                       # Site configuration (name, description)
 │
 ├── astro.config.mjs                    # Astro config (integrations, site URL)
-├── tailwind.config.cjs                 # Tailwind theme configuration
+├── check-faq-parity.mjs                # Build gate: FAQ JSON-LD must match visible copy
 ├── netlify.toml                        # Netlify build settings, redirects, headers
 ├── DEPLOYMENT.md                       # Complete deployment guide
 ├── README.md                           # Project overview and quick start
 └── package.json                        # Dependencies and scripts
 ```
+
+Tailwind v4 is configured in `src/styles/global.css` via `@tailwindcss/vite` —
+there is no `tailwind.config.cjs`.
 
 ## Key Technical Decisions
 
@@ -217,11 +237,35 @@ emailjs.send('service_id', 'template_attorney_notification', {
 
 ### 4. SEO Strategy: Schema Markup + Regional Keywords
 
-**Schema.org Structured Data:**
-- **LocalBusiness** + **ProfessionalService** (Homepage)
-- **Person** (About page)
-- **FAQPage** (DPO Consulting service page)
-- **BlogPosting** (Each blog post)
+**Schema.org Structured Data** — 9 JSON-LD blocks across 7 pages:
+
+| Page | Blocks |
+|---|---|
+| Homepage | `Attorney` + `ProfessionalService`, `FAQPage` |
+| About | `Person` + `Occupation` |
+| DPO Consulting | `Service`, `FAQPage` |
+| `/start`, `/for/banks`, `/for/hotels`, `/for/lending` | `FAQPage` (one each, via `FaqLanding`) |
+
+**Blog posts carry no `BlogPosting` schema.** They never have — an earlier
+version of this file claimed otherwise. Adding it is an open opportunity, not a
+regression.
+
+**FAQ copy is generated, never hardcoded twice.** Every page with a `FAQPage`
+block declares a `const faqs = [{ q, a }]` array and renders **both** the JSON-LD
+and the visible `<details>` accordion from it. The `/for/*` pages and `/start`
+pass theirs to `FaqLanding`; `index.astro` and `dpo-consulting.astro` do it
+inline.
+
+This is enforced, not conventional. `check-faq-parity.mjs` runs as part of
+`npm run build` — which is Netlify's build command — and **fails the deploy** if
+any `FAQPage` answer is missing from the rendered body of its own page. The rule
+exists because a correction was once applied to a homepage JSON-LD block and not
+to the accordion beside it, so the published page contradicted its own
+structured data and every grep for the corrected text reported it clean.
+
+Answers may contain `<strong>`, `<em>` and `<a>` — Google permits that tag set
+in FAQ answers, and emitting the identical string on both surfaces is what makes
+the parity check exact. **Never hardcode the pair on a new page.**
 
 **Target Keywords:**
 - Primary: "Data Protection Officer Philippines", "DPO Region 8", "DPO Leyte"
@@ -319,9 +363,13 @@ tags: ['RA 10173', 'NPC', 'Compliance', etc.]
 ```bash
 npm install          # Install dependencies
 npm run dev          # Start dev server (localhost:4321)
-npm run build        # Build production site
+npm run build        # Build production site, then run the FAQ parity gate
 npm run preview      # Preview production build
 ```
+
+`npm run build` is `astro build && node check-faq-parity.mjs`. A non-zero exit
+from the gate is a real failure — some page's FAQ JSON-LD no longer matches its
+visible copy. Fix the page; do not bypass the check.
 
 ### Production Deployment (Automatic via Netlify)
 
@@ -387,36 +435,15 @@ npm run preview      # Preview production build
 
 **See DEPLOYMENT.md Section "Step 3: Set Up Decap CMS" for complete instructions.**
 
-### 3. Custom Domain (Optional but Recommended)
+### 3. Custom Domain — DONE
 
-**Steps:**
-1. Purchase domain (dporegion8.com recommended)
-2. Netlify Dashboard → Domain settings → Add custom domain
-3. Update DNS records at registrar
-4. Wait for DNS propagation (up to 24 hours)
-5. Netlify auto-provisions SSL certificate
+Live at **https://dpo.dedioslaw.ph**. `astro.config.mjs` (`site:`) and the
+`netlify.toml` www→apex redirect both point at it. The `dporegion8.com` name
+this file used to recommend was never purchased.
 
-**Update `netlify.toml` with actual domain:**
-```toml
-from = "https://www.dporegion8.com/*"
-to = "https://dporegion8.com/:splat"
-```
+### 4. Google Analytics — DONE
 
-### 4. Google Analytics (Optional)
-
-**Steps:**
-1. Create Google Analytics 4 property
-2. Get Measurement ID (G-XXXXXXXXXX)
-3. Add to `src/components/BaseHead.astro`:
-   ```html
-   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-   <script>
-     window.dataLayer = window.dataLayer || [];
-     function gtag(){dataLayer.push(arguments);}
-     gtag('js', new Date());
-     gtag('config', 'G-XXXXXXXXXX');
-   </script>
-   ```
+GA4 is live in `src/components/BaseHead.astro` (`GA_MEASUREMENT_ID`).
 
 ## Security Measures
 
@@ -513,6 +540,9 @@ Neutrals:
 - Syntax errors in .astro files
 - Missing frontmatter in blog posts
 - Invalid YAML in config files
+- **FAQ parity gate failed** — `check-faq-parity.mjs` names the page and the
+  question whose JSON-LD answer is absent from the visible copy. Make that page
+  render both surfaces from its `faqs` array; do not remove the gate.
 
 **Solution:** Test locally with `npm run build`
 
@@ -594,14 +624,18 @@ tags: ['Array', 'of', 'strings']
 - [x] Netlify deployment configuration (netlify.toml)
 - [x] Complete deployment documentation (DEPLOYMENT.md)
 - [x] Project README with quick start guide
+- [x] Deployed and live at dpo.dedioslaw.ph (GA4 active)
+- [x] Conversion pages: `/start`, `/card`, and the three `/for/*` industry
+      landing pages, all QR targets on print collateral
+- [x] Legal-accuracy audit of every page and post against RA 10173, its IRR
+      and the NPC circulars (2026-08-02, see `../AUDIT-REPORT-2026-08-02.md`)
+- [x] FAQ copy generated from one array per page + `check-faq-parity.mjs`
+      build gate
 
-### ⏭️ Client Actions Required
-- [ ] Purchase domain name
-- [ ] Deploy to Netlify
-- [ ] Configure EmailJS credentials
-- [ ] Set up Netlify Identity
-- [ ] Create Google Business Profile
-- [ ] Launch marketing campaigns
+### ⏭️ Open
+- [ ] Real client testimonials — the homepage cards are currently unattributed
+- [ ] `BlogPosting` schema on blog posts (never implemented)
+- [ ] Google Business Profile
 
 ## Support Resources
 
@@ -625,6 +659,6 @@ tags: ['Array', 'of', 'strings']
 ---
 
 **Project Build Date:** March 2026
-**Last Updated:** March 31, 2026
+**Last Updated:** August 3, 2026
 **Built by:** Claude (Anthropic)
 **Built for:** Atty. Renerio de Dios Jr. - TÜV Certified DPO, Region 8, Philippines
