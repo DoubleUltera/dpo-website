@@ -269,9 +269,15 @@ exists because a correction was once applied to a homepage JSON-LD block and not
 to the accordion beside it, so the published page contradicted its own
 structured data and every grep for the corrected text reported it clean.
 
-**FAQ rich results no longer exist.** Google restricted them to authoritative
-government and health sites in September 2023 and retired the feature entirely
-on **7 May 2026**, removing the documentation that June. The `FAQPage` markup is
+**FAQ rich results no longer exist.** Google restricted them to well-known,
+authoritative government and health sites in August 2023, then retired the
+feature entirely on **7 May 2026** — Search stopped showing them and Search
+Console stopped reporting on FAQ structured data. In **June 2026** the FAQ
+search appearance, the rich result report, and *FAQ support in the Rich Results
+Test itself* were dropped; the Search Console API follows in August 2026. So the
+Rich Results Test will not report on the seven `FAQPage` blocks at all — that is
+the tool, not a defect in the markup. Google's own guidance is that unused
+structured data causes no problems and need not be removed. The `FAQPage` markup is
 still valid structured data and still describes the page to non-Google consumers,
 so it stays — but do not expect an FAQ rich result in Search, and do not judge
 the markup by whether one appears. The parity rule earns its keep for accuracy,
