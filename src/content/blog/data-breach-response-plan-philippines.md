@@ -2,7 +2,7 @@
 title: 'Data Breach Response Plan: The 72-Hour Rule Every Philippine Business Must Know'
 description: 'A practical guide to creating and executing a data breach response plan that complies with the 72-hour NPC reporting requirement under RA 10173.'
 pubDate: 2026-03-30
-updatedDate: 2026-08-02
+updatedDate: 2026-08-04
 category: 'Data Privacy Law'
 tags: ['Data Breach', 'NPC', 'RA 10173', 'Incident Response', 'Security', 'Philippines']
 ---
@@ -441,7 +441,7 @@ Here's a simple template you can customize:
 
 - **Risk Level:** High (financial information)
 - **NPC Reporting:** Required within 72 hours
-- **Customer Notification:** Required immediately
+- **Customer Notification:** Recommended as soon as confirmed (legal maximum: 72 hours)
 - **Additional Steps:** Notify payment processor, offer credit monitoring
 
 </div>
