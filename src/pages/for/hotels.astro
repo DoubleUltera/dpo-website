@@ -4,31 +4,35 @@ import FaqLanding from '../../components/FaqLanding.astro';
 const faqs = [
 	{
 		q: 'A hotel just keeps guest records. Does the Data Privacy Act really apply to us?',
-		a: 'Yes. Names, IDs, contact details, nationality, payment cards, and stay history are all <strong>personal data</strong> under RA 10173 — and a passport or government ID makes some of it sensitive. Any hotel or resort that records guests is a Personal Information Controller with full obligations under the law.',
+		a: '<strong>Yes, from the first guest you check in.</strong> Names, IDs, contact details, nationality, payment cards and stay history are all personal data under RA 10173, and a passport or government ID makes part of it sensitive personal information. Any hotel or resort that records guests is a Personal Information Controller with the full set of obligations.',
 	},
 	{
 		q: 'What about our CCTV cameras?',
-		a: 'CCTV captures personal data, so it is covered. The NPC has specific guidance on <strong>video surveillance</strong>: you need proper notices, a lawful purpose, controlled access to footage, and a retention limit. Cameras in private areas or kept indefinitely are a common violation.',
+		a: '<strong>CCTV is governed by a binding NPC circular, not just guidance.</strong> NPC Circular 2024-02 requires a lawful basis, notices at entrances, restricted access to footage, a written CCTV policy, and a privacy impact assessment for every system. There is no fixed retention period: keep footage only as long as your stated purpose needs, and write that period down. Cameras with facial recognition or other analytics count as profiling, which makes NPC registration mandatory at any size. Body-worn cameras on security staff fall under a separate circular (2025-01) with a 30-day retention rule.',
 	},
 	{
 		q: 'We take bookings through Agoda, Booking.com and other OTAs. Who is responsible for that data?',
-		a: 'Both you and the platform have roles, but once guest data reaches your systems you are accountable for it. Online travel agencies, your PMS, and your booking engine form a data flow that needs <strong>data-sharing terms and vendor due diligence</strong> — a core part of what a DPO maps and documents.',
+		a: '<strong>You are, once the data reaches your systems.</strong> The platform has its own duties, but your property is accountable for what it receives. Online travel agencies, your PMS and your booking engine form a data flow that needs data-sharing terms and vendor due diligence. Mapping and documenting that flow is a core part of the DPO’s work.',
 	},
 	{
 		q: 'How long can we keep guest information?',
-		a: 'Only as long as there is a lawful purpose (legal records, billing, legitimate marketing with consent). Keeping ID scans and full guest histories forever is a retention violation. We help you set a defensible retention and disposal schedule.',
+		a: '<strong>Only as long as you have a lawful purpose for it.</strong> Legal records, billing, and marketing with consent are purposes; habit is not. Keeping ID scans and full guest histories forever is a retention violation. We help you set a retention and disposal schedule you can defend.',
 	},
 	{
 		q: 'Does a hotel need a Data Protection Officer?',
-		a: 'Yes — every hotel does, whatever its size. IRR Section 26(a) requires <strong>any</strong> organization processing personal data to designate one; there is no room-count or headcount threshold. What scale changes is whether you must also register with the NPC. The DPO is your registered contact with the NPC and the person who handles guest data-privacy complaints.',
+		a: '<strong>Yes, every hotel does, whatever its size.</strong> The duty applies to any organization that processes personal data, with no room-count or headcount threshold (IRR Section 26(a); NPC Advisory 2017-01). The DPO is your registered contact with the NPC and the person who handles guest privacy complaints.',
 	},
 	{
-		q: 'What if guest data leaks — a lost laptop, a hacked booking system?',
-		a: 'You must assess the incident and, where required, notify the NPC and affected guests within <strong>72 hours</strong>. Hospitality breaches (payment cards, passport copies) draw real penalties, so a prepared breach-response plan matters.',
+		q: 'Do we have to register with the NPC?',
+		a: '<strong>Most hotels that copy guest IDs do.</strong> Registration is triggered by any one of four grounds (NPC Circular 2022-04, Section 5), and two of them catch hotels quickly: sensitive personal information of 1,000 or more individuals, which a property scanning guest IDs can reach within a single season, and 250 or more employees. CCTV analytics such as facial recognition trigger it at any size. Below the thresholds you file a notarized sworn declaration instead. The certificate is renewed yearly, only in the 30 days before it expires.',
+	},
+	{
+		q: 'What if guest data leaks, such as a lost laptop or a hacked booking system?',
+		a: '<strong>You have 72 hours.</strong> If guest data that could enable fraud, such as passport copies or card details, may have been taken, you must notify the NPC and the affected guests within 72 hours of learning of it, with a full report within five days (NPC Circular 16-03). A missed report is itself a fined infraction, so a prepared breach-response plan matters.',
 	},
 	{
 		q: 'Can you set this up for our property?',
-		a: 'Yes. As a TÜV Certified DPO (Cert #7000532) in Region 8, I can serve as your external DPO, register you with the NPC, build your Privacy Management Program, write your CCTV and guest-data notices, and train your front-desk team.',
+		a: '<strong>Yes.</strong> As a TÜV Certified DPO (Cert #7000532) in Region 8, I can serve as your external DPO, register you with the NPC, build your Privacy Management Program, write your CCTV and guest-data notices, and train your front-desk team.',
 	},
 ];
 ---
@@ -39,7 +43,7 @@ const faqs = [
 	badge="For Hotels & Resorts"
 	heading="Data privacy compliance for hotels & resorts"
 	intro={[
-		"You scanned this from our Hotel Risk Summary. Hotels handle more personal data than they realise — guest IDs, CCTV, payment cards, and OTA bookings. Here is what the Data Privacy Act expects of a property in Region 8.",
+		"You scanned this from our Hotel Risk Summary. Hotels handle more personal data than they realise: guest IDs, CCTV, payment cards, and OTA bookings. Here is what the Data Privacy Act expects of a property in Region 8.",
 	]}
 	faqs={faqs}
 	ctaHeading="Keep guest data — and your reputation — protected"

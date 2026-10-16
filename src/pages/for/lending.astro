@@ -4,31 +4,35 @@ import FaqLanding from '../../components/FaqLanding.astro';
 const faqs = [
 	{
 		q: 'We are registered with the SEC. Do we also have NPC obligations?',
-		a: 'Yes. The <strong>SEC</strong> regulates you as a lending or financing company (your licence, disclosures, interest practices). The <strong>National Privacy Commission</strong> separately regulates how you handle borrower personal data under RA 10173. Lending and financing companies are squarely on the NPC’s radar, and the two regulators have coordinated on abusive practices.',
+		a: '<strong>Yes. The SEC licenses you; the NPC regulates your borrower data.</strong> The SEC covers your licence, disclosures and interest practices. The National Privacy Commission (NPC) separately regulates how you handle borrower personal data under RA 10173, with a lending-specific rulebook (NPC Circular 20-01, as amended by Circular 2022-02). The two regulators act together: SEC Memorandum Circular 18-2019 ties your licence to lawful collection practices, and a 2025 joint DICT-NPC-SEC advisory targets online lending platforms.',
 	},
 	{
 		q: 'Why are lending apps under so much scrutiny?',
-		a: 'The NPC has issued repeated advisories and enforcement actions against online lending apps for <strong>harvesting phone contacts, shaming borrowers, and unauthorised processing</strong>. If you operate or use a lending app, the way it accesses contacts, photos, and location is exactly what regulators inspect first.',
+		a: '<strong>Because contact-list harvesting and borrower shaming are the NPC’s most active enforcement docket.</strong> The NPC has shut down online lending companies, ordered app takedowns, and referred executives for prosecution over apps that harvest phone contacts, photos and location to pressure borrowers. If you operate or use a lending app, how it accesses the phone is the first thing a regulator inspects.',
 	},
 	{
 		q: 'What borrower data counts as sensitive, and why does it matter?',
-		a: 'Government IDs, financial details, and information about a borrower’s ability to pay are <strong>sensitive or high-risk personal data</strong>. Processing it triggers stricter duties — lawful basis, consent done correctly, security measures, and retention limits — all of which a DPO puts in place.',
+		a: '<strong>Government IDs are sensitive personal information by law, and the rest of the borrower file rides with them.</strong> Payslips, bank details and income documents are the data that enables identity fraud, so a leak of them is a reportable breach. Sensitive data triggers the strictest duties: a lawful basis, consent done properly, security measures and retention limits. Setting these up is the DPO’s job.',
 	},
 	{
 		q: 'Does a lending company need a Data Protection Officer?',
-		a: 'Yes — and not because of your size. IRR Section 26(a) requires <strong>every</strong> organization that processes personal data to designate a DPO, with no threshold at all. What is specific to lending is the rest: credit scoring is profiling, which must be registered whatever your size, and NPC Circular 20-01 as amended by 2022-02 governs how you may process borrower data and run collections. The DPO is also your registered point of contact with the NPC.',
+		a: '<strong>Yes, whatever your size.</strong> Every organization that processes personal data must designate a DPO (IRR Section 26(a)). What is specific to lending comes next: credit scoring is profiling, so your data processing systems must be registered with the NPC at any size (NPC Circular 2022-04, Section 5), and a borrower file with the government IDs of 1,000 or more people triggers registration on its own. The DPO is your registered contact with the NPC.',
 	},
 	{
 		q: 'What about collections and debt-shaming complaints?',
-		a: 'Contacting a borrower’s relatives or co-workers, or disclosing their debt, is a frequent source of NPC complaints and penalties. Lawful collection practices and a privacy-compliant script protect you from both NPC action and SEC sanctions.',
+		a: '<strong>Collection is where most lending complaints start.</strong> Contacting a borrower’s relatives or co-workers, or disclosing their debt, is unlawful processing under the DPA and an unfair collection practice under SEC rules. Circular 20-01 limits character references to the names the borrower supplied and keeps you liable for outsourced collectors. A privacy-compliant collection script protects you from both NPC fines and SEC sanctions.',
 	},
 	{
 		q: 'How fast must we report a data breach?',
-		a: 'You must assess and, where required, notify the NPC and affected borrowers within <strong>72 hours</strong> of knowing about a breach. We prepare the response plan in advance so you are not improvising during the clock.',
+		a: '<strong>Within 72 hours of knowing about it.</strong> If borrower data that could enable fraud may have been taken, you must notify the NPC and the affected borrowers within 72 hours and file a full report within five days (NPC Circular 16-03). We prepare the response plan in advance so you are not improvising against the clock.',
+	},
+	{
+		q: 'What can this cost us if we get it wrong?',
+		a: '<strong>Fines, licence sanctions and personal criminal exposure, all at once.</strong> NPC administrative fines reach 0.5% to 3% of prior-year gross income for a grave infraction, capped at ₱5 million per act, plus ₱50,000 to ₱200,000 per infraction for failing to register. The SEC can suspend or revoke your licence for the same conduct. Lending executives have faced criminal referral with prison terms of up to seven years for unlawful processing. NPC fine decisions are immediately executory even while you appeal.',
 	},
 	{
 		q: 'Can you act as our external DPO and fix this end to end?',
-		a: 'Yes. As a TÜV Certified DPO (Cert #7000532) in Region 8, I can serve as your designated DPO, handle NPC registration, build your Privacy Management Program, review your app and collection practices, and train your staff.',
+		a: '<strong>Yes.</strong> As a TÜV Certified DPO (Cert #7000532) in Region 8, I can serve as your designated DPO, handle NPC registration, build your Privacy Management Program, review your app and collection practices, and train your staff and collectors.',
 	},
 ];
 ---
@@ -39,7 +43,7 @@ const faqs = [
 	badge="For Lending & Financing"
 	heading="Data privacy compliance for lending companies"
 	intro={[
-		"You scanned this from our Lending Risk Summary. Lending and financing companies face both SEC and NPC oversight — and lending apps draw the closest scrutiny of any sector. Here is what that means in plain terms.",
+		"You scanned this from our Lending Risk Summary. Lending and financing companies answer to both the SEC and the NPC, and lending apps draw the closest scrutiny of any sector. Here is what that means in plain terms.",
 	]}
 	faqs={faqs}
 	ctaHeading="Lend with borrower data handled lawfully"

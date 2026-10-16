@@ -4,31 +4,31 @@ import FaqLanding from '../../components/FaqLanding.astro';
 const faqs = [
 	{
 		q: 'Our bank is already supervised by the BSP. Do we also answer to the NPC?',
-		a: 'Yes — they cover different things. The <strong>BSP</strong> regulates you as a financial institution (MORB, IT risk, consumer protection). The <strong>National Privacy Commission (NPC)</strong> regulates how you collect and handle <em>personal data</em> under the Data Privacy Act (RA 10173). A BSP-compliant bank can still be penalised by the NPC. The two overlap heavily, so your privacy program should be built to satisfy both at once.',
+		a: '<strong>Yes. They regulate different things.</strong> The BSP supervises you as a financial institution: the MORB, IT risk, consumer protection. The National Privacy Commission (NPC) regulates how you handle personal data under the Data Privacy Act (RA 10173). The DPA exempts bank processing done to comply with the AMLA and the Credit Information System Act, but only that processing, never the bank as a whole. A BSP-compliant bank can still be penalised by the NPC, so build one privacy program that satisfies both.',
 	},
 	{
 		q: 'Does a bank legally need a Data Protection Officer?',
-		a: 'Yes — and so does every other organization that processes personal data. IRR Section 26(a) and NPC Advisory No. 2017-01 apply the duty to <strong>any</strong> person or body processing personal data, with no threshold and no exemption for size. For a bank the point is what sits beneath it: the government-issued IDs in your KYC files are sensitive personal information under DPA Section 3(l)(3), and credit scoring is profiling — which must be registered at any size. The DPO is also the registered contact the NPC deals with.',
+		a: '<strong>Yes, as does every organization that processes personal data.</strong> The duty has no size threshold (IRR Section 26(a); NPC Advisory 2017-01). For a bank the stakes sit underneath: the government-issued IDs in your KYC files are sensitive personal information (DPA Section 3(l)(3)), and credit scoring is profiling, which must be registered at any size. The DPO is also the registered contact the NPC deals with.',
 	},
 	{
 		q: 'What happens if customer financial data is breached?',
-		a: 'A breach of financial data carries some of the highest stakes under the law: account numbers, balances, and IDs enable fraud directly. You must assess and, where required, notify the NPC and affected clients within <strong>72 hours</strong> of knowledge of the breach. Late or missing notification is itself a violation — on top of the breach.',
+		a: '<strong>Two clocks start.</strong> If the data could enable fraud, such as account numbers, balances or IDs, you must notify the NPC and the affected clients within 72 hours of learning of the breach, and file a full report within five days (NPC Circular 16-03). The BSP has its own reporting rules on top. Late or missing notification is a separate violation, fined at up to 2% of gross income, and concealing a breach is a criminal offence.',
 	},
 	{
 		q: 'Do we have to register with the NPC, and how often?',
-		a: 'Almost certainly yes. Registration is triggered by any one of four grounds in Circular 2022-04 Section 5 — 250 or more persons employed, sensitive personal information on 1,000 or more individuals, processing likely to pose a risk to rights and freedoms, or automated decision-making and profiling at any size. Credit scoring puts most banks over the last one on its own. Renewal is only within the 30 days before the certificate expires. We handle the eligibility assessment, the filing, and keeping it current so it does not lapse.',
+		a: '<strong>Almost certainly yes, and the certificate must be renewed every year.</strong> Registration is triggered by any one of four grounds (NPC Circular 2022-04, Section 5): 250 or more employees; sensitive personal information of 1,000 or more individuals; processing likely to pose a risk to rights and freedoms; or automated decision-making and profiling at any size. Credit scoring alone puts most banks over the last one. The certificate is valid for one year and can be renewed only in the 30 days before it expires. Miss that window and you are treated as unregistered.',
 	},
 	{
 		q: 'We use third-party processors (core banking, e-KYC, collections). Are we still liable?',
-		a: 'Yes. As the Personal Information Controller, the bank stays accountable for data handled by vendors. That liability has to be managed through proper data-sharing and outsourcing agreements and vendor due diligence — which the DPO oversees.',
+		a: '<strong>Yes. Outsourcing the work does not outsource the accountability.</strong> As the Personal Information Controller, the bank remains answerable for data handled by its vendors. That exposure is managed through outsourcing and data-sharing agreements, breach-reporting clauses, and vendor due diligence, all of which the DPO oversees.',
 	},
 	{
 		q: 'What can NPC penalties actually cost us?',
-		a: 'Two separate regimes. NPC <strong>administrative</strong> fines run to 0.5%–3% of your prior-year annual gross income for a grave infraction and 0.25%–2% for a major one, capped at ₱5 million for any single act; failure to register is ₱50,000–₱200,000 per infraction. The DPA’s <strong>criminal</strong> provisions are separate and fall on responsible officers personally — 6 months to 7 years depending on the offence. Add BSP scrutiny under RA 11765 on top: the penalties stack, they do not replace each other. For a bank, the cost of a compliant privacy program is a fraction of a single enforcement action.',
+		a: '<strong>Two separate regimes, and they stack with BSP sanctions.</strong> NPC administrative fines run 0.5% to 3% of prior-year gross income for a grave infraction and 0.25% to 2% for a major one, capped at ₱5 million for any single act. Failure to register is ₱50,000 to ₱200,000 per infraction. The DPA’s criminal provisions are separate, carry six months to seven years’ imprisonment, and fall on responsible officers personally. The BSP can sanction the same lapse under RA 11765. For a bank, a compliant privacy program costs a fraction of one enforcement action.',
 	},
 	{
 		q: 'Can you act as our external DPO?',
-		a: 'Yes. As a TÜV Certified DPO (Cert #7000532) based in Region 8, I can serve as your designated external DPO, build your Privacy Management Program, train staff, and be your point of contact with the NPC — without the cost of a full-time hire.',
+		a: '<strong>Yes.</strong> As a TÜV Certified DPO (Cert #7000532) based in Region 8, I can serve as your designated external DPO, build your Privacy Management Program, train your staff, and be your point of contact with the NPC, without the cost of a full-time hire. As a lawyer, what you disclose to me is also protected by attorney-client privilege.',
 	},
 ];
 ---
@@ -39,7 +39,7 @@ const faqs = [
 	badge="For Banks"
 	heading="Data privacy compliance for banks"
 	intro={[
-		"You scanned this from our Bank Risk Summary. Here are straight answers to what banks in Region 8 actually ask about the Data Privacy Act — where it overlaps with the BSP, and what a breach of financial data really costs.",
+		"You scanned this from our Bank Risk Summary. Straight answers for banks in Region 8: where the NPC overlaps with the BSP, what a breach of financial data costs, and what the law expects of your DPO.",
 	]}
 	faqs={faqs}
 	ctaHeading="Protect your customers' financial data"

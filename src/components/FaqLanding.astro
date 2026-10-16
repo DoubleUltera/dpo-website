@@ -63,7 +63,7 @@ const faqSchema = {
 						{faqs.map((f) => (
 							<details class="bg-white rounded-lg p-6 shadow-sm border border-neutral-100">
 								<summary class="font-semibold text-primary-900 cursor-pointer" set:html={f.q} />
-								<p class="mt-4 text-neutral-700 text-sm" set:html={f.a} />
+								<p class="mt-4 text-neutral-700 text-base leading-relaxed" set:html={f.a} />
 							</details>
 						))}
 					</div>

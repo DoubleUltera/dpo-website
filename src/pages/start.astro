@@ -4,42 +4,42 @@ import FaqLanding from '../components/FaqLanding.astro';
 const faqs = [
 	{
 		q: 'What is the Data Privacy Act, in one sentence?',
-		a: 'RA 10173, the Data Privacy Act of 2012, is the Philippine law that says any business collecting personal information must protect it, use it only for declared purposes, and answer to the <strong>National Privacy Commission (NPC)</strong> if it doesn’t.',
+		a: '<strong>It is the law that makes your business responsible for the personal data it holds.</strong> RA 10173, the Data Privacy Act of 2012, requires you to protect that data, use it only for the purposes you declared, and answer to the National Privacy Commission (NPC) if you don’t.',
 	},
 	{
-		q: 'Do I even need a Data Protection Officer?',
-		a: 'Yes. If your business processes personal data at all, it must designate one — IRR Section 26(a) and NPC Advisory 2017-01 apply the duty to <strong>every</strong> organization, with no size threshold and no small-business exemption. What size does decide is whether you must also <strong>register</strong> your data processing systems with the NPC. If you meet none of the registration grounds you still appoint a DPO and file a notarized sworn declaration instead. A short assessment settles which side you are on.',
+		q: 'Do we even need a Data Protection Officer?',
+		a: '<strong>Yes. Every organization that handles personal data must designate one, whatever its size.</strong> There is no small-business exemption (IRR Section 26(a); NPC Advisory 2017-01). Size only decides a second question: whether you must also register your data processing systems with the NPC. If you fall below the registration thresholds, you still appoint a DPO and file a notarized sworn declaration instead. A short assessment settles which side you are on.',
 	},
 	{
-		q: 'What is a DPO and what do they actually do?',
-		a: 'A Data Protection Officer is the person accountable for your data-privacy compliance: they build your privacy program, register you with the NPC, handle breaches, train staff, and act as your official contact with the NPC. You can appoint one in-house or engage an external DPO.',
+		q: 'What does a DPO actually do?',
+		a: '<strong>The DPO is the person accountable for your compliance.</strong> They build your privacy program, register you with the NPC, run your breach response, train your staff, and are your official contact with the NPC. The role can be filled in-house or by an external DPO under contract. The NPC allows one outside DPO to serve several companies, and no NPC approval is needed for that.',
 	},
 	{
-		q: 'Do I have to register with the NPC?',
-		a: 'Only if one of four grounds applies (Circular 2022-04 Section 5): 250 or more persons employed; <strong>sensitive</strong> personal information on 1,000 or more individuals; processing likely to pose a risk to rights and freedoms; or automated decision-making or profiling, which has no threshold. If none applies you file a notarized sworn declaration instead — never nothing. Many businesses don’t realise which side they fall on until they’re assessed. We handle the eligibility check and the filing.',
+		q: 'Do we have to register with the NPC?',
+		a: '<strong>Only if one of four grounds applies to you</strong> (NPC Circular 2022-04, Section 5): you employ 250 or more people; you hold sensitive personal information, such as government IDs or health records, of 1,000 or more individuals; your processing is likely to pose a risk to people’s rights; or you use automated decision-making or profiling, which has no threshold. Count your customer database and every employee file together, and most established businesses cross 1,000 sooner than they expect. If no ground applies, you file a notarized sworn declaration of exemption. Either way there is a filing to make.',
 	},
 	{
-		q: 'What happens if I just ignore this?',
-		a: 'The NPC can investigate complaints and impose administrative fines of <strong>0.5%–3% of your prior-year gross income</strong> for a grave infraction — capped at ₱5 million for any single act — plus ₱50,000–₱200,000 per infraction for failing to register. RA 10173 carries imprisonment separately, for serious offences, and it falls on responsible officers personally. Beyond penalties, a breach or a public complaint damages customer trust. Compliance is far cheaper than enforcement.',
+		q: 'What happens if we just ignore this?',
+		a: '<strong>The NPC can fine you, and it is enforcing.</strong> Failing to register costs ₱50,000 to ₱200,000 per infraction. A grave infraction costs 0.5% to 3% of your prior-year gross income, capped at ₱5 million for any single act. The gravest violations also carry criminal liability that falls on responsible officers personally. In September 2026 the NPC issued show cause orders to Meta, Roblox, Reddit and Discord for failing to register. Compliance costs far less than enforcement.',
 	},
 	{
-		q: 'My business is small. Is this overkill?',
-		a: 'Compliance scales. A small clinic, lending office, or hotel doesn’t need an enterprise program — it needs the right basics done properly: lawful basis, notices, security, a retention schedule, and a breach plan. That’s exactly what a right-sized engagement delivers.',
+		q: 'Our business is small. Is this overkill?',
+		a: '<strong>No. Compliance scales with your size.</strong> A small clinic, lending office or hotel does not need an enterprise program. It needs the basics done properly: a lawful basis for each use of data, privacy notices, security measures, a retention schedule, and a breach plan. That is what a right-sized engagement delivers.',
 	},
 	{
 		q: 'What does working with you look like?',
-		a: 'A free assessment tells you whether you need a DPO and registration, and what’s missing. From there I can serve as your external DPO (Cert #7000532, TÜV Certified), build your Privacy Management Program, and keep you compliant — based in Region 8, serving Leyte, Samar, and Biliran.',
+		a: '<strong>It starts with a free assessment.</strong> It tells you whether you need to register, what is missing, and what fixing it would take. From there I can serve as your external DPO (TÜV Certified, Cert #7000532), build your Privacy Management Program, and keep you compliant on retainer. Based in Dulag, Leyte, serving Leyte, Samar and Biliran.',
 	},
 ];
 ---
 
 <FaqLanding
-	title="Do I Need a Data Protection Officer? | Start Here | TÜV Certified DPO Region 8"
+	title="Do We Need a Data Protection Officer? | Start Here | TÜV Certified DPO Region 8"
 	description="A plain-language starting point for Philippine businesses: what the Data Privacy Act requires, whether you need a DPO, NPC registration, and the cost of ignoring it."
 	badge="Start Here"
-	heading="Do I even need a Data Protection Officer?"
+	heading="Do we even need a Data Protection Officer?"
 	intro={[
-		"You scanned this from our leaflet. If you collect names, IDs, or customer details, the Data Privacy Act applies to you. Here are the questions every Region 8 business owner asks first — answered plainly.",
+		"You scanned this from our leaflet. If your business keeps customer or employee records, the Data Privacy Act already applies to it. Here are the first questions every Region 8 business asks, answered in plain language.",
 	]}
 	faqs={faqs}
 	ctaHeading="Find out where your business stands"
