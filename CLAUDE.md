@@ -94,7 +94,7 @@ dpo-website/
 │
 ├── src/
 │   ├── components/
-│   │   ├── BaseHead.astro              # SEO meta tags, Open Graph, fonts, GA4
+│   │   ├── BaseHead.astro              # SEO meta tags, Open Graph, fonts, Cloudflare Web Analytics
 │   │   ├── FaqLanding.astro            # Whole-page layout for the /for/* landing pages
 │   │   ├── Footer.astro                # Site footer with copyright
 │   │   ├── FormattedDate.astro         # Date formatting for blog posts
@@ -476,9 +476,13 @@ Live at **https://dpo.dedioslaw.ph**. `astro.config.mjs` (`site:`) and the
 `netlify.toml` www→apex redirect both point at it. The `dporegion8.com` name
 this file used to recommend was never purchased.
 
-### 4. Google Analytics — DONE
+### 4. Analytics — Cloudflare Web Analytics
 
-GA4 is live in `src/components/BaseHead.astro` (`GA_MEASUREMENT_ID`).
+`BaseHead.astro` injects the Cloudflare beacon site-wide when `CF_BEACON_TOKEN`
+in `src/consts.ts` is non-empty. Cookieless and bot-filtered, so no consent
+banner is needed. Read the numbers at Cloudflare → Analytics & Logs → Web
+Analytics. GA4 was removed on 2026-10-27 because it set cookies without a
+consent notice, which a DPO's own site should not do.
 
 ## Security Measures
 
@@ -556,7 +560,7 @@ Neutrals:
 - Publish 2-3 new blog posts
 
 ### Monthly
-- Review Google Analytics for traffic trends
+- Review Cloudflare Web Analytics for traffic trends
 - Check for broken links
 - Update service pages if offerings change
 - Review and update blog content for SEO
@@ -660,7 +664,7 @@ tags: ['Array', 'of', 'strings']
 - [x] Netlify deployment configuration (netlify.toml)
 - [x] Complete deployment documentation (DEPLOYMENT.md)
 - [x] Project README with quick start guide
-- [x] Deployed and live at dpo.dedioslaw.ph (GA4 active)
+- [x] Deployed and live at dpo.dedioslaw.ph (Cloudflare Web Analytics)
 - [x] Conversion pages: `/start`, `/card`, and the three `/for/*` industry
       landing pages, all QR targets on print collateral
 - [x] Legal-accuracy audit of every page and post against RA 10173, its IRR

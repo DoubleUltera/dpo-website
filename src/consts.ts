@@ -6,6 +6,8 @@ export const SITE_DESCRIPTION = 'TÜV Certified Data Protection Officer serving 
 
 export const FACEBOOK_URL = 'https://www.facebook.com/DeDiosLawDPO/';
 
-// Paste your GA4 Measurement ID here (looks like 'G-XXXXXXXXXX') to turn on
-// Google Analytics site-wide. Leave it '' to keep analytics off.
-export const GA_MEASUREMENT_ID = 'G-VP72GRP734';
+// Cloudflare Web Analytics: cookieless, bot-filtered, no consent banner needed.
+// Paste the site token from Cloudflare → Analytics & Logs → Web Analytics
+// (32 hex chars). Leave it '' to keep analytics off. GA4 (G-VP72GRP734) was
+// removed on 2026-10-27: it set cookies with no consent notice.
+export const CF_BEACON_TOKEN = '5d6386063b834f0ba5d759115c4c5476';
