@@ -2,7 +2,7 @@
 title: 'Data Breach Response Plan: The 72-Hour Rule Every Philippine Business Must Know'
 description: 'A practical guide to creating and executing a data breach response plan that complies with the 72-hour NPC reporting requirement under RA 10173.'
 pubDate: 2026-03-30
-updatedDate: 2026-08-04
+updatedDate: 2026-10-27
 category: 'Data Privacy Law'
 tags: ['Data Breach', 'NPC', 'RA 10173', 'Incident Response', 'Security', 'Philippines']
 ---
@@ -103,6 +103,22 @@ The larger the breach, the higher the likelihood of NPC reporting requirements.
 **The clock starts when you become aware of the breach, not when you finish investigating.**
 
 </div>
+
+---
+
+## The Yearly Filing Most Businesses Miss: the Annual Security Incident Report
+
+A breach notification is event-driven. There is also a standing yearly duty. **NPC Circular 16-03 Section 22** requires every personal information controller to document **all** security incidents, breach or not, and to submit an **Annual Security Incident Report (ASIR)** to the NPC summarizing them. It is due from every organization that processes personal data, including those not required to register, and a year with no incidents still has to be filed as a zero-incident report.
+
+<div class="reporting-box">
+
+- **Where:** the Data Breach Notification Management System (DBNMS) at [https://dbnms.privacy.gov.ph](https://dbnms.privacy.gov.ph). The NPC accepts no email or physical filing for it.
+- **When:** the NPC opens a window each year for the prior calendar year, so far **1 January to 31 March**. Confirm the current cycle on privacy.gov.ph before filing.
+- **The 2025 report is still open.** Under **NPC Advisory 2026-03** (8 September 2026), organizations that missed the 31 March 2026 deadline may still file their 2025 ASIR through the DBNMS until **10 November 2026**. Filing after that date exposes you to administrative fines under Circular 2022-01, and the extension waives nothing.
+
+</div>
+
+If your organization has never filed one, that is the first thing to fix after reading this guide.
 
 ---
 

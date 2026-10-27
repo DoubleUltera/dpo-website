@@ -2,7 +2,7 @@
 title: 'How to Register Your Business with the National Privacy Commission (Complete Guide)'
 description: 'Step-by-step guide to registering your organization as a Personal Information Controller with the NPC under RA 10173, including requirements and common mistakes.'
 pubDate: 2026-03-29
-updatedDate: 2026-08-02
+updatedDate: 2026-10-27
 category: 'Compliance Tips'
 tags: ['NPC', 'Registration', 'RA 10173', 'Compliance', 'Philippines', 'PIC']
 ---
@@ -60,6 +60,14 @@ Under **Section 5(A)**, a data processing system involving automated decision-ma
 
 </div>
 
+### Groups, Branches and Franchises: Who Registers?
+
+Registration follows **control**, not the org chart. In **Advisory Opinion 2026-004** (18 May 2026) the NPC confirmed that a branch, division or field office that processes personal data under policies and systems set by head office is **not a separate controller**, so one central registration is proper — provided it is not merely nominal. The central registration must list the data processing systems actually used at branch level: data subjects, categories of data, purposes, recipients, retention, security measures and how incidents escalate internally. A unit that independently decides the purpose or extent of a processing activity registers that activity separately, or as its own system under the central registrant.
+
+The same logic covers breach notification and the annual security incident report, which may be filed centrally if the written protocol names who validates an incident, who decides whether it is notifiable, who files in the DBNMS and who notifies the data subjects. Branch-level privacy focal persons or deputy DPOs do not make the branch a controller, and no registration fee arises for a unit that need not register separately.
+
+For a hotel group, a multi-branch lender, a cooperative network or a school system in Region 8 this means **one registration, one Common DPO and one real inventory** — not a filing per branch, and not a branch left out because "head office handles it".
+
 ---
 
 ## What If You're Not Required to Register?
@@ -76,6 +84,7 @@ You are exempt from **registration** — not from the Data Privacy Act, and not 
 - Protect personal data with security measures
 - Respond to data subject requests
 - Report data breaches within 72 hours
+- **File the Annual Security Incident Report every year** through the DBNMS — the duty falls on every organization, registered or not (Circular 16-03 Section 22). The 2025 report is open until **10 November 2026** (Advisory 2026-03)
 
 **And keep watching the thresholds.** Annex 1 binds you to re-file within **10 days** of any change to your contact details, and to **register within 20 days** once any exemption ground stops being true.
 

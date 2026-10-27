@@ -2,7 +2,7 @@
 title: 'Data Privacy Act of 2012: Essential Compliance Guide for Region 8 Businesses'
 description: 'A comprehensive guide to understanding and complying with RA 10173 (Data Privacy Act of 2012) for businesses in Eastern Visayas, Philippines.'
 pubDate: 2026-03-27
-updatedDate: 2026-08-03
+updatedDate: 2026-10-27
 category: 'Compliance Tips'
 tags: ['RA 10173', 'Data Privacy Act', 'Compliance', 'Region 8', 'NPC']
 ---
@@ -141,6 +141,8 @@ If your organization meets **any one** of four grounds under NPC Circular 2022-0
 - Security measures in place
 
 **Cost:** ₱500–₱2,500 initial and ₱350–₱1,000 renewal, set by the type and scope of the registrant rather than company size (NPC Schedule of Fees, Circular 2023-01). Most city-based Region 8 organizations pay ₱1,000 initial and ₱500 renewal; municipality-based ones pay ₱500 and ₱350. Registration must be renewed within the 30 days before it expires.
+
+**One filing every year, registered or not: the Annual Security Incident Report (ASIR).** NPC Circular 16-03 Section 22 requires every organization that processes personal data to log all security incidents and submit a yearly summary to the NPC through the DBNMS ([https://dbnms.privacy.gov.ph](https://dbnms.privacy.gov.ph)), even if the answer is "none". The window usually runs 1 January to 31 March for the prior year. Under NPC Advisory 2026-03 the 2025 report can still be filed until **10 November 2026**; after that, administrative fines apply.
 
 ### Step 3: Create Essential Privacy Documents
 
