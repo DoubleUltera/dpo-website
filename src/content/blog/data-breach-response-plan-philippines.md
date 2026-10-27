@@ -259,11 +259,9 @@ The NPC requires the following information:
 <div class="reporting-box">
 
 **How to Report:**
-1. **Data Breach Notification Management System (DBNMS)** — [https://dbnms.privacy.gov.ph](https://dbnms.privacy.gov.ph). This is the operative channel; file here.
-2. Email: [complaints@privacy.gov.ph](mailto:complaints@privacy.gov.ph) (designated by Circular 16-03 Section 23)
-3. NPC Hotline: +632 5322 1322
-
-**Subject Line:** "Data Breach Notification - [Your Company Name]"
+1. **Data Breach Notification Management System (DBNMS)** — [https://dbnms.privacy.gov.ph](https://dbnms.privacy.gov.ph). This is the **only** valid channel. The NPC's standing announcement treats email and every physical mode as invalid for breach notifications, so an email to the Commission does not stop the 72-hour clock.
+2. A notification is **not deemed filed until the NPC sends its confirmation** (Circular 16-03 Section 17(E)). Keep the DBNMS acknowledgment with your incident file.
+3. The NPC's email addresses and hotline are for questions, not filing. Compliance questions go to compliancesupport@privacy.gov.ph (NPC Advisory 2026-02).
 
 **Include:**
 - Completed NPC breach notification form
@@ -391,7 +389,7 @@ Here's a simple template you can customize:
 
 ## Key Contacts
 - NPC Breach Notification: https://dbnms.privacy.gov.ph
-- NPC Complaints: complaints@privacy.gov.ph | +632 5322 1322
+- NPC questions only (not a filing route): compliancesupport@privacy.gov.ph | +632 5322 1322
 - IT Security Consultant: [Name, Contact]
 - Forensics Expert: [Name, Contact]
 - Legal Counsel: [Name, Contact]

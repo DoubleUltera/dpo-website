@@ -669,7 +669,7 @@ tags: ['Array', 'of', 'strings']
       post, both enforced by the `check-schema.mjs` build gate
 
 ### ⏭️ Open
-- [ ] Real client testimonials — the homepage cards are currently unattributed
+- [ ] Real client testimonials — the placeholder section was removed on 2026-10-27; re-add only with a quote from a signed client
 - [ ] Google Business Profile
 
 ## Support Resources
